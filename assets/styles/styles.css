@@ -29,7 +29,7 @@ body {
 #mainSection {
     top: 0px !important;
     position: relative !important;
-    left: 56px;
+    left: 0px;
     width: 100% !important;
     height: 100% !important;
 }
