@@ -1,120 +1,347 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/node-fetch-native/dist/polyfill.mjs';
-import { Server } from 'http';
-import { tmpdir } from 'os';
-import { join as join$1 } from 'path';
-import { mkdirSync } from 'fs';
-import { parentPort, threadId } from 'worker_threads';
-import { provider, isWindows } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/std-env/dist/index.mjs';
-import { eventHandler, setHeaders, sendRedirect, defineEventHandler, handleCacheHeaders, createEvent, getRequestHeader, getRequestHeaders, setResponseHeader, createError, getQuery, readBody, getCookie, createApp, createRouter as createRouter$1, lazyEventHandler, toNodeListener } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/nitropack/node_modules/h3/dist/index.mjs';
-import { useOneTap } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/vue3-google-signin/dist/index.es.js';
-import { createRenderer } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import devalue from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { renderToString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/vue/server-renderer/index.mjs';
-import { parseURL, withQuery, joinURL, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/ufo/dist/index.mjs';
-import destr from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/destr/dist/index.mjs';
-import { snakeCase, kebabCase, pascalCase, camelCase } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/scule/dist/index.mjs';
-import { createFetch as createFetch$1, Headers } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/ofetch/dist/node.mjs';
-import { createCall, createFetch } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/hookable/dist/index.mjs';
-import { hash } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/ohash/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unstorage/dist/drivers/fs.mjs';
-import defu from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/defu/dist/defu.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/radix3/dist/index.mjs';
-import cache from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/memory-cache/index.js';
-import { performance } from 'perf_hooks';
-import { FilterXSS } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/xss/lib/index.js';
-import { defineCorsEventHandler } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/@nozomuikuta/h3-cors/dist/index.mjs';
-import { MeiliSearch } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/meilisearch/dist/bundles/meilisearch.cjs.js';
-import { extname, join } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/pathe/dist/index.mjs';
-import { unified } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unified/index.js';
-import { toString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/mdast-util-to-string/index.js';
-import { preprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/micromark/dev/lib/preprocess.js';
-import { postprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/micromark/dev/lib/postprocess.js';
-import { stringifyPosition } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unist-util-stringify-position/index.js';
-import { markdownLineEnding, markdownSpace } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/micromark-util-character/dev/index.js';
-import { push, splice } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/micromark-util-chunked/dev/index.js';
-import { resolveAll } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/micromark-util-resolve-all/index.js';
-import remarkEmoji from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/remark-emoji/index.js';
-import rehypeSlug from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/rehype-slug/index.js';
-import remarkSqueezeParagraphs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/remark-squeeze-paragraphs/index.js';
-import rehypeExternalLinks from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/rehype-external-links/index.js';
-import remarkGfm from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/remark-gfm/index.js';
-import rehypeSortAttributeValues from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/rehype-sort-attribute-values/index.js';
-import rehypeSortAttributes from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/rehype-sort-attributes/index.js';
-import rehypeRaw from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/rehype-raw/index.js';
-import remarkMDC, { parseFrontMatter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/remark-mdc/dist/index.mjs';
-import remarkParse from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/remark-parse/index.js';
-import remark2rehype from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/remark-rehype/index.js';
-import { all } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/mdast-util-to-hast/index.js';
-import { detab } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/detab/index.js';
-import { u } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unist-builder/index.js';
-import { encode } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/mdurl/index.js';
-import slugify from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/slugify/slugify.js';
-import { position } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unist-util-position/index.js';
-import htmlTags from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/html-tags/index.js';
-import { visit } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unist-util-visit/index.js';
-import { BUNDLED_LANGUAGES, BUNDLED_THEMES, getHighlighter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/shiki-es/dist/shiki.node.mjs';
-import consola from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/unenv/runtime/npm/consola.mjs';
+globalThis._importMeta_={url:import.meta.url,env:process.env};import { getHighlighter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/shikiji/dist/index.mjs';
+import { Server } from 'node:http';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { mkdirSync } from 'node:fs';
+import { parentPort, threadId } from 'node:worker_threads';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseHeader, send, getResponseStatus, setResponseStatus, setResponseHeaders, getRequestHeaders, getQuery as getQuery$1, getCookie, createError, createApp, createRouter as createRouter$1, toNodeListener, fetchWithEvent, lazyEventHandler, getResponseStatusText } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/h3/dist/index.mjs';
+import { getRequestDependencies, getPreloadLinks, getPrefetchLinks, createRenderer } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { stringify, uneval } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/devalue/index.js';
+import { renderToString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/vue/server-renderer/index.mjs';
+import { renderSSRHead } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@unhead/ssr/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/ofetch/dist/node.mjs';
+import destr, { destr as destr$1 } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/hookable/dist/index.mjs';
+import { snakeCase, kebabCase, pascalCase, camelCase } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/scule/dist/index.mjs';
+import { klona } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/klona/dist/index.mjs';
+import defu, { defuFn, defu as defu$1 } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unstorage/drivers/fs.mjs';
+import { toRouteMatcher, createRouter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/radix3/dist/index.mjs';
+import { extname } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/pathe/dist/index.mjs';
+import { unified } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unified/index.js';
+import { toString } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/mdast-util-to-string/index.js';
+import { postprocess, preprocess } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/micromark/dev/index.js';
+import { stringifyPosition } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unist-util-stringify-position/index.js';
+import { markdownLineEnding, markdownSpace } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/micromark-util-character/dev/index.js';
+import { push, splice } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/micromark-util-chunked/dev/index.js';
+import { resolveAll } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/micromark-util-resolve-all/index.js';
+import { normalizeUri } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/micromark-util-sanitize-uri/dev/index.js';
+import slugify from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/slugify/slugify.js';
+import remarkParse from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/remark-parse/index.js';
+import remark2rehype from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/remark-rehype/index.js';
+import remarkMDC, { parseFrontMatter } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/remark-mdc/dist/index.mjs';
+import { toString as toString$1 } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/hast-util-to-string/index.js';
+import Slugger from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/github-slugger/index.js';
+import { detab } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/detab/index.js';
+import remarkEmoji from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/remark-emoji/index.js';
+import remarkGFM from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/remark-gfm/index.js';
+import rehypeExternalLinks from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/rehype-external-links/index.js';
+import rehypeSortAttributeValues from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/rehype-sort-attribute-values/index.js';
+import rehypeSortAttributes from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/rehype-sort-attributes/index.js';
+import rehypeRaw from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/rehype-raw/index.js';
+import { visit } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unist-util-visit/index.js';
+import { version, unref } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/vue/index.mjs';
+import { createServerHead as createServerHead$1 } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/unhead/dist/index.mjs';
+import { defineHeadPlugin } from 'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@unhead/shared/dist/index.mjs';
 
-const _runtimeConfig = {"app":{"baseURL":"/","buildAssetsDir":"/_nuxt/","cdnURL":""},"nitro":{"routeRules":{"/__nuxt_error":{"cache":false},"/**":{"headers":{"Cross-Origin-Resource-Policy":"same-origin","Cross-Origin-Opener-Policy":"same-origin","Cross-Origin-Embedder-Policy":"require-corp","Content-Security-Policy":"base-uri 'self'; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self'; img-src 'self' data:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests","Origin-Agent-Cluster":"?1","Referrer-Policy":"no-referrer","Strict-Transport-Security":"max-age=15552000; includeSubDomains","X-Content-Type-Options":"nosniff","X-DNS-Prefetch-Control":"off","X-Download-Options":"noopen","X-Frame-Options":"SAMEORIGIN","X-Permitted-Cross-Domain-Policies":"none","X-XSS-Protection":"0"}}},"envPrefix":"NUXT_"},"public":{"content":{"locales":[],"experimental":{"stripQueryParameters":false,"clientDB":false},"api":{"baseURL":"/api/_content"},"navigation":{"fields":[]},"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"highlight":false,"wsUrl":"ws://localhost:4000/","documentDriven":false,"host":"","trailingSlash":false,"anchorLinks":{"depth":4,"exclude":[1]}},"googleSignIn":{"clientId":"CLIENT ID OBTAINED FROM GOOGLE API CONSOLE"},"meilisearchClient":{"hostUrl":"http://my-meilisearch-server.domain.com","searchApiKey":"<your_public_key>","serverSideUsage":true,"instantSearch":{"theme":"algolia"},"clientOptions":{"placeholderSearch":true,"paginationTotalHits":50,"finitePagination":true,"keepZeroFacets":false}}},"content":{"cacheVersion":2,"cacheIntegrity":"kc4UzpZUjI","transformers":[],"base":"","api":{"baseURL":"/api/_content"},"watch":{"ws":{"port":{"port":4000,"portRange":[4000,4040]},"hostname":"localhost","showURL":false}},"sources":{},"ignores":["\\.","-"],"locales":[],"highlight":false,"markdown":{"tags":{"p":"prose-p","a":"prose-a","blockquote":"prose-blockquote","code-inline":"prose-code-inline","code":"prose-code","em":"prose-em","h1":"prose-h1","h2":"prose-h2","h3":"prose-h3","h4":"prose-h4","h5":"prose-h5","h6":"prose-h6","hr":"prose-hr","img":"prose-img","ul":"prose-ul","ol":"prose-ol","li":"prose-li","strong":"prose-strong","table":"prose-table","thead":"prose-thead","tbody":"prose-tbody","td":"prose-td","th":"prose-th","tr":"prose-tr"},"anchorLinks":{"depth":4,"exclude":[1]},"remarkPlugins":{},"rehypePlugins":{}},"yaml":{},"csv":{"delimeter":",","json":true},"navigation":{"fields":[]},"documentDriven":false,"experimental":{"clientDB":false,"stripQueryParameters":false}},"security":{"headers":{"crossOriginResourcePolicy":{"value":"same-origin","route":"/**"},"crossOriginOpenerPolicy":{"value":"same-origin","route":"/**"},"crossOriginEmbedderPolicy":{"value":"require-corp","route":"/**"},"contentSecurityPolicy":{"value":{"base-uri":["'self'"],"font-src":["'self'","https:","data:"],"form-action":["'self'"],"frame-ancestors":["'self'"],"img-src":["'self'","data:"],"object-src":["'none'"],"script-src-attr":["'none'"],"style-src":["'self'","https:","'unsafe-inline'"],"upgrade-insecure-requests":true},"route":"/**"},"originAgentCluster":{"value":"?1","route":"/**"},"referrerPolicy":{"value":"no-referrer","route":"/**"},"strictTransportSecurity":{"value":{"maxAge":15552000,"includeSubdomains":true},"route":"/**"},"xContentTypeOptions":{"value":"nosniff","route":"/**"},"xDNSPrefetchControl":{"value":"off","route":"/**"},"xDownloadOptions":{"value":"noopen","route":"/**"},"xFrameOptions":{"value":"SAMEORIGIN","route":"/**"},"xPermittedCrossDomainPolicies":{"value":"none","route":"/**"},"xXSSProtection":{"value":"0","route":"/**"}},"requestSizeLimiter":{"value":{"maxRequestSizeInBytes":2000000,"maxUploadFileRequestInBytes":8000000},"route":"","throwError":true},"rateLimiter":{"value":{"tokensPerInterval":150,"interval":"hour","fireImmediately":true},"route":"","throwError":true},"xssValidator":{"value":{},"route":"","throwError":true},"corsHandler":{"value":{"origin":"*","methods":["GET","HEAD","PUT","PATCH","POST","DELETE"],"preflight":{"statusCode":204}},"route":"","throwError":true},"allowedMethodsRestricter":{"value":"*","route":"","throwError":true},"hidePoweredBy":true,"basicAuth":false,"enabled":true},"serverMeilisearchClient":{"hostUrl":"http://my-meilisearch-server.domain.com","searchApiKey":"<your_public_key>","adminApiKey":"<your_secret_key>","serverSideUsage":true,"instantSearch":{"theme":"algolia"},"clientOptions":{"placeholderSearch":true,"paginationTotalHits":50,"finitePagination":true,"keepZeroFacets":false}}};
-const ENV_PREFIX = "NITRO_";
-const ENV_PREFIX_ALT = _runtimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
-const getEnv = (key) => {
-  const envKey = snakeCase(key).toUpperCase();
-  return destr(process.env[ENV_PREFIX + envKey] ?? process.env[ENV_PREFIX_ALT + envKey]);
+const r=Object.create(null),t=e=>globalThis.process?.env||globalThis._importMeta_.env||globalThis.Deno?.env.toObject()||globalThis.__env__||(e?r:globalThis),s=new Proxy(r,{get(e,o){return t()[o]??r[o]},has(e,o){const i=t();return o in i||o in r},set(e,o,i){const p=t(!0);return p[o]=i,!0},deleteProperty(e,o){if(!o)return !1;const i=t(!0);return delete i[o],!0},ownKeys(){const e=t(!0);return Object.keys(e)}}),E=typeof process<"u"&&process.env&&"development"||"",d=[["APPVEYOR"],["AZURE_PIPELINES","SYSTEM_TEAMFOUNDATIONCOLLECTIONURI"],["AZURE_STATIC","INPUT_AZURE_STATIC_WEB_APPS_API_TOKEN"],["APPCIRCLE","AC_APPCIRCLE"],["BAMBOO","bamboo_planKey"],["BITBUCKET","BITBUCKET_COMMIT"],["BITRISE","BITRISE_IO"],["BUDDY","BUDDY_WORKSPACE_ID"],["BUILDKITE"],["CIRCLE","CIRCLECI"],["CIRRUS","CIRRUS_CI"],["CLOUDFLARE_PAGES","CF_PAGES",{ci:!0}],["CODEBUILD","CODEBUILD_BUILD_ARN"],["CODEFRESH","CF_BUILD_ID"],["DRONE"],["DRONE","DRONE_BUILD_EVENT"],["DSARI"],["GITHUB_ACTIONS"],["GITLAB","GITLAB_CI"],["GITLAB","CI_MERGE_REQUEST_ID"],["GOCD","GO_PIPELINE_LABEL"],["LAYERCI"],["HUDSON","HUDSON_URL"],["JENKINS","JENKINS_URL"],["MAGNUM"],["NETLIFY"],["NETLIFY","NETLIFY_LOCAL",{ci:!1}],["NEVERCODE"],["RENDER"],["SAIL","SAILCI"],["SEMAPHORE"],["SCREWDRIVER"],["SHIPPABLE"],["SOLANO","TDDIUM"],["STRIDER"],["TEAMCITY","TEAMCITY_VERSION"],["TRAVIS"],["VERCEL","NOW_BUILDER"],["VERCEL","VERCEL",{ci:!1}],["VERCEL","VERCEL_ENV",{ci:!1}],["APPCENTER","APPCENTER_BUILD_ID"],["CODESANDBOX","CODESANDBOX_SSE",{ci:!1}],["STACKBLITZ"],["STORMKIT"],["CLEAVR"]];function B(){if(globalThis.process?.env)for(const e of d){const o=e[1]||e[0];if(globalThis.process?.env[o])return {name:e[0].toLowerCase(),...e[2]}}return globalThis.process?.env?.SHELL==="/bin/jsh"&&globalThis.process?.versions?.webcontainer?{name:"stackblitz",ci:!1}:{name:"",ci:!1}}const I=B(),U=I.name;function n(e){return e?e!=="false":!1}const l=globalThis.process?.platform||"",T=n(s.CI)||I.ci!==!1,a=n(globalThis.process?.stdout&&globalThis.process?.stdout.isTTY);n(s.DEBUG);const c=E==="test"||n(s.TEST);n(s.MINIMAL)||T||c||!a;const C=/^win/i.test(l);!n(s.NO_COLOR)&&(n(s.FORCE_COLOR)||C&&s.TERM!=="dumb"||a&&s.TERM&&s.TERM==="dumb"||T);const R=(globalThis.process?.versions?.node||"").replace(/^v/,"")||null;Number(R?.split(".")[0])||null;const Y=globalThis.process||Object.create(null),L={versions:{}};new Proxy(Y,{get(e,o){if(o==="env")return s;if(o in e)return e[o];if(o in L)return L[o]}});const _=!!globalThis.Netlify,O=!!globalThis.EdgeRuntime,D=globalThis.navigator?.userAgent==="Cloudflare-Workers",A=!!globalThis.Deno,u=!!globalThis.__lagon__,N=globalThis.process?.release?.name==="node",S=!!globalThis.Bun||!!globalThis.process?.versions?.bun,b=!!globalThis.fastly,K=[[_,"netlify"],[O,"edge-light"],[D,"workerd"],[A,"deno"],[u,"lagon"],[N,"node"],[S,"bun"],[b,"fastly"]];function F(){const e=K.find(o=>o[0]);if(e)return {name:e[1]}}const g=F();g?.name||"";
+
+const inlineAppConfig = {
+  "nuxt": {
+    "buildId": "dev"
+  }
 };
-function isObject$1(input) {
+
+
+
+const appConfig = defuFn(inlineAppConfig);
+
+const _inlineRuntimeConfig = {
+  "app": {
+    "baseURL": "/",
+    "buildAssetsDir": "/_nuxt/",
+    "cdnURL": ""
+  },
+  "nitro": {
+    "envPrefix": "NUXT_",
+    "routeRules": {
+      "/__nuxt_error": {
+        "cache": false
+      },
+      "/_nuxt/builds/meta/**": {
+        "headers": {
+          "cache-control": "public, max-age=31536000, immutable"
+        }
+      },
+      "/_nuxt/builds/**": {
+        "headers": {
+          "cache-control": "public, max-age=1, immutable"
+        }
+      }
+    }
+  },
+  "public": {
+    "mdc": {
+      "components": {
+        "prose": true,
+        "map": {
+          "p": "prose-p",
+          "a": "prose-a",
+          "blockquote": "prose-blockquote",
+          "code-inline": "prose-code-inline",
+          "code": "ProseCodeInline",
+          "em": "prose-em",
+          "h1": "prose-h1",
+          "h2": "prose-h2",
+          "h3": "prose-h3",
+          "h4": "prose-h4",
+          "h5": "prose-h5",
+          "h6": "prose-h6",
+          "hr": "prose-hr",
+          "img": "prose-img",
+          "ul": "prose-ul",
+          "ol": "prose-ol",
+          "li": "prose-li",
+          "strong": "prose-strong",
+          "table": "prose-table",
+          "thead": "prose-thead",
+          "tbody": "prose-tbody",
+          "td": "prose-td",
+          "th": "prose-th",
+          "tr": "prose-tr"
+        }
+      },
+      "headings": {
+        "anchorLinks": {
+          "h1": false,
+          "h2": true,
+          "h3": true,
+          "h4": true,
+          "h5": false,
+          "h6": false
+        }
+      }
+    },
+    "content": {
+      "locales": [],
+      "defaultLocale": "",
+      "integrity": "",
+      "experimental": {
+        "stripQueryParameters": false,
+        "advanceQuery": false,
+        "clientDB": false
+      },
+      "respectPathCase": false,
+      "api": {
+        "baseURL": "/api/_content"
+      },
+      "navigation": {
+        "fields": []
+      },
+      "tags": {
+        "p": "prose-p",
+        "a": "prose-a",
+        "blockquote": "prose-blockquote",
+        "code-inline": "prose-code-inline",
+        "code": "ProseCodeInline",
+        "em": "prose-em",
+        "h1": "prose-h1",
+        "h2": "prose-h2",
+        "h3": "prose-h3",
+        "h4": "prose-h4",
+        "h5": "prose-h5",
+        "h6": "prose-h6",
+        "hr": "prose-hr",
+        "img": "prose-img",
+        "ul": "prose-ul",
+        "ol": "prose-ol",
+        "li": "prose-li",
+        "strong": "prose-strong",
+        "table": "prose-table",
+        "thead": "prose-thead",
+        "tbody": "prose-tbody",
+        "td": "prose-td",
+        "th": "prose-th",
+        "tr": "prose-tr"
+      },
+      "highlight": false,
+      "wsUrl": "ws://localhost:4000/",
+      "documentDriven": false,
+      "host": "",
+      "trailingSlash": false,
+      "search": "",
+      "contentHead": true,
+      "anchorLinks": {
+        "depth": 4,
+        "exclude": [
+          1
+        ]
+      }
+    },
+    "storyblok": {
+      "accessToken": "",
+      "enableSudoMode": false,
+      "usePlugin": true,
+      "bridge": true,
+      "devtools": false,
+      "componentsDir": "~/storyblok",
+      "apiOptions": {}
+    }
+  },
+  "mdc": {
+    "highlight": {}
+  },
+  "content": {
+    "cacheVersion": 2,
+    "cacheIntegrity": "dLYeSFVwsx",
+    "transformers": [],
+    "base": "",
+    "api": {
+      "baseURL": "/api/_content"
+    },
+    "watch": {
+      "ws": {
+        "port": {
+          "port": 4000,
+          "portRange": [
+            4000,
+            4040
+          ]
+        },
+        "hostname": "localhost",
+        "showURL": false
+      }
+    },
+    "sources": {},
+    "ignores": [],
+    "locales": [],
+    "defaultLocale": "",
+    "highlight": false,
+    "markdown": {
+      "tags": {
+        "p": "prose-p",
+        "a": "prose-a",
+        "blockquote": "prose-blockquote",
+        "code-inline": "prose-code-inline",
+        "code": "ProseCodeInline",
+        "em": "prose-em",
+        "h1": "prose-h1",
+        "h2": "prose-h2",
+        "h3": "prose-h3",
+        "h4": "prose-h4",
+        "h5": "prose-h5",
+        "h6": "prose-h6",
+        "hr": "prose-hr",
+        "img": "prose-img",
+        "ul": "prose-ul",
+        "ol": "prose-ol",
+        "li": "prose-li",
+        "strong": "prose-strong",
+        "table": "prose-table",
+        "thead": "prose-thead",
+        "tbody": "prose-tbody",
+        "td": "prose-td",
+        "th": "prose-th",
+        "tr": "prose-tr"
+      },
+      "anchorLinks": {
+        "depth": 4,
+        "exclude": [
+          1
+        ]
+      },
+      "remarkPlugins": {},
+      "rehypePlugins": {}
+    },
+    "yaml": {},
+    "csv": {
+      "delimeter": ",",
+      "json": true
+    },
+    "navigation": {
+      "fields": []
+    },
+    "contentHead": true,
+    "documentDriven": false,
+    "respectPathCase": false,
+    "experimental": {
+      "clientDB": false,
+      "stripQueryParameters": false,
+      "advanceQuery": false,
+      "search": ""
+    }
+  }
+};
+const ENV_PREFIX = "NITRO_";
+const ENV_PREFIX_ALT = _inlineRuntimeConfig.nitro.envPrefix ?? process.env.NITRO_ENV_PREFIX ?? "_";
+const _sharedRuntimeConfig = _deepFreeze(
+  _applyEnv(klona(_inlineRuntimeConfig))
+);
+function useRuntimeConfig(event) {
+  if (!event) {
+    return _sharedRuntimeConfig;
+  }
+  if (event.context.nitro.runtimeConfig) {
+    return event.context.nitro.runtimeConfig;
+  }
+  const runtimeConfig = klona(_inlineRuntimeConfig);
+  _applyEnv(runtimeConfig);
+  event.context.nitro.runtimeConfig = runtimeConfig;
+  return runtimeConfig;
+}
+_deepFreeze(klona(appConfig));
+function _getEnv(key) {
+  const envKey = snakeCase(key).toUpperCase();
+  return destr(
+    process.env[ENV_PREFIX + envKey] ?? process.env[ENV_PREFIX_ALT + envKey]
+  );
+}
+function _isObject(input) {
   return typeof input === "object" && !Array.isArray(input);
 }
-function overrideConfig(obj, parentKey = "") {
+function _applyEnv(obj, parentKey = "") {
   for (const key in obj) {
     const subKey = parentKey ? `${parentKey}_${key}` : key;
-    const envValue = getEnv(subKey);
-    if (isObject$1(obj[key])) {
-      if (isObject$1(envValue)) {
+    const envValue = _getEnv(subKey);
+    if (_isObject(obj[key])) {
+      if (_isObject(envValue)) {
         obj[key] = { ...obj[key], ...envValue };
       }
-      overrideConfig(obj[key], subKey);
+      _applyEnv(obj[key], subKey);
     } else {
       obj[key] = envValue ?? obj[key];
     }
   }
+  return obj;
 }
-overrideConfig(_runtimeConfig);
-const config$1 = deepFreeze(_runtimeConfig);
-const useRuntimeConfig = () => config$1;
-function deepFreeze(object) {
+function _deepFreeze(object) {
   const propNames = Object.getOwnPropertyNames(object);
   for (const name of propNames) {
     const value = object[name];
     if (value && typeof value === "object") {
-      deepFreeze(value);
+      _deepFreeze(value);
     }
   }
   return Object.freeze(object);
 }
-
-const globalTiming = globalThis.__timing__ || {
-  start: () => 0,
-  end: () => 0,
-  metrics: []
-};
-const timingMiddleware = eventHandler((event) => {
-  const start = globalTiming.start();
-  const _end = event.res.end;
-  event.res.end = function(chunk, encoding, cb) {
-    const metrics = [["Generate", globalTiming.end(start)], ...globalTiming.metrics];
-    const serverTiming = metrics.map((m) => `-;dur=${m[1]};desc="${encodeURIComponent(m[0])}"`).join(", ");
-    if (!event.res.headersSent) {
-      event.res.setHeader("Server-Timing", serverTiming);
+new Proxy(/* @__PURE__ */ Object.create(null), {
+  get: (_, prop) => {
+    console.warn(
+      "Please use `useRuntimeConfig()` instead of accessing config directly."
+    );
+    const runtimeConfig = useRuntimeConfig();
+    if (prop in runtimeConfig) {
+      return runtimeConfig[prop];
     }
-    _end.call(event.res, chunk, encoding, cb);
-    return this;
-  }.bind(event.res);
+    return void 0;
+  }
 });
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"C:/Users/Basti/OneDrive/Documents/My Websites/Handmade Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/server/assets"}];
 
 const assets = createStorage();
 
@@ -124,72 +351,18 @@ for (const asset of serverAssets) {
 
 const storage = createStorage({});
 
-const useStorage = () => storage;
-
 storage.mount('/assets', assets);
 
-storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\elitekids-frontend\\content","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\elitekids-frontend\\.nuxt\\content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\elitekids-frontend","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\elitekids-frontend\\server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\elitekids-frontend\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\Applications\\AlternateCMS-Framework\\elitekids-frontend\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend\\content","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend\\.nuxt\\content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend\\server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:\\Users\\Basti\\OneDrive\\Documents\\My Websites\\Handmade Sites\\Javascript-Projects\\Nuxt-Projects\\AlternateCMS-Framework\\TheMeeoviCompany-Sites\\elitekids-frontend\\.data\\kv","ignore":["**/node_modules/**","**/.git/**"]}));
 
-function defineRenderHandler(handler) {
-  return eventHandler(async (event) => {
-    if (event.req.url.endsWith("/favicon.ico")) {
-      event.res.setHeader("Content-Type", "image/x-icon");
-      event.res.end("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-      return;
-    }
-    const response = await handler(event);
-    if (!response) {
-      if (!event.res.writableEnded) {
-        event.res.statusCode = event.res.statusCode === 200 ? 500 : event.res.statusCode;
-        event.res.end("No response returned from render handler: " + event.req.url);
-      }
-      return;
-    }
-    const nitroApp = useNitroApp();
-    await nitroApp.hooks.callHook("render:response", response, { event });
-    if (!event.res.headersSent && response.headers) {
-      for (const header in response.headers) {
-        event.res.setHeader(header, response.headers[header]);
-      }
-      if (response.statusCode) {
-        event.res.statusCode = response.statusCode;
-      }
-      if (response.statusMessage) {
-        event.res.statusMessage = response.statusMessage;
-      }
-    }
-    return typeof response.body === "string" ? response.body : JSON.stringify(response.body);
-  });
-}
-
-const config = useRuntimeConfig();
-const _routeRulesMatcher = toRouteMatcher(createRouter({ routes: config.nitro.routeRules }));
-function createRouteRulesHandler() {
-  return eventHandler((event) => {
-    const routeRules = getRouteRules(event);
-    if (routeRules.headers) {
-      setHeaders(event, routeRules.headers);
-    }
-    if (routeRules.redirect) {
-      return sendRedirect(event, routeRules.redirect.to, routeRules.redirect.statusCode);
-    }
-  });
-}
-function getRouteRules(event) {
-  event.context._nitro = event.context._nitro || {};
-  if (!event.context._nitro.routeRules) {
-    const path = new URL(event.req.url, "http://localhost").pathname;
-    event.context._nitro.routeRules = getRouteRulesForPath(path);
-  }
-  return event.context._nitro.routeRules;
-}
-function getRouteRulesForPath(path) {
-  return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
+function useStorage(base = "") {
+  return base ? prefixStorage(storage, base) : storage;
 }
 
 const defaultCacheOptions = {
@@ -198,47 +371,83 @@ const defaultCacheOptions = {
   swr: true,
   maxAge: 1
 };
-function defineCachedFunction(fn, opts) {
+function defineCachedFunction(fn, opts = {}) {
   opts = { ...defaultCacheOptions, ...opts };
   const pending = {};
-  const group = opts.group || "nitro";
+  const group = opts.group || "nitro/functions";
   const name = opts.name || fn.name || "_";
-  const integrity = hash([opts.integrity, fn, opts]);
-  const validate = opts.validate || (() => true);
-  async function get(key, resolver) {
+  const integrity = opts.integrity || hash([fn, opts]);
+  const validate = opts.validate || ((entry) => entry.value !== void 0);
+  async function get(key, resolver, shouldInvalidateCache, event) {
     const cacheKey = [opts.base, group, name, key + ".json"].filter(Boolean).join(":").replace(/:\/$/, ":index");
     const entry = await useStorage().getItem(cacheKey) || {};
     const ttl = (opts.maxAge ?? opts.maxAge ?? 0) * 1e3;
     if (ttl) {
       entry.expires = Date.now() + ttl;
     }
-    const expired = entry.integrity !== integrity || ttl && Date.now() - (entry.mtime || 0) > ttl || !validate(entry);
+    const expired = shouldInvalidateCache || entry.integrity !== integrity || ttl && Date.now() - (entry.mtime || 0) > ttl || validate(entry) === false;
     const _resolve = async () => {
-      if (!pending[key]) {
-        entry.value = void 0;
-        entry.integrity = void 0;
-        entry.mtime = void 0;
-        entry.expires = void 0;
+      const isPending = pending[key];
+      if (!isPending) {
+        if (entry.value !== void 0 && (opts.staleMaxAge || 0) >= 0 && opts.swr === false) {
+          entry.value = void 0;
+          entry.integrity = void 0;
+          entry.mtime = void 0;
+          entry.expires = void 0;
+        }
         pending[key] = Promise.resolve(resolver());
       }
-      entry.value = await pending[key];
-      entry.mtime = Date.now();
-      entry.integrity = integrity;
-      delete pending[key];
-      if (validate(entry)) {
-        useStorage().setItem(cacheKey, entry).catch((error) => console.error("[nitro] [cache]", error));
+      try {
+        entry.value = await pending[key];
+      } catch (error) {
+        if (!isPending) {
+          delete pending[key];
+        }
+        throw error;
+      }
+      if (!isPending) {
+        entry.mtime = Date.now();
+        entry.integrity = integrity;
+        delete pending[key];
+        if (validate(entry) !== false) {
+          const promise = useStorage().setItem(cacheKey, entry).catch((error) => {
+            console.error(`[nitro] [cache] Cache write error.`, error);
+            useNitroApp().captureError(error, { event, tags: ["cache"] });
+          });
+          if (event && event.waitUntil) {
+            event.waitUntil(promise);
+          }
+        }
       }
     };
     const _resolvePromise = expired ? _resolve() : Promise.resolve();
-    if (opts.swr && entry.value) {
-      _resolvePromise.catch(console.error);
-      return Promise.resolve(entry);
+    if (entry.value === void 0) {
+      await _resolvePromise;
+    } else if (expired && event && event.waitUntil) {
+      event.waitUntil(_resolvePromise);
+    }
+    if (opts.swr && validate(entry) !== false) {
+      _resolvePromise.catch((error) => {
+        console.error(`[nitro] [cache] SWR handler error.`, error);
+        useNitroApp().captureError(error, { event, tags: ["cache"] });
+      });
+      return entry;
     }
     return _resolvePromise.then(() => entry);
   }
   return async (...args) => {
-    const key = (opts.getKey || getKey)(...args);
-    const entry = await get(key, () => fn(...args));
+    const shouldBypassCache = opts.shouldBypassCache?.(...args);
+    if (shouldBypassCache) {
+      return fn(...args);
+    }
+    const key = await (opts.getKey || getKey)(...args);
+    const shouldInvalidateCache = opts.shouldInvalidateCache?.(...args);
+    const entry = await get(
+      key,
+      () => fn(...args),
+      shouldInvalidateCache,
+      args[0] && isEvent(args[0]) ? args[0] : void 0
+    );
     let value = entry.value;
     if (opts.transform) {
       value = await opts.transform(entry, ...args) || value;
@@ -248,120 +457,149 @@ function defineCachedFunction(fn, opts) {
 }
 const cachedFunction = defineCachedFunction;
 function getKey(...args) {
-  return args.length ? hash(args, {}) : "";
+  return args.length > 0 ? hash(args, {}) : "";
+}
+function escapeKey(key) {
+  return String(key).replace(/\W/g, "");
 }
 function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
+  const variableHeaderNames = (opts.varies || []).filter(Boolean).map((h) => h.toLowerCase()).sort();
   const _opts = {
     ...opts,
-    getKey: (event) => {
-      const url = event.req.originalUrl || event.req.url;
-      const friendlyName = decodeURI(parseURL(url).pathname).replace(/[^a-zA-Z0-9]/g, "").substring(0, 16);
-      const urlHash = hash(url);
-      return `${friendlyName}.${urlHash}`;
+    getKey: async (event) => {
+      const customKey = await opts.getKey?.(event);
+      if (customKey) {
+        return escapeKey(customKey);
+      }
+      const _path = event.node.req.originalUrl || event.node.req.url || event.path;
+      const _pathname = escapeKey(decodeURI(parseURL(_path).pathname)).slice(0, 16) || "index";
+      const _hashedPath = `${_pathname}.${hash(_path)}`;
+      const _headers = variableHeaderNames.map((header) => [header, event.node.req.headers[header]]).map(([name, value]) => `${escapeKey(name)}.${hash(value)}`);
+      return [_hashedPath, ..._headers].join(":");
     },
     validate: (entry) => {
+      if (!entry.value) {
+        return false;
+      }
       if (entry.value.code >= 400) {
         return false;
       }
       if (entry.value.body === void 0) {
         return false;
       }
+      if (entry.value.headers.etag === "undefined" || entry.value.headers["last-modified"] === "undefined") {
+        return false;
+      }
       return true;
     },
     group: opts.group || "nitro/handlers",
-    integrity: [
-      opts.integrity,
-      handler
-    ]
+    integrity: opts.integrity || hash([handler, opts])
   };
-  const _cachedHandler = cachedFunction(async (incomingEvent) => {
-    const reqProxy = cloneWithProxy(incomingEvent.req, { headers: {} });
-    const resHeaders = {};
-    let _resSendBody;
-    const resProxy = cloneWithProxy(incomingEvent.res, {
-      statusCode: 200,
-      getHeader(name) {
-        return resHeaders[name];
-      },
-      setHeader(name, value) {
-        resHeaders[name] = value;
-        return this;
-      },
-      getHeaderNames() {
-        return Object.keys(resHeaders);
-      },
-      hasHeader(name) {
-        return name in resHeaders;
-      },
-      removeHeader(name) {
-        delete resHeaders[name];
-      },
-      getHeaders() {
-        return resHeaders;
-      },
-      end(chunk, arg2, arg3) {
-        if (typeof chunk === "string") {
-          _resSendBody = chunk;
-        }
-        if (typeof arg2 === "function") {
-          arg2();
-        }
-        if (typeof arg3 === "function") {
-          arg3();
-        }
-        return this;
-      },
-      write(chunk, arg2, arg3) {
-        if (typeof chunk === "string") {
-          _resSendBody = chunk;
-        }
-        if (typeof arg2 === "function") {
-          arg2();
-        }
-        if (typeof arg3 === "function") {
-          arg3();
-        }
-        return this;
-      },
-      writeHead(statusCode, headers2) {
-        this.statusCode = statusCode;
-        if (headers2) {
-          for (const header in headers2) {
-            this.setHeader(header, headers2[header]);
+  const _cachedHandler = cachedFunction(
+    async (incomingEvent) => {
+      const variableHeaders = {};
+      for (const header of variableHeaderNames) {
+        variableHeaders[header] = incomingEvent.node.req.headers[header];
+      }
+      const reqProxy = cloneWithProxy(incomingEvent.node.req, {
+        headers: variableHeaders
+      });
+      const resHeaders = {};
+      let _resSendBody;
+      const resProxy = cloneWithProxy(incomingEvent.node.res, {
+        statusCode: 200,
+        writableEnded: false,
+        writableFinished: false,
+        headersSent: false,
+        closed: false,
+        getHeader(name) {
+          return resHeaders[name];
+        },
+        setHeader(name, value) {
+          resHeaders[name] = value;
+          return this;
+        },
+        getHeaderNames() {
+          return Object.keys(resHeaders);
+        },
+        hasHeader(name) {
+          return name in resHeaders;
+        },
+        removeHeader(name) {
+          delete resHeaders[name];
+        },
+        getHeaders() {
+          return resHeaders;
+        },
+        end(chunk, arg2, arg3) {
+          if (typeof chunk === "string") {
+            _resSendBody = chunk;
           }
+          if (typeof arg2 === "function") {
+            arg2();
+          }
+          if (typeof arg3 === "function") {
+            arg3();
+          }
+          return this;
+        },
+        write(chunk, arg2, arg3) {
+          if (typeof chunk === "string") {
+            _resSendBody = chunk;
+          }
+          if (typeof arg2 === "function") {
+            arg2();
+          }
+          if (typeof arg3 === "function") {
+            arg3();
+          }
+          return this;
+        },
+        writeHead(statusCode, headers2) {
+          this.statusCode = statusCode;
+          if (headers2) {
+            for (const header in headers2) {
+              this.setHeader(header, headers2[header]);
+            }
+          }
+          return this;
         }
-        return this;
+      });
+      const event = createEvent(reqProxy, resProxy);
+      event.context = incomingEvent.context;
+      const body = await handler(event) || _resSendBody;
+      const headers = event.node.res.getHeaders();
+      headers.etag = String(
+        headers.Etag || headers.etag || `W/"${hash(body)}"`
+      );
+      headers["last-modified"] = String(
+        headers["Last-Modified"] || headers["last-modified"] || (/* @__PURE__ */ new Date()).toUTCString()
+      );
+      const cacheControl = [];
+      if (opts.swr) {
+        if (opts.maxAge) {
+          cacheControl.push(`s-maxage=${opts.maxAge}`);
+        }
+        if (opts.staleMaxAge) {
+          cacheControl.push(`stale-while-revalidate=${opts.staleMaxAge}`);
+        } else {
+          cacheControl.push("stale-while-revalidate");
+        }
+      } else if (opts.maxAge) {
+        cacheControl.push(`max-age=${opts.maxAge}`);
       }
-    });
-    const event = createEvent(reqProxy, resProxy);
-    event.context = incomingEvent.context;
-    const body = await handler(event) || _resSendBody;
-    const headers = event.res.getHeaders();
-    headers.etag = headers.Etag || headers.etag || `W/"${hash(body)}"`;
-    headers["last-modified"] = headers["Last-Modified"] || headers["last-modified"] || new Date().toUTCString();
-    const cacheControl = [];
-    if (opts.swr) {
-      if (opts.maxAge) {
-        cacheControl.push(`s-maxage=${opts.maxAge}`);
+      if (cacheControl.length > 0) {
+        headers["cache-control"] = cacheControl.join(", ");
       }
-      if (opts.staleMaxAge) {
-        cacheControl.push(`stale-while-revalidate=${opts.staleMaxAge}`);
-      } else {
-        cacheControl.push("stale-while-revalidate");
-      }
-    } else if (opts.maxAge) {
-      cacheControl.push(`max-age=${opts.maxAge}`);
-    }
-    if (cacheControl.length) {
-      headers["cache-control"] = cacheControl.join(", ");
-    }
-    const cacheEntry = {
-      code: event.res.statusCode,
-      headers,
-      body
-    };
-    return cacheEntry;
-  }, _opts);
+      const cacheEntry = {
+        code: event.node.res.statusCode,
+        headers,
+        body
+      };
+      return cacheEntry;
+    },
+    _opts
+  );
   return defineEventHandler(async (event) => {
     if (opts.headersOnly) {
       if (handleCacheHeaders(event, { maxAge: opts.maxAge })) {
@@ -370,7 +608,7 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
       return handler(event);
     }
     const response = await _cachedHandler(event);
-    if (event.res.headersSent || event.res.writableEnded) {
+    if (event.node.res.headersSent || event.node.res.writableEnded) {
       return response.body;
     }
     if (handleCacheHeaders(event, {
@@ -380,9 +618,17 @@ function defineCachedEventHandler(handler, opts = defaultCacheOptions) {
     })) {
       return;
     }
-    event.res.statusCode = response.code;
+    event.node.res.statusCode = response.code;
     for (const name in response.headers) {
-      event.res.setHeader(name, response.headers[name]);
+      const value = response.headers[name];
+      if (name === "set-cookie") {
+        event.node.res.appendHeader(
+          name,
+          splitCookiesString(value)
+        );
+      } else {
+        event.node.res.setHeader(name, value);
+      }
     }
     return response.body;
   });
@@ -406,25 +652,15 @@ function cloneWithProxy(obj, overrides) {
 }
 const cachedEventHandler = defineCachedEventHandler;
 
-const _e2XVXbPTR8 = (function(nitro) {
-  nitro.hooks.hook("render:response", (response) => {
-    delete response.headers["X-Powered-By"];
-  });
-});
-
-const plugins = [
-  _e2XVXbPTR8
-];
-
 function hasReqHeader(event, name, includes) {
   const value = getRequestHeader(event, name);
   return value && typeof value === "string" && value.toLowerCase().includes(includes);
 }
 function isJsonRequest(event) {
-  return hasReqHeader(event, "accept", "application/json") || hasReqHeader(event, "user-agent", "curl/") || hasReqHeader(event, "user-agent", "httpie/") || event.req.url?.endsWith(".json") || event.req.url?.includes("/api/");
+  return hasReqHeader(event, "accept", "application/json") || hasReqHeader(event, "user-agent", "curl/") || hasReqHeader(event, "user-agent", "httpie/") || hasReqHeader(event, "sec-fetch-mode", "cors") || event.path.startsWith("/api/") || event.path.endsWith(".json");
 }
 function normalizeError(error) {
-  const cwd = process.cwd();
+  const cwd = typeof process.cwd === "function" ? process.cwd() : "/";
   const stack = (error.stack || "").split("\n").splice(1).filter((line) => line.includes("at ")).map((line) => {
     const text = line.replace(cwd + "/", "./").replace("webpack:/", "").replace("file://", "").trim();
     return {
@@ -442,21 +678,144 @@ function normalizeError(error) {
     message
   };
 }
+function _captureError(error, type) {
+  console.error(`[nitro] [${type}]`, error);
+  useNitroApp().captureError(error, { tags: [type] });
+}
+function trapUnhandledNodeErrors() {
+  process.on(
+    "unhandledRejection",
+    (error) => _captureError(error, "unhandledRejection")
+  );
+  process.on(
+    "uncaughtException",
+    (error) => _captureError(error, "uncaughtException")
+  );
+}
+function joinHeaders(value) {
+  return Array.isArray(value) ? value.join(", ") : String(value);
+}
+function normalizeFetchResponse(response) {
+  if (!response.headers.has("set-cookie")) {
+    return response;
+  }
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers: normalizeCookieHeaders(response.headers)
+  });
+}
+function normalizeCookieHeader(header = "") {
+  return splitCookiesString(joinHeaders(header));
+}
+function normalizeCookieHeaders(headers) {
+  const outgoingHeaders = new Headers();
+  for (const [name, header] of headers) {
+    if (name === "set-cookie") {
+      for (const cookie of normalizeCookieHeader(header)) {
+        outgoingHeaders.append("set-cookie", cookie);
+      }
+    } else {
+      outgoingHeaders.set(name, joinHeaders(header));
+    }
+  }
+  return outgoingHeaders;
+}
+
+const config = useRuntimeConfig();
+const _routeRulesMatcher = toRouteMatcher(
+  createRouter({ routes: config.nitro.routeRules })
+);
+function createRouteRulesHandler(ctx) {
+  return eventHandler((event) => {
+    const routeRules = getRouteRules(event);
+    if (routeRules.headers) {
+      setHeaders(event, routeRules.headers);
+    }
+    if (routeRules.redirect) {
+      return sendRedirect(
+        event,
+        routeRules.redirect.to,
+        routeRules.redirect.statusCode
+      );
+    }
+    if (routeRules.proxy) {
+      let target = routeRules.proxy.to;
+      if (target.endsWith("/**")) {
+        let targetPath = event.path;
+        const strpBase = routeRules.proxy._proxyStripBase;
+        if (strpBase) {
+          targetPath = withoutBase(targetPath, strpBase);
+        }
+        target = joinURL(target.slice(0, -3), targetPath);
+      } else if (event.path.includes("?")) {
+        const query = getQuery(event.path);
+        target = withQuery(target, query);
+      }
+      return proxyRequest(event, target, {
+        fetch: ctx.localFetch,
+        ...routeRules.proxy
+      });
+    }
+  });
+}
+function getRouteRules(event) {
+  event.context._nitro = event.context._nitro || {};
+  if (!event.context._nitro.routeRules) {
+    event.context._nitro.routeRules = getRouteRulesForPath(
+      withoutBase(event.path.split("?")[0], useRuntimeConfig().app.baseURL)
+    );
+  }
+  return event.context._nitro.routeRules;
+}
+function getRouteRulesForPath(path) {
+  return defu({}, ..._routeRulesMatcher.matchAll(path).reverse());
+}
+
+const plugins = [
+  
+];
+
+function defineRenderHandler(handler) {
+  return eventHandler(async (event) => {
+    if (event.path.endsWith("/favicon.ico")) {
+      setResponseHeader(event, "Content-Type", "image/x-icon");
+      return send(
+        event,
+        "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      );
+    }
+    const response = await handler(event);
+    if (!response) {
+      const _currentStatus = getResponseStatus(event);
+      setResponseStatus(event, _currentStatus === 200 ? 500 : _currentStatus);
+      return send(
+        event,
+        "No response returned from render handler: " + event.path
+      );
+    }
+    const nitroApp = useNitroApp();
+    await nitroApp.hooks.callHook("render:response", response, { event });
+    if (response.headers) {
+      setResponseHeaders(event, response.headers);
+    }
+    if (response.statusCode || response.statusMessage) {
+      setResponseStatus(event, response.statusCode, response.statusMessage);
+    }
+    return response.body;
+  });
+}
 
 const errorHandler = (async function errorhandler(error, event) {
   const { stack, statusCode, statusMessage, message } = normalizeError(error);
   const errorObject = {
-    url: event.node.req.url,
+    url: event.path,
     statusCode,
     statusMessage,
     message,
     stack: statusCode !== 404 ? `<pre>${stack.map((i) => `<span class="stack${i.internal ? " internal" : ""}">${i.text}</span>`).join("\n")}</pre>` : "",
     data: error.data
   };
-  event.node.res.statusCode = errorObject.statusCode !== 200 && errorObject.statusCode || 500;
-  if (errorObject.statusMessage) {
-    event.node.res.statusMessage = errorObject.statusMessage;
-  }
   if (error.unhandled || error.fatal) {
     const tags = [
       "[nuxt]",
@@ -467,379 +826,44 @@ const errorHandler = (async function errorhandler(error, event) {
     ].filter(Boolean).join(" ");
     console.error(tags, errorObject.message + "\n" + stack.map((l) => "  " + l.text).join("  \n"));
   }
-  if (isJsonRequest(event)) {
-    event.node.res.setHeader("Content-Type", "application/json");
-    event.node.res.end(JSON.stringify(errorObject));
+  if (event.handled) {
     return;
   }
-  const isErrorPage = event.node.req.url?.startsWith("/__nuxt_error");
+  setResponseStatus(event, errorObject.statusCode !== 200 && errorObject.statusCode || 500, errorObject.statusMessage);
+  if (isJsonRequest(event)) {
+    setResponseHeader(event, "Content-Type", "application/json");
+    return send(event, JSON.stringify(errorObject));
+  }
+  const isErrorPage = event.path.startsWith("/__nuxt_error");
   const res = !isErrorPage ? await useNitroApp().localFetch(withQuery(joinURL(useRuntimeConfig().app.baseURL, "/__nuxt_error"), errorObject), {
     headers: getRequestHeaders(event),
     redirect: "manual"
   }).catch(() => null) : null;
   if (!res) {
-    const { template } = await import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/@nuxt/ui-templates/dist/templates/error-dev.mjs') ;
+    const { template } = await Promise.resolve().then(function () { return errorDev; }) ;
     {
       errorObject.description = errorObject.message;
     }
-    event.node.res.setHeader("Content-Type", "text/html;charset=UTF-8");
-    event.node.res.end(template(errorObject));
+    if (event.handled) {
+      return;
+    }
+    setResponseHeader(event, "Content-Type", "text/html;charset=UTF-8");
+    return send(event, template(errorObject));
+  }
+  const html = await res.text();
+  if (event.handled) {
     return;
   }
   for (const [header, value] of res.headers.entries()) {
     setResponseHeader(event, header, value);
   }
-  if (res.status && res.status !== 200) {
-    event.node.res.statusCode = res.status;
-  }
-  if (res.statusText) {
-    event.node.res.statusMessage = res.statusText;
-  }
-  event.node.res.end(await res.text());
-});
-
-const securityConfig$3 = useRuntimeConfig().security;
-const FILE_UPLOAD_HEADER = "multipart/form-data";
-const _FIFLpG = defineEventHandler(async (event) => {
-  if (["POST", "PUT", "DELETE"].includes(event.node.req.method)) {
-    const contentLengthValue = getRequestHeader(event, "content-length");
-    const contentTypeValue = getRequestHeader(event, "content-type");
-    const isFileUpload = contentTypeValue?.includes(FILE_UPLOAD_HEADER);
-    const requestLimit = isFileUpload ? securityConfig$3.requestSizeLimiter.value.maxUploadFileRequestInBytes : securityConfig$3.requestSizeLimiter.value.maxRequestSizeInBytes;
-    if (parseInt(contentLengthValue) >= requestLimit) {
-      if (securityConfig$3.requestSizeLimiter.throwError) {
-        throw createError({ statusCode: 413, statusMessage: "Payload Too Large" });
-      } else {
-        return { statusCode: 413, statusMessage: "Payload Too Large" };
-      }
-    }
-  }
-});
-
-// generate timestamp or delta
-// see http://nodejs.org/api/process.html#process_process_hrtime
-function hrtime(previousTimestamp) {
-    const clocktime = performance.now() * 1e-3;
-    let seconds = Math.floor(clocktime);
-    let nanoseconds = Math.floor((clocktime % 1) * 1e9);
-    if (previousTimestamp != undefined) {
-        seconds = seconds - previousTimestamp[0];
-        nanoseconds = nanoseconds - previousTimestamp[1];
-        if (nanoseconds < 0) {
-            seconds--;
-            nanoseconds += 1e9;
-        }
-    }
-    return [seconds, nanoseconds];
-}
-// The current timestamp in whole milliseconds
-function getMilliseconds() {
-    const [seconds, nanoseconds] = hrtime();
-    return seconds * 1e3 + Math.floor(nanoseconds / 1e6);
-}
-// Wait for a specified number of milliseconds before fulfilling the returned promise.
-function wait(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-}
-
-/**
- * A hierarchical token bucket for rate limiting. See
- * http://en.wikipedia.org/wiki/Token_bucket for more information.
- *
- * @param options
- * @param options.bucketSize Maximum number of tokens to hold in the bucket.
- *  Also known as the burst rate.
- * @param options.tokensPerInterval Number of tokens to drip into the bucket
- *  over the course of one interval.
- * @param options.interval The interval length in milliseconds, or as
- *  one of the following strings: 'second', 'minute', 'hour', day'.
- * @param options.parentBucket Optional. A token bucket that will act as
- *  the parent of this bucket.
- */
-class TokenBucket {
-    constructor({ bucketSize, tokensPerInterval, interval, parentBucket }) {
-        this.bucketSize = bucketSize;
-        this.tokensPerInterval = tokensPerInterval;
-        if (typeof interval === "string") {
-            switch (interval) {
-                case "sec":
-                case "second":
-                    this.interval = 1000;
-                    break;
-                case "min":
-                case "minute":
-                    this.interval = 1000 * 60;
-                    break;
-                case "hr":
-                case "hour":
-                    this.interval = 1000 * 60 * 60;
-                    break;
-                case "day":
-                    this.interval = 1000 * 60 * 60 * 24;
-                    break;
-                default:
-                    throw new Error("Invalid interval " + interval);
-            }
-        }
-        else {
-            this.interval = interval;
-        }
-        this.parentBucket = parentBucket;
-        this.content = 0;
-        this.lastDrip = getMilliseconds();
-    }
-    /**
-     * Remove the requested number of tokens. If the bucket (and any parent
-     * buckets) contains enough tokens this will happen immediately. Otherwise,
-     * the removal will happen when enough tokens become available.
-     * @param count The number of tokens to remove.
-     * @returns A promise for the remainingTokens count.
-     */
-    async removeTokens(count) {
-        // Is this an infinite size bucket?
-        if (this.bucketSize === 0) {
-            return Number.POSITIVE_INFINITY;
-        }
-        // Make sure the bucket can hold the requested number of tokens
-        if (count > this.bucketSize) {
-            throw new Error(`Requested tokens ${count} exceeds bucket size ${this.bucketSize}`);
-        }
-        // Drip new tokens into this bucket
-        this.drip();
-        const comeBackLater = async () => {
-            // How long do we need to wait to make up the difference in tokens?
-            const waitMs = Math.ceil((count - this.content) * (this.interval / this.tokensPerInterval));
-            await wait(waitMs);
-            return this.removeTokens(count);
-        };
-        // If we don't have enough tokens in this bucket, come back later
-        if (count > this.content)
-            return comeBackLater();
-        if (this.parentBucket != undefined) {
-            // Remove the requested from the parent bucket first
-            const remainingTokens = await this.parentBucket.removeTokens(count);
-            // Check that we still have enough tokens in this bucket
-            if (count > this.content)
-                return comeBackLater();
-            // Tokens were removed from the parent bucket, now remove them from
-            // this bucket. Note that we look at the current bucket and parent
-            // bucket's remaining tokens and return the smaller of the two values
-            this.content -= count;
-            return Math.min(remainingTokens, this.content);
-        }
-        else {
-            // Remove the requested tokens from this bucket
-            this.content -= count;
-            return this.content;
-        }
-    }
-    /**
-     * Attempt to remove the requested number of tokens and return immediately.
-     * If the bucket (and any parent buckets) contains enough tokens this will
-     * return true, otherwise false is returned.
-     * @param {Number} count The number of tokens to remove.
-     * @param {Boolean} True if the tokens were successfully removed, otherwise
-     *  false.
-     */
-    tryRemoveTokens(count) {
-        // Is this an infinite size bucket?
-        if (!this.bucketSize)
-            return true;
-        // Make sure the bucket can hold the requested number of tokens
-        if (count > this.bucketSize)
-            return false;
-        // Drip new tokens into this bucket
-        this.drip();
-        // If we don't have enough tokens in this bucket, return false
-        if (count > this.content)
-            return false;
-        // Try to remove the requested tokens from the parent bucket
-        if (this.parentBucket && !this.parentBucket.tryRemoveTokens(count))
-            return false;
-        // Remove the requested tokens from this bucket and return
-        this.content -= count;
-        return true;
-    }
-    /**
-     * Add any new tokens to the bucket since the last drip.
-     * @returns {Boolean} True if new tokens were added, otherwise false.
-     */
-    drip() {
-        if (this.tokensPerInterval === 0) {
-            const prevContent = this.content;
-            this.content = this.bucketSize;
-            return this.content > prevContent;
-        }
-        const now = getMilliseconds();
-        const deltaMS = Math.max(now - this.lastDrip, 0);
-        this.lastDrip = now;
-        const dripAmount = deltaMS * (this.tokensPerInterval / this.interval);
-        const prevContent = this.content;
-        this.content = Math.min(this.content + dripAmount, this.bucketSize);
-        return Math.floor(this.content) > Math.floor(prevContent);
-    }
-}
-
-/**
- * A generic rate limiter. Underneath the hood, this uses a token bucket plus
- * an additional check to limit how many tokens we can remove each interval.
- *
- * @param options
- * @param options.tokensPerInterval Maximum number of tokens that can be
- *  removed at any given moment and over the course of one interval.
- * @param options.interval The interval length in milliseconds, or as
- *  one of the following strings: 'second', 'minute', 'hour', day'.
- * @param options.fireImmediately Whether or not the promise will resolve
- *  immediately when rate limiting is in effect (default is false).
- */
-class RateLimiter {
-    constructor({ tokensPerInterval, interval, fireImmediately }) {
-        this.tokenBucket = new TokenBucket({
-            bucketSize: tokensPerInterval,
-            tokensPerInterval,
-            interval,
-        });
-        // Fill the token bucket to start
-        this.tokenBucket.content = tokensPerInterval;
-        this.curIntervalStart = getMilliseconds();
-        this.tokensThisInterval = 0;
-        this.fireImmediately = fireImmediately !== null && fireImmediately !== void 0 ? fireImmediately : false;
-    }
-    /**
-     * Remove the requested number of tokens. If the rate limiter contains enough
-     * tokens and we haven't spent too many tokens in this interval already, this
-     * will happen immediately. Otherwise, the removal will happen when enough
-     * tokens become available.
-     * @param count The number of tokens to remove.
-     * @returns A promise for the remainingTokens count.
-     */
-    async removeTokens(count) {
-        // Make sure the request isn't for more than we can handle
-        if (count > this.tokenBucket.bucketSize) {
-            throw new Error(`Requested tokens ${count} exceeds maximum tokens per interval ${this.tokenBucket.bucketSize}`);
-        }
-        const now = getMilliseconds();
-        // Advance the current interval and reset the current interval token count
-        // if needed
-        if (now < this.curIntervalStart || now - this.curIntervalStart >= this.tokenBucket.interval) {
-            this.curIntervalStart = now;
-            this.tokensThisInterval = 0;
-        }
-        // If we don't have enough tokens left in this interval, wait until the
-        // next interval
-        if (count > this.tokenBucket.tokensPerInterval - this.tokensThisInterval) {
-            if (this.fireImmediately) {
-                return -1;
-            }
-            else {
-                const waitMs = Math.ceil(this.curIntervalStart + this.tokenBucket.interval - now);
-                await wait(waitMs);
-                const remainingTokens = await this.tokenBucket.removeTokens(count);
-                this.tokensThisInterval += count;
-                return remainingTokens;
-            }
-        }
-        // Remove the requested number of tokens from the token bucket
-        const remainingTokens = await this.tokenBucket.removeTokens(count);
-        this.tokensThisInterval += count;
-        return remainingTokens;
-    }
-    /**
-     * Attempt to remove the requested number of tokens and return immediately.
-     * If the bucket (and any parent buckets) contains enough tokens and we
-     * haven't spent too many tokens in this interval already, this will return
-     * true. Otherwise, false is returned.
-     * @param {Number} count The number of tokens to remove.
-     * @param {Boolean} True if the tokens were successfully removed, otherwise
-     *  false.
-     */
-    tryRemoveTokens(count) {
-        // Make sure the request isn't for more than we can handle
-        if (count > this.tokenBucket.bucketSize)
-            return false;
-        const now = getMilliseconds();
-        // Advance the current interval and reset the current interval token count
-        // if needed
-        if (now < this.curIntervalStart || now - this.curIntervalStart >= this.tokenBucket.interval) {
-            this.curIntervalStart = now;
-            this.tokensThisInterval = 0;
-        }
-        // If we don't have enough tokens left in this interval, return false
-        if (count > this.tokenBucket.tokensPerInterval - this.tokensThisInterval)
-            return false;
-        // Try to remove the requested number of tokens from the token bucket
-        const removed = this.tokenBucket.tryRemoveTokens(count);
-        if (removed) {
-            this.tokensThisInterval += count;
-        }
-        return removed;
-    }
-    /**
-     * Returns the number of tokens remaining in the TokenBucket.
-     * @returns {Number} The number of tokens remaining.
-     */
-    getTokensRemaining() {
-        this.tokenBucket.drip();
-        return this.tokenBucket.content;
-    }
-}
-
-const securityConfig$2 = useRuntimeConfig().security;
-const _O4Xkyd = defineEventHandler(async (event) => {
-  const ip = getRequestHeader(event, "x-forwarded-for");
-  if (!cache.get(ip)) {
-    const cachedLimiter = new RateLimiter(securityConfig$2.rateLimiter.value);
-    cache.put(ip, cachedLimiter, 1e4);
-  } else {
-    const cachedLimiter = cache.get(ip);
-    if (cachedLimiter.getTokensRemaining() > 1) {
-      await cachedLimiter.removeTokens(1);
-      cache.put(ip, cachedLimiter, 1e4);
-    } else {
-      if (securityConfig$2.rateLimiter.throwError) {
-        throw createError({ statusCode: 429, statusMessage: "Too Many Requests" });
-      } else {
-        return { statusCode: 429, statusMessage: "Too Many Requests" };
-      }
-    }
-  }
-});
-
-const securityConfig$1 = useRuntimeConfig().security;
-const xssValidator = new FilterXSS(securityConfig$1.xssValidator.value);
-const _iLBork = defineEventHandler(async (event) => {
-  if (["POST", "GET"].includes(event.node.req.method)) {
-    const valueToFilter = event.node.req.method === "GET" ? getQuery(event) : readBody(event);
-    const stringifiedValue = JSON.stringify(valueToFilter);
-    const processedValue = xssValidator.process(JSON.stringify(valueToFilter));
-    if (processedValue !== stringifiedValue) {
-      if (securityConfig$1.requestSizeLimiter.throwError) {
-        throw createError({ statusCode: 400, statusMessage: "Bad Request" });
-      } else {
-        return { statusCode: 400, statusMessage: "Bad Request" };
-      }
-    }
-  }
-});
-
-const securityConfig = useRuntimeConfig().security;
-const _Ybs3s8 = defineEventHandler(defineCorsEventHandler(securityConfig.corsHandler.value));
-
-const useConfig = () => useRuntimeConfig().serverMeilisearchClient;
-
-const _j0TZ2L = defineEventHandler(async (event) => {
-  const { hostUrl, adminApiKey } = useConfig();
-  if (!event.context.serverMeilisearchClient) {
-    event.context.serverMeilisearchClient = new MeiliSearch({
-      host: hostUrl,
-      apiKey: adminApiKey
-    });
-  }
-  event.context.serverMeilisearchClient;
+  setResponseStatus(event, res.status && res.status !== 200 ? res.status : void 0, res.statusText);
+  return send(event, html);
 });
 
 const get = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj);
 const _pick = (obj, condition) => Object.keys(obj).filter(condition).reduce((newObj, key) => Object.assign(newObj, { [key]: obj[key] }), {});
+const omit = (keys) => (obj) => keys && keys.length ? _pick(obj, (key) => !keys.includes(key)) : obj;
 const apply = (fn) => (data) => Array.isArray(data) ? data.map((item) => fn(item)) : fn(data);
 const detectProperties = (keys) => {
   const prefixes = [];
@@ -898,17 +922,15 @@ const assertArray = (value, message = "Expected an array") => {
     throw new TypeError(message);
   }
 };
-const ensureArray = (value) => Array.isArray(value) ? value : value ? [value] : [];
+const ensureArray = (value) => {
+  return Array.isArray(value) ? value : [void 0, null].includes(value) ? [] : [value];
+};
 
 const arrayParams = ["sort", "where", "only", "without"];
-const createQuery = (fetcher, intitialParams) => {
-  const queryParams = {
-    ...intitialParams
-  };
-  for (const key of arrayParams) {
-    if (queryParams[key]) {
-      queryParams[key] = ensureArray(queryParams[key]);
-    }
+function createQuery(fetcher, opts = {}) {
+  const queryParams = {};
+  for (const key of Object.keys(opts.initialParams || {})) {
+    queryParams[key] = arrayParams.includes(key) ? ensureArray(opts.initialParams[key]) : opts.initialParams[key];
   }
   const $set = (key, fn = (v) => v) => {
     return (...values) => {
@@ -916,201 +938,57 @@ const createQuery = (fetcher, intitialParams) => {
       return query;
     };
   };
+  const resolveResult = (result) => {
+    if (opts.legacy) {
+      if (result?.surround) {
+        return result.surround;
+      }
+      if (!result) {
+        return result;
+      }
+      if (result?.dirConfig) {
+        result.result = {
+          _path: result.dirConfig?._path,
+          ...result.result,
+          _dir: result.dirConfig
+        };
+      }
+      return result?._path || Array.isArray(result) || !Object.prototype.hasOwnProperty.call(result, "result") ? result : result?.result;
+    }
+    return result;
+  };
   const query = {
-    params: () => queryParams,
+    params: () => ({
+      ...queryParams,
+      ...queryParams.where ? { where: [...ensureArray(queryParams.where)] } : {},
+      ...queryParams.sort ? { sort: [...ensureArray(queryParams.sort)] } : {}
+    }),
     only: $set("only", ensureArray),
     without: $set("without", ensureArray),
-    where: $set("where", (q) => [...ensureArray(queryParams.where), q]),
+    where: $set("where", (q) => [...ensureArray(queryParams.where), ...ensureArray(q)]),
     sort: $set("sort", (sort) => [...ensureArray(queryParams.sort), ...ensureArray(sort)]),
     limit: $set("limit", (v) => parseInt(String(v), 10)),
     skip: $set("skip", (v) => parseInt(String(v), 10)),
     // find
-    find: () => fetcher(query),
-    findOne: () => {
-      queryParams.first = true;
-      return fetcher(query);
-    },
-    findSurround: (surroundQuery, options) => {
-      queryParams.surround = { query: surroundQuery, ...options };
-      return fetcher(query);
-    },
+    find: () => fetcher(query).then(resolveResult),
+    findOne: () => fetcher($set("first")(true)).then(resolveResult),
+    count: () => fetcher($set("count")(true)).then(resolveResult),
     // locale
-    locale: (_locale) => query.where({ _locale })
+    locale: (_locale) => query.where({ _locale }),
+    withSurround: $set("surround", (surroundQuery, options) => ({ query: surroundQuery, ...options })),
+    withDirConfig: () => $set("dirConfig")(true)
   };
-  return query;
-};
-
-function createMatch(opts = {}) {
-  const operators = createOperators(match, opts.operators);
-  function match(item, conditions) {
-    if (typeof conditions !== "object" || conditions instanceof RegExp) {
-      return operators.$eq(item, conditions);
-    }
-    return Object.keys(conditions || {}).every((key) => {
-      const condition = conditions[key];
-      if (key.startsWith("$") && operators[key]) {
-        const fn = operators[key];
-        return typeof fn === "function" ? fn(item, condition) : false;
-      }
-      return match(get(item, key), condition);
-    });
+  if (opts.legacy) {
+    query.findSurround = (surroundQuery, options) => {
+      return query.withSurround(surroundQuery, options).find().then(resolveResult);
+    };
+    return query;
   }
-  return match;
-}
-function createOperators(match, operators = {}) {
-  return {
-    $match: (item, condition) => match(item, condition),
-    /**
-     * Match if item equals condition
-     **/
-    $eq: (item, condition) => condition instanceof RegExp ? condition.test(item) : item === condition,
-    /**
-     * Match if item not equals condition
-     **/
-    $ne: (item, condition) => condition instanceof RegExp ? !condition.test(item) : item !== condition,
-    /**
-     * Match is condition is false
-     **/
-    $not: (item, condition) => !match(item, condition),
-    /**
-     * Match only if all of nested conditions are true
-     **/
-    $and: (item, condition) => {
-      assertArray(condition, "$and requires an array as condition");
-      return condition.every((cond) => match(item, cond));
-    },
-    /**
-     * Match if any of nested conditions is true
-     **/
-    $or: (item, condition) => {
-      assertArray(condition, "$or requires an array as condition");
-      return condition.some((cond) => match(item, cond));
-    },
-    /**
-     * Match if item is in condition array
-     **/
-    $in: (item, condition) => ensureArray(condition).some(
-      (cond) => Array.isArray(item) ? match(item, { $contains: cond }) : match(item, cond)
-    ),
-    /**
-     * Match if item contains every condition or math every rule in condition array
-     **/
-    $contains: (item, condition) => {
-      item = Array.isArray(item) ? item : String(item);
-      return ensureArray(condition).every((i) => item.includes(i));
-    },
-    /**
-     * Ignore case contains
-     **/
-    $icontains: (item, condition) => {
-      if (typeof condition !== "string") {
-        throw new TypeError("$icontains requires a string, use $contains instead");
-      }
-      item = String(item).toLocaleLowerCase();
-      return ensureArray(condition).every((i) => item.includes(i.toLocaleLowerCase()));
-    },
-    /**
-     * Match if item contains at least one rule from condition array
-     */
-    $containsAny: (item, condition) => {
-      assertArray(condition, "$containsAny requires an array as condition");
-      item = Array.isArray(item) ? item : String(item);
-      return condition.some((i) => item.includes(i));
-    },
-    /**
-     * Check key existence
-     */
-    $exists: (item, condition) => condition ? typeof item !== "undefined" : typeof item === "undefined",
-    /**
-     * Match if type of item equals condition
-     */
-    $type: (item, condition) => typeof item === String(condition),
-    /**
-     * Provides regular expression capabilities for pattern matching strings.
-     */
-    $regex: (item, condition) => {
-      if (!(condition instanceof RegExp)) {
-        const matched = String(condition).match(/\/(.*)\/([dgimsuy]*)$/);
-        condition = matched ? new RegExp(matched[1], matched[2] || "") : new RegExp(condition);
-      }
-      return condition.test(String(item || ""));
-    },
-    /**
-     * Check if item is less than condition
-     */
-    $lt: (item, condition) => {
-      return item < condition;
-    },
-    /**
-     * Check if item is less than or equal to condition
-     */
-    $lte: (item, condition) => {
-      return item <= condition;
-    },
-    /**
-     * Check if item is greater than condition
-     */
-    $gt: (item, condition) => {
-      return item > condition;
-    },
-    /**
-     * Check if item is greater than or equal to condition
-     */
-    $gte: (item, condition) => {
-      return item >= condition;
-    },
-    ...operators || {}
-  };
-}
-
-function createPipelineFetcher(getContentsList) {
-  const match = createMatch();
-  const surround = (data, { query, before, after }) => {
-    const matchQuery = typeof query === "string" ? { _path: query } : query;
-    const index = data.findIndex((item) => match(item, matchQuery));
-    before = before || 1;
-    after = after || 1;
-    const slice = new Array(before + after).fill(null, 0);
-    return index === -1 ? slice : slice.map((_, i) => data[index - before + i + Number(i >= before)] || null);
-  };
-  const pipelines = [
-    // Conditions
-    (data, params) => data.filter((item) => ensureArray(params.where).every((matchQuery) => match(item, matchQuery))),
-    // Sort data
-    (data, params) => ensureArray(params.sort).forEach((options) => sortList(data, options)),
-    // Surround logic
-    (data, params) => params.surround ? surround(data, params.surround) : data,
-    // Skip first items
-    (data, params) => params.skip ? data.slice(params.skip) : data,
-    // Pick first items
-    (data, params) => params.limit ? data.slice(0, params.limit) : data,
-    // Remove unwanted fields
-    (data, params) => apply(withoutKeys(params.without))(data),
-    // Select only wanted fields
-    (data, params) => apply(withKeys(params.only))(data)
-  ];
-  return async (query) => {
-    const data = await getContentsList();
-    const params = query.params();
-    const filteredData = pipelines.reduce(($data, pipe) => pipe($data, params) || $data, data);
-    if (params.first) {
-      return filteredData[0];
-    }
-    return filteredData;
-  };
+  return query;
 }
 
 const defineTransformer = (transformer) => {
   return transformer;
-};
-const createSingleton = (fn) => {
-  let instance;
-  return (...args) => {
-    if (!instance) {
-      instance = fn(...args);
-    }
-    return instance;
-  };
 };
 
 function createTokenizer(parser, initialize, from) {
@@ -1557,7 +1435,7 @@ function attemptLastLine(effects, ok, nok) {
     return nok(code);
   }
 }
-const parse$1 = (options) => {
+const parse = (options) => {
   return createTokenizer(
     { ...options },
     { tokenize: initializeDocument },
@@ -1576,13 +1454,13 @@ const fromCSV = function(value, encoding, options) {
     options = encoding;
     encoding = void 0;
   }
-  return compiler$1()(
+  return compiler()(
     postprocess(
-      parse$1(options).write(preprocess()(value, encoding, true))
+      parse(options).write(preprocess()(value, encoding, true))
     )
   );
 };
-function compiler$1() {
+function compiler() {
   const config = {
     enter: {
       column: opener(openColumn),
@@ -1813,6 +1691,596 @@ const csv = defineTransformer({
   }
 });
 
+const useProcessorPlugins = async (processor, plugins = {}) => {
+  const toUse = Object.entries(plugins).filter((p) => p[1] !== false);
+  for (const plugin of toUse) {
+    const instance = plugin[1].instance || await import(
+      /* @vite-ignore */
+      plugin[0]
+    ).then((m) => m.default || m);
+    processor.use(instance, plugin[1].options);
+  }
+};
+
+const unsafeLinkPrefix = [
+  "javascript:",
+  "data:text/html",
+  "vbscript:",
+  "data:text/javascript",
+  "data:text/vbscript",
+  "data:text/css",
+  "data:text/plain",
+  "data:text/xml"
+];
+const validateProp = (attribute, value) => {
+  if (attribute.startsWith("on")) {
+    return false;
+  }
+  if (attribute === "href" || attribute === "src") {
+    return !unsafeLinkPrefix.some((prefix) => value.toLowerCase().startsWith(prefix));
+  }
+  return true;
+};
+const validateProps = (props) => {
+  if (!props) {
+    return {};
+  }
+  return Object.fromEntries(
+    Object.entries(props).filter(([name, value]) => {
+      const isValid = validateProp(name, value);
+      if (!isValid) {
+        console.warn(`[@nuxtjs/mdc] removing unsafe attribute: ${name}="${value}"`);
+      }
+      return isValid;
+    })
+  );
+};
+
+function compileHast() {
+  const slugs = new Slugger();
+  function compileToJSON(node, parent) {
+    if (node.type === "root") {
+      return {
+        type: "root",
+        children: node.children.map((child) => compileToJSON(child, node)).filter(Boolean)
+      };
+    }
+    if (node.type === "element") {
+      if (node.tagName === "p" && node.children.every((child) => child.type === "text" && /^\s*$/.test(child.value))) {
+        return null;
+      }
+      if (node.tagName === "li") {
+        let hasPreviousParagraph = false;
+        node.children = node.children?.flatMap((child) => {
+          if (child.type === "element" && child.tagName === "p") {
+            if (hasPreviousParagraph) {
+              child.children.unshift({
+                type: "element",
+                tagName: "br",
+                properties: {},
+                children: []
+              });
+            }
+            hasPreviousParagraph = true;
+            return child.children;
+          }
+          return child;
+        });
+      }
+      if (node.tagName?.match(/^h\d$/)) {
+        node.properties = node.properties || {};
+        node.properties.id = String(node.properties?.id || slugs.slug(toString$1(node))).replace(/-+/g, "-").replace(/^-|-$/g, "").replace(/^(\d)/, "_$1");
+      }
+      if (node.tagName === "component-slot") {
+        node.tagName = "template";
+      }
+      return {
+        type: "element",
+        tag: node.tagName,
+        props: validateProps(node.properties),
+        children: node.children.map((child) => compileToJSON(child, node)).filter(Boolean)
+      };
+    }
+    if (node.type === "text") {
+      if (node.value !== "\n" || parent?.properties?.emptyLinePlaceholder) {
+        return {
+          type: "text",
+          value: node.value
+        };
+      }
+    }
+    return null;
+  }
+  this.Compiler = (tree) => {
+    const body = compileToJSON(tree);
+    let excerpt = void 0;
+    const excerptIndex = tree.children.findIndex((node) => node.type === "comment" && node.value?.trim() === "more");
+    if (excerptIndex !== -1) {
+      excerpt = compileToJSON({
+        type: "root",
+        children: tree.children.slice(0, excerptIndex)
+      });
+      if (excerpt.children.find((node) => node.type === "element" && node.tag === "pre")) {
+        const lastChild = body.children[body.children.length - 1];
+        if (lastChild.type === "element" && lastChild.tag === "style") {
+          excerpt.children.push(lastChild);
+        }
+      }
+    }
+    return {
+      body,
+      excerpt
+    };
+  };
+}
+
+function emphasis(state, node) {
+  const result = {
+    type: "element",
+    tagName: "em",
+    properties: node.attributes || {},
+    children: state.all(node)
+  };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+function parseThematicBlock(lang) {
+  if (!lang?.trim()) {
+    return {
+      language: void 0,
+      highlights: void 0,
+      filename: void 0,
+      meta: void 0
+    };
+  }
+  const languageMatches = lang.replace(/[{|[](.+)/, "").match(/^[^ \t]+(?=[ \t]|$)/);
+  const highlightTokensMatches = lang.match(/{([^}]*)}/);
+  const filenameMatches = lang.match(/\[((\\]|[^\]])*)\]/);
+  const meta = lang.replace(languageMatches?.[0] ?? "", "").replace(highlightTokensMatches?.[0] ?? "", "").replace(filenameMatches?.[0] ?? "", "").trim();
+  return {
+    language: languageMatches?.[0] || void 0,
+    highlights: parseHighlightedLines(highlightTokensMatches?.[1] || void 0),
+    // https://github.com/nuxt/content/pull/2169
+    filename: filenameMatches?.[1].replace(/\\]/g, "]") || void 0,
+    meta
+  };
+}
+function parseHighlightedLines(lines) {
+  const lineArray = String(lines || "").split(",").filter(Boolean).flatMap((line) => {
+    const [start, end] = line.trim().split("-").map((a) => Number(a.trim()));
+    return Array.from({ length: (end || start) - start + 1 }).map((_, i) => start + i);
+  });
+  return lineArray.length ? lineArray : void 0;
+}
+const TAG_NAME_REGEXP = /^<\/?([A-Za-z0-9-_]+) ?[^>]*>/;
+function getTagName(value) {
+  const result = String(value).match(TAG_NAME_REGEXP);
+  return result && result[1];
+}
+
+const code = (state, node) => {
+  const lang = (node.lang || "") + " " + (node.meta || "");
+  const { language, highlights, filename, meta } = parseThematicBlock(lang);
+  const value = node.value ? detab(node.value + "\n") : "";
+  let result = {
+    type: "element",
+    tagName: "code",
+    properties: { __ignoreMap: "" },
+    children: [{ type: "text", value }]
+  };
+  if (meta) {
+    result.data = {
+      // @ts-ignore
+      meta
+    };
+  }
+  state.patch(node, result);
+  result = state.applyData(node, result);
+  const properties = {
+    language,
+    filename,
+    highlights,
+    meta,
+    code: value
+  };
+  if (language) {
+    properties.className = ["language-" + language];
+  }
+  result = { type: "element", tagName: "pre", properties, children: [result] };
+  state.patch(node, result);
+  return result;
+};
+
+function html(state, node) {
+  const tagName = getTagName(node.value);
+  if (tagName && /[A-Z]/.test(tagName)) {
+    node.value = node.value.replace(tagName, kebabCase(tagName));
+  }
+  if (state.dangerous || state.options?.allowDangerousHtml) {
+    const result = { type: "raw", value: node.value };
+    state.patch(node, result);
+    return state.applyData(node, result);
+  }
+  return void 0;
+}
+
+function link$1(state, node) {
+  const properties = {
+    ...node.attributes || {},
+    href: normalizeUri(node.url)
+  };
+  if (node.title !== null && node.title !== void 0) {
+    properties.title = node.title;
+  }
+  const result = {
+    type: "element",
+    tagName: "a",
+    properties,
+    children: state.all(node)
+  };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+function list(state, node) {
+  const properties = {};
+  const results = state.all(node);
+  let index = -1;
+  if (typeof node.start === "number" && node.start !== 1) {
+    properties.start = node.start;
+  }
+  while (++index < results.length) {
+    const child = results[index];
+    if (child.type === "element" && child.tagName === "li" && child.properties && Array.isArray(child.properties.className) && child.properties.className.includes("task-list-item")) {
+      properties.className = ["contains-task-list"];
+      break;
+    }
+  }
+  if ((node.children || []).some((child) => typeof child.checked === "boolean")) {
+    properties.className = ["contains-task-list"];
+  }
+  const result = {
+    type: "element",
+    tagName: node.ordered ? "ol" : "ul",
+    properties,
+    children: state.wrap(results, true)
+  };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+const htmlTags = [
+  "a",
+  "abbr",
+  "address",
+  "area",
+  "article",
+  "aside",
+  "audio",
+  "b",
+  "base",
+  "bdi",
+  "bdo",
+  "blockquote",
+  "body",
+  "br",
+  "button",
+  "canvas",
+  "caption",
+  "cite",
+  "code",
+  "col",
+  "colgroup",
+  "data",
+  "datalist",
+  "dd",
+  "del",
+  "details",
+  "dfn",
+  "dialog",
+  "div",
+  "dl",
+  "dt",
+  "em",
+  "embed",
+  "fieldset",
+  "figcaption",
+  "figure",
+  "footer",
+  "form",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "head",
+  "header",
+  "hgroup",
+  "hr",
+  "html",
+  "i",
+  "iframe",
+  "img",
+  "input",
+  "ins",
+  "kbd",
+  "label",
+  "legend",
+  "li",
+  "link",
+  "main",
+  "map",
+  "mark",
+  "math",
+  "menu",
+  "menuitem",
+  "meta",
+  "meter",
+  "nav",
+  "noscript",
+  "object",
+  "ol",
+  "optgroup",
+  "option",
+  "output",
+  "p",
+  "param",
+  "picture",
+  "pre",
+  "progress",
+  "q",
+  "rb",
+  "rp",
+  "rt",
+  "rtc",
+  "ruby",
+  "s",
+  "samp",
+  "script",
+  "section",
+  "select",
+  "slot",
+  "small",
+  "source",
+  "span",
+  "strong",
+  "style",
+  "sub",
+  "summary",
+  "sup",
+  "svg",
+  "table",
+  "tbody",
+  "td",
+  "template",
+  "textarea",
+  "tfoot",
+  "th",
+  "thead",
+  "time",
+  "title",
+  "tr",
+  "track",
+  "u",
+  "ul",
+  "var",
+  "video",
+  "wbr"
+];
+
+function paragraph(state, node) {
+  if (node.children && node.children[0] && node.children[0].type === "html") {
+    const tagName = kebabCase(getTagName(node.children[0].value) || "div");
+    if (!htmlTags.includes(tagName)) {
+      return state.all(node);
+    }
+  }
+  const result = {
+    type: "element",
+    tagName: "p",
+    properties: {},
+    children: state.all(node)
+  };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+function image(state, node) {
+  const properties = { ...node.attributes, src: normalizeUri(node.url) };
+  if (node.alt !== null && node.alt !== void 0) {
+    properties.alt = node.alt;
+  }
+  if (node.title !== null && node.title !== void 0) {
+    properties.title = node.title;
+  }
+  const result = { type: "element", tagName: "img", properties, children: [] };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+function strong(state, node) {
+  const result = {
+    type: "element",
+    tagName: "strong",
+    properties: node.attributes || {},
+    children: state.all(node)
+  };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+function inlineCode(state, node) {
+  const language = node.attributes?.language || node.attributes?.lang;
+  const text = { type: "text", value: node.value.replace(/\r?\n|\r/g, " ") };
+  state.patch(node, text);
+  const result = {
+    type: "element",
+    tagName: "code",
+    properties: node.attributes || {},
+    children: [text]
+  };
+  const classes = (result.properties.class || "").split(" ");
+  delete result.properties.class;
+  if (language) {
+    result.properties.language = language;
+    delete result.properties.lang;
+    classes.push("language-" + language);
+  }
+  result.properties.className = classes.join(" ");
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+
+function containerComponent(state, node) {
+  const result = {
+    type: "element",
+    tagName: node.name,
+    properties: {
+      ...node.attributes,
+      ...node.data?.hProperties
+    },
+    children: state.all(node)
+  };
+  state.patch(node, result);
+  result.attributes = node.attributes;
+  result.fmAttributes = node.fmAttributes;
+  return result;
+}
+
+const handlers$1 = {
+  emphasis,
+  code,
+  link: link$1,
+  paragraph,
+  html,
+  list,
+  image,
+  strong,
+  inlineCode,
+  containerComponent
+};
+
+const defaults$1 = {
+  remark: {
+    plugins: {
+      "remark-mdc": {
+        instance: remarkMDC
+      },
+      "remark-emoji": {
+        instance: remarkEmoji
+      },
+      "remark-gfm": {
+        instance: remarkGFM
+      }
+    }
+  },
+  rehype: {
+    options: {
+      // @ts-ignore
+      handlers: handlers$1,
+      allowDangerousHtml: true
+    },
+    plugins: {
+      "rehype-external-links": {
+        instance: rehypeExternalLinks
+      },
+      "rehype-sort-attribute-values": {
+        instance: rehypeSortAttributeValues
+      },
+      "rehype-sort-attributes": {
+        instance: rehypeSortAttributes
+      },
+      "rehype-raw": {
+        instance: rehypeRaw,
+        options: {
+          passThrough: ["element"]
+        }
+      }
+    }
+  },
+  highlight: false,
+  toc: {
+    searchDepth: 2,
+    depth: 2
+  }
+};
+
+const defaults = {
+  theme: {
+    default: "github-light",
+    dark: "github-dark"
+  },
+  async highlighter(code, lang, theme, highlights) {
+    if (process.browser && window.sessionStorage.getItem("mdc-shiki-highlighter") === "browser") {
+      return Promise.resolve().then(function () { return highlighter; }).then(({ useShikiHighlighter }) => {
+        return useShikiHighlighter().getHighlightedAST(code, lang, theme, { highlights });
+      });
+    }
+    try {
+      return await $fetch("/api/_mdc/highlight", {
+        params: {
+          code,
+          lang,
+          theme: JSON.stringify(theme),
+          highlights: JSON.stringify(highlights)
+        }
+      });
+    } catch (e) {
+      if (process.browser && e?.response?.status === 404) {
+        window.sessionStorage.setItem("mdc-shiki-highlighter", "browser");
+        return this.highlighter?.(code, lang, theme, highlights);
+      }
+    }
+    return Promise.resolve({ tree: [{ type: "text", value: code }], className: "", style: "" });
+  }
+};
+function rehypeShiki(opts = {}) {
+  const options = { ...defaults, ...opts };
+  return async (tree) => {
+    const tasks = [];
+    const styles = [];
+    visit(
+      tree,
+      (node) => ["pre", "code"].includes(node.tagName) && !!node.properties?.language,
+      (node) => {
+        const _node = node;
+        const task = options.highlighter(
+          toString$1(node),
+          _node.properties.language,
+          options.theme,
+          _node.properties.highlights ?? []
+        ).then(({ tree: tree2, className, style, inlineStyle }) => {
+          _node.properties.className = ((_node.properties.className || "") + " " + className).trim();
+          _node.properties.style = ((_node.properties.style || "") + " " + inlineStyle).trim();
+          if (_node.children[0]?.tagName === "code") {
+            _node.children[0].children = tree2;
+          } else {
+            _node.children = tree2[0].children || tree2[0];
+          }
+          if (style)
+            styles.push(style);
+        });
+        tasks.push(task);
+      }
+    );
+    if (tasks.length) {
+      await Promise.all(tasks);
+      tree.children.push({
+        type: "element",
+        tagName: "style",
+        children: [{ type: "text", value: cleanCSS(styles.join("")) }],
+        properties: {}
+      });
+    }
+  };
+}
+const cleanCSS = (css) => {
+  const styles = css.split("}").filter((s) => Boolean(s.trim())).map((s) => s.trim() + "}");
+  return Array.from(new Set(styles)).join("");
+};
+
 function flattenNodeText(node) {
   if (node.type === "text") {
     return node.value || "";
@@ -1891,367 +2359,6 @@ function generateToc(body, options) {
   return toc;
 }
 
-function emphasis(h, node) {
-  return h(node, "em", node.attributes, all(h, node));
-}
-
-function parseThematicBlock(lang) {
-  if (!lang) {
-    return {
-      language: void 0,
-      highlights: void 0,
-      fileName: void 0
-    };
-  }
-  const language = lang.replace(/[{|[](.+)/, "").match(/^[^ \t]+(?=[ \t]|$)/);
-  const highlightTokens = lang.match(/{([^}]+)}/);
-  const filenameTokens = lang.match(/\[(.+)\]/);
-  return {
-    language: language ? language[0] : void 0,
-    highlights: parseHighlightedLines(highlightTokens && highlightTokens[1]),
-    filename: Array.isArray(filenameTokens) ? filenameTokens[1] : void 0
-  };
-}
-function parseHighlightedLines(lines) {
-  const lineArray = String(lines || "").split(",").filter(Boolean).flatMap((line) => {
-    const [start, end] = line.trim().split("-").map((a) => Number(a.trim()));
-    return Array.from({ length: (end || start) - start + 1 }).map((_, i) => start + i);
-  });
-  return lineArray.length ? lineArray : void 0;
-}
-const TAG_NAME_REGEXP = /^<\/?([A-Za-z0-9-_]+) ?[^>]*>/;
-function getTagName(value) {
-  const result = String(value).match(TAG_NAME_REGEXP);
-  return result && result[1];
-}
-function wrap(nodes, loose = false) {
-  const result = [];
-  let index = -1;
-  if (loose) {
-    result.push(u("text", "\n"));
-  }
-  while (++index < nodes.length) {
-    if (index) {
-      result.push(u("text", "\n"));
-    }
-    result.push(nodes[index]);
-  }
-  if (loose && nodes.length > 0) {
-    result.push(u("text", "\n"));
-  }
-  return result;
-}
-
-const code = (h, node) => {
-  const lang = (node.lang || "") + " " + (node.meta || "");
-  const { language, highlights, filename } = parseThematicBlock(lang);
-  const code = node.value ? detab(node.value + "\n") : "";
-  return h(
-    node.position,
-    "code",
-    {
-      language,
-      filename,
-      highlights,
-      meta: node.meta,
-      code
-    },
-    [h(node, "pre", {}, [h(node, "code", { __ignoreMap: "" }, [u("text", code)])])]
-  );
-};
-
-function html(h, node) {
-  const tagName = getTagName(node.value);
-  if (tagName && /[A-Z]/.test(tagName)) {
-    node.value = node.value.replace(tagName, kebabCase(tagName));
-  }
-  if (tagName === "code") {
-    node.value = node.value.replace(tagName, "code-inline");
-  }
-  return h.dangerous ? h.augment(node, u("raw", node.value)) : null;
-}
-
-function heading(h, node) {
-  return h(node, "h" + node.depth, all(h, node));
-}
-
-const SEMVER_REGEX = /^(\d+)(\.\d+)*(\.x)?$/;
-const describeId = (_id) => {
-  const [_source, ...parts] = _id.split(":");
-  const [, filename, _extension] = parts[parts.length - 1].match(/(.*)\.([^.]+)$/);
-  parts[parts.length - 1] = filename;
-  const _path = parts.join("/");
-  return {
-    _source,
-    _path,
-    _extension,
-    _file: _extension ? `${_path}.${_extension}` : _path
-  };
-};
-const pathMeta = defineTransformer({
-  name: "path-meta",
-  extensions: [".*"],
-  transform(content, options = {}) {
-    const { locales = [], defaultLocale = "en" } = options;
-    const { _source, _file, _path, _extension } = describeId(content._id);
-    const parts = _path.split("/");
-    const _locale = locales.includes(parts[0]) ? parts.shift() : defaultLocale;
-    const filePath = generatePath(parts.join("/"));
-    return {
-      _path: filePath,
-      _dir: filePath.split("/").slice(-2)[0],
-      _draft: isDraft(_path),
-      _partial: isPartial(_path),
-      _locale,
-      ...content,
-      // TODO: move title to Markdown parser
-      title: content.title || generateTitle(refineUrlPart(parts[parts.length - 1])),
-      _source,
-      _file,
-      _extension
-    };
-  }
-});
-const isDraft = (path) => !!path.match(/\.draft(\/|\.|$)/);
-const isPartial = (path) => path.split(/[:/]/).some((part) => part.match(/^_.*/));
-const generatePath = (path, { forceLeadingSlash = true } = {}) => {
-  path = path.split("/").map((part) => slugify(refineUrlPart(part), { lower: true })).join("/");
-  return forceLeadingSlash ? withLeadingSlash(withoutTrailingSlash(path)) : path;
-};
-const generateTitle = (path) => path.split(/[\s-]/g).map(pascalCase).join(" ");
-function refineUrlPart(name) {
-  name = name.split(/[/:]/).pop();
-  if (SEMVER_REGEX.test(name)) {
-    return name;
-  }
-  return name.replace(/(\d+\.)?(.*)/, "$2").replace(/^index(\.draft)?$/, "").replace(/\.draft$/, "");
-}
-
-function link(h, node) {
-  const props = {
-    ...node.attributes || {},
-    href: encode(normalizeLink(node.url))
-  };
-  if (node.title !== null && node.title !== void 0) {
-    props.title = node.title;
-  }
-  return h(node, "a", props, all(h, node));
-}
-function normalizeLink(link2) {
-  if (link2.endsWith(".md") && (isRelative(link2) || !/^https?/.test(link2) && !link2.startsWith("/"))) {
-    return generatePath(link2.replace(/\.md$/, ""), { forceLeadingSlash: false });
-  } else {
-    return link2;
-  }
-}
-
-function list(h, node) {
-  const props = {};
-  const name = `${node.ordered ? "ol" : "ul"}`;
-  if (typeof node.start === "number" && node.start !== 1) {
-    props.start = node.start;
-  }
-  if ((node.children || []).some((child) => typeof child.checked === "boolean")) {
-    props.className = ["contains-task-list"];
-  }
-  return h(node, name, props, wrap(all(h, node), true));
-}
-
-function listItem(h, node, parent) {
-  const result = all(h, node);
-  const loose = parent ? listLoose(parent) : listItemLoose(node);
-  const props = {};
-  let wrapped = [];
-  let index;
-  let child;
-  if (typeof node.checked === "boolean") {
-    result.unshift(
-      h({}, "input", {
-        type: "checkbox",
-        checked: node.checked,
-        disabled: true
-      })
-    );
-    props.className = ["task-list-item"];
-  }
-  const length = result.length;
-  index = -1;
-  while (++index < length) {
-    child = result[index];
-    if (child.tagName === "p" && !loose) {
-      wrapped = wrapped.concat(child.children || []);
-    } else {
-      wrapped.push(child);
-    }
-  }
-  return h(node, "li", props, wrapped);
-}
-function listLoose(node) {
-  let loose = node.spread;
-  const children = node.children;
-  const length = children.length;
-  let index = -1;
-  while (!loose && ++index < length) {
-    loose = listItemLoose(children[index]);
-  }
-  return loose;
-}
-function listItemLoose(node) {
-  const spread = node.spread;
-  const children = node.children || [];
-  return spread === void 0 || spread === null ? children.length > 1 : spread;
-}
-
-function table(h, node) {
-  const rows = node.children;
-  const align = node.align || [];
-  const result = rows.map((row, index) => {
-    const childres = row.children;
-    const name = index === 0 ? "th" : "td";
-    let pos = node.align ? align.length : childres.length;
-    const out = [];
-    while (pos--) {
-      const cell = childres[pos];
-      out[pos] = h(cell, name, { align: align[pos] }, cell ? all(h, cell) : []);
-    }
-    return h(row, "tr", wrap(out, true));
-  });
-  const body = result[1] && h(
-    {
-      start: position(result[1]).start,
-      end: position(result[result.length - 1]).end
-    },
-    "tbody",
-    wrap(result.slice(1), true)
-  );
-  return h(node, "table", wrap([h(result[0].position, "thead", wrap([result[0]], true))].concat(body || []), true));
-}
-
-function paragraph(h, node) {
-  if (node.children && node.children[0] && node.children[0].type === "html") {
-    const tagName = kebabCase(getTagName(node.children[0].value) || "div");
-    if (!htmlTags.includes(tagName)) {
-      return all(h, node);
-    }
-  }
-  return h(node, "p", all(h, node));
-}
-
-function image(h, node) {
-  const props = {
-    ...node.attributes,
-    src: encode(node.url),
-    alt: node.alt
-  };
-  if (node.title !== null && node.title !== void 0) {
-    props.title = node.title;
-  }
-  return h(node, "img", props);
-}
-
-function blockquote(h, node) {
-  return h(node, "blockquote", wrap(all(h, node), true));
-}
-
-function strong(h, node) {
-  return h(node, "strong", node.attributes, all(h, node));
-}
-
-function inlineCode(h, node) {
-  return h(node, "code-inline", node.attributes, [
-    // @ts-ignore
-    u("text", node.value.replace(/\r?\n|\r/g, " "))
-  ]);
-}
-
-function thematicBreak(h, node) {
-  return h(node, "hr");
-}
-
-function containerComponent(h, node) {
-  const hast = h(node, node.tagName, node.attributes, all(h, node));
-  hast.attributes = node.attributes;
-  hast.fmAttributes = node.fmAttributes;
-  return hast;
-}
-
-const handlers$1 = {
-  emphasis,
-  code,
-  paragraph,
-  html,
-  link,
-  list,
-  listItem,
-  heading,
-  table,
-  image,
-  blockquote,
-  strong,
-  inlineCode,
-  thematicBreak,
-  containerComponent
-};
-
-function compiler(_options) {
-  function parseAsJSON(node) {
-    if (Array.isArray(node)) {
-      return node.map(parseAsJSON).filter(Boolean);
-    }
-    if (node.tagName?.startsWith("h") && node.properties.id) {
-      node.properties.id = node.properties.id.replace(/-+/g, "-").replace(/-$/, "").replace(/^-/, "");
-    }
-    if (node.type === "element") {
-      if (node.tagName === "li") {
-        let hasPreviousParagraph = false;
-        node.children = node.children.flatMap((child) => {
-          if (child.tagName === "p") {
-            if (hasPreviousParagraph) {
-              child.children.unshift({
-                type: "element",
-                tagName: "br",
-                properties: {}
-              });
-            }
-            hasPreviousParagraph = true;
-            return child.children;
-          }
-          return child;
-        });
-      }
-      if (node.tagName === "component-slot") {
-        node.tagName = "template";
-      }
-      return {
-        type: "element",
-        tag: node.tagName,
-        props: node.properties,
-        children: parseAsJSON(node.children || [])
-      };
-    }
-    if (node.type === "text") {
-      if (node.value === "\n") {
-        return null;
-      }
-      return {
-        type: "text",
-        value: node.value
-      };
-    }
-    if (node.type === "comment") {
-      return null;
-    }
-    node.children = parseAsJSON(node.children || []);
-    return node;
-  }
-  this.Compiler = function(root) {
-    return {
-      type: "root",
-      children: parseAsJSON(root.children || [])
-    };
-  };
-}
-
 function isTag(vnode, tag) {
   if (vnode.type === tag) {
     return true;
@@ -2265,13 +2372,13 @@ function isTag(vnode, tag) {
   return false;
 }
 function isText(vnode) {
-  return isTag(vnode, "text") || typeof vnode.children === "string";
+  return isTag(vnode, "text") || isTag(vnode, Symbol.for("v-txt"));
 }
 function nodeChildren(node) {
   if (Array.isArray(node.children) || typeof node.children === "string") {
     return node.children;
   }
-  if (typeof node.children.default === "function") {
+  if (typeof node.children?.default === "function") {
     return node.children.default();
   }
   return [];
@@ -2284,52 +2391,57 @@ function nodeTextContent(node) {
     return node.map(nodeTextContent).join("");
   }
   if (isText(node)) {
-    return node.children || node.value;
+    return node.children || node.value || "";
   }
   const children = nodeChildren(node);
   if (Array.isArray(children)) {
-    return children.map(nodeTextContent).join("");
+    return children.map(nodeTextContent).filter(Boolean).join("");
   }
   return "";
 }
 
-const usePlugins = (plugins, stream) => {
-  for (const plugin of Object.values(plugins)) {
-    if (plugin) {
-      const { instance, ...options } = plugin;
-      stream.use(instance, options);
-    }
+let moduleOptions;
+const parseMarkdown = async (md, opts = {}) => {
+  if (!moduleOptions) {
+    moduleOptions = await import(
+      'file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/.nuxt/mdc-imports.mjs'
+      /* @vite-ignore */
+    ).catch(() => ({}));
   }
-};
-function generateBody(content, options) {
-  const rehypeOptions = {
-    handlers: handlers$1,
-    allowDangerousHtml: true
+  const options = defu$1(opts, {
+    remark: { plugins: moduleOptions?.remarkPlugins },
+    rehype: { plugins: moduleOptions?.rehypePlugins },
+    highlight: moduleOptions?.highlight
+  }, defaults$1);
+  const { content, data: frontmatter } = await parseFrontMatter(md);
+  const processor = unified();
+  processor.use(remarkParse);
+  await useProcessorPlugins(processor, options.remark?.plugins);
+  processor.use(remark2rehype, options.rehype?.options);
+  if (options.highlight) {
+    processor.use(rehypeShiki, options.highlight);
+  }
+  await useProcessorPlugins(processor, options.rehype?.plugins);
+  processor.use(compileHast);
+  const processedFile = await processor.process({ value: content, data: frontmatter });
+  const result = processedFile.result;
+  const data = Object.assign(
+    contentHeading(result.body),
+    frontmatter,
+    processedFile?.data || {}
+  );
+  let toc;
+  if (data.toc !== false) {
+    const tocOption = defu$1(data.toc || {}, options.toc);
+    toc = generateToc(result.body, tocOption);
+  }
+  return {
+    data,
+    body: result.body,
+    excerpt: result.excerpt,
+    toc
   };
-  return new Promise((resolve, reject) => {
-    const stream = unified().use(remarkParse);
-    if (options.mdc) {
-      stream.use(remarkMDC);
-    }
-    usePlugins(options.remarkPlugins, stream);
-    stream.use(remark2rehype, rehypeOptions);
-    usePlugins(options.rehypePlugins, stream);
-    stream.use(compiler, options);
-    stream.process(
-      {
-        value: content,
-        data: options.data
-      },
-      (error, file) => {
-        if (error) {
-          return reject(error);
-        }
-        Object.assign(options.data, file?.data || {});
-        resolve(file?.result);
-      }
-    );
-  });
-}
+};
 function contentHeading(body) {
   let title = "";
   let description = "";
@@ -2348,81 +2460,194 @@ function contentHeading(body) {
   };
 }
 
-const useDefaultOptions = () => ({
-  mdc: true,
-  toc: {
-    depth: 2,
-    searchDepth: 2
-  },
-  tags: {},
-  remarkPlugins: {
-    "remark-emoji": {
-      instance: remarkEmoji
-    },
-    "remark-squeeze-paragraphs": {
-      instance: remarkSqueezeParagraphs
-    },
-    "remark-gfm": {
-      instance: remarkGfm
+const useShikiHighlighter = createSingleton((opts) => {
+  const { theme, preload, wrapperStyle } = opts || {};
+  let promise;
+  const getShikiHighlighter = () => {
+    if (!promise) {
+      promise = getHighlighter({
+        themes: [
+          theme?.default || theme || "dark-plus"
+        ],
+        langs: [
+          ...preload || [],
+          "diff",
+          "json",
+          "js",
+          "ts",
+          "css",
+          "shell",
+          "html",
+          "md",
+          "yaml",
+          "vue",
+          "mdc"
+        ]
+      }).then((highlighter) => {
+        const themes = Object.values(typeof theme === "string" ? { default: theme } : theme || {});
+        if (themes.length) {
+          return Promise.all(themes.map((theme2) => highlighter.loadTheme(theme2))).then(() => highlighter);
+        }
+        return highlighter;
+      });
     }
-  },
-  rehypePlugins: {
-    "rehype-slug": {
-      instance: rehypeSlug
-    },
-    "rehype-external-links": {
-      instance: rehypeExternalLinks
-    },
-    "rehype-sort-attribute-values": {
-      instance: rehypeSortAttributeValues
-    },
-    "rehype-sort-attributes": {
-      instance: rehypeSortAttributes
-    },
-    "rehype-raw": {
-      instance: rehypeRaw,
-      passThrough: ["element"]
-    }
-  }
-});
-async function parse(file, userOptions = {}) {
-  const options = defu(userOptions, useDefaultOptions());
-  const { content, data } = await parseFrontMatter(file);
-  const body = await generateBody(content, { ...options, data });
-  let toc;
-  if (data.toc !== false) {
-    const tocOption = defu(data.toc || {}, options.toc);
-    toc = generateToc(body, tocOption);
-  }
-  const excerptString = useExcerpt(content);
-  const excerpt = excerptString ? await generateBody(excerptString, { ...options, data }) : void 0;
-  const heading = contentHeading(body);
-  return {
-    body: {
-      ...body,
-      toc
-    },
-    meta: {
-      _empty: content.trim().length === 0,
-      title: heading.title,
-      description: heading.description,
-      excerpt,
-      ...data
+    return promise;
+  };
+  const getHighlightedAST = async (code, lang, theme2, opts2) => {
+    try {
+      const highlighter = await getShikiHighlighter();
+      const { highlights = [] } = opts2 || {};
+      const themesObject = typeof theme2 === "string" ? { default: theme2 } : theme2 || {};
+      const themeNames = Object.values(themesObject);
+      if (themeNames.length) {
+        await Promise.all(themeNames.map((theme3) => highlighter.loadTheme(theme3)));
+      }
+      if (lang && !highlighter.getLoadedLanguages().includes(lang)) {
+        await highlighter.loadLanguage(lang);
+      }
+      const root = highlighter.codeToHast(code.trimEnd(), {
+        lang,
+        themes: themesObject,
+        defaultColor: false,
+        transforms: {
+          line(node, line) {
+            node.properties ||= {};
+            if (highlights.includes(line)) {
+              node.properties.class = (node.properties.class || "") + " highlight";
+            }
+            node.properties.line = line;
+            if (node.children.length === 0) {
+              node.children.push({
+                type: "element",
+                tagName: "span",
+                properties: {
+                  emptyLinePlaceholder: true
+                },
+                children: [{ type: "text", value: "" }]
+              });
+            }
+            const last = node.children.at(-1);
+            if (last?.type === "element" && last.tagName === "span") {
+              const text = last.children.at(-1);
+              if (text?.type === "text")
+                text.value += "\n";
+            }
+          }
+        }
+      });
+      const preEl = root.children[0];
+      const codeEl = preEl.children[0];
+      preEl.properties.style = wrapperStyle ? typeof wrapperStyle === "string" ? wrapperStyle : preEl.properties.style : "";
+      const styles = [];
+      Object.keys(themesObject).forEach((color) => {
+        const colorScheme = color !== "default" ? `.${color}` : "";
+        styles.push(
+          wrapperStyle ? `${colorScheme} .shiki,` : "",
+          `html .${color} .shiki span {`,
+          `color: var(--shiki-${color});`,
+          `background: var(--shiki-${color}-bg);`,
+          `font-style: var(--shiki-${color}-font-style);`,
+          `font-weight: var(--shiki-${color}-font-weight);`,
+          `text-decoration: var(--shiki-${color}-text-decoration);`,
+          "}"
+        );
+        styles.unshift(
+          `html${colorScheme} .shiki span {`,
+          `color: var(--shiki-${color});`,
+          `background: var(--shiki-${color}-bg);`,
+          `font-style: var(--shiki-${color}-font-style);`,
+          `font-weight: var(--shiki-${color}-font-weight);`,
+          `text-decoration: var(--shiki-${color}-text-decoration);`,
+          "}"
+        );
+      });
+      return {
+        tree: codeEl.children,
+        className: preEl.properties.class,
+        inlineStyle: preEl.properties.style,
+        style: styles.join("")
+      };
+    } catch (error) {
+      console.warn("[@nuxtjs/mdc] Failed to highlight code block", error.message);
+      return {
+        tree: [{ type: "text", value: code }],
+        className: "",
+        inlineStyle: "",
+        style: ""
+      };
     }
   };
+  return {
+    getHighlightedAST
+  };
+});
+function createSingleton(fn) {
+  let instance;
+  return (...args) => {
+    if (!instance) {
+      instance = fn(...args);
+    }
+    return instance;
+  };
 }
-function useExcerpt(content, delimiter = /<!--\s*?more\s*?-->/i) {
-  if (!delimiter) {
-    return "";
+
+const highlighter = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  useShikiHighlighter: useShikiHighlighter
+});
+
+const SEMVER_REGEX = /^(\d+)(\.\d+)*(\.x)?$/;
+const describeId = (id) => {
+  const [_source, ...parts] = id.split(":");
+  const [, filename, _extension] = parts[parts.length - 1]?.match(/(.*)\.([^.]+)$/) || [];
+  if (filename) {
+    parts[parts.length - 1] = filename;
   }
-  let idx = -1;
-  const match = delimiter.exec(content);
-  if (match) {
-    idx = match.index;
+  const _path = (parts || []).join("/");
+  return {
+    _source,
+    _path,
+    _extension,
+    _file: _extension ? `${_path}.${_extension}` : _path
+  };
+};
+const pathMeta = defineTransformer({
+  name: "path-meta",
+  extensions: [".*"],
+  transform(content, options = {}) {
+    const { locales = [], defaultLocale = "en", respectPathCase = false } = options;
+    const { _source, _file, _path, _extension } = describeId(content._id);
+    const parts = _path.split("/");
+    const _locale = locales.includes(parts[0]) ? parts.shift() : defaultLocale;
+    const filePath = generatePath(parts.join("/"), { respectPathCase });
+    return {
+      _path: filePath,
+      _dir: filePath.split("/").slice(-2)[0],
+      _draft: content._draft ?? isDraft(_path),
+      _partial: isPartial(_path),
+      _locale,
+      ...content,
+      // TODO: move title to Markdown parser
+      title: content.title || generateTitle(refineUrlPart(parts[parts.length - 1])),
+      _source,
+      _file,
+      _extension
+    };
   }
-  if (idx !== -1) {
-    return content.slice(0, idx);
+});
+const isDraft = (path) => !!path.match(/\.draft(\/|\.|$)/);
+const isPartial = (path) => path.split(/[:/]/).some((part) => part.match(/^_.*/));
+const generatePath = (path, { forceLeadingSlash = true, respectPathCase = false } = {}) => {
+  path = path.split("/").map((part) => slugify(refineUrlPart(part), { lower: !respectPathCase })).join("/");
+  return forceLeadingSlash ? withLeadingSlash(withoutTrailingSlash(path)) : path;
+};
+const generateTitle = (path) => path.split(/[\s-]/g).map(pascalCase).join(" ");
+function refineUrlPart(name) {
+  name = name.split(/[/:]/).pop();
+  if (SEMVER_REGEX.test(name)) {
+    return name;
   }
+  return name.replace(/(\d+\.)?(.*)/, "$2").replace(/^index(\.draft)?$/, "").replace(/\.draft$/, "");
 }
 
 const markdown = defineTransformer({
@@ -2432,10 +2657,28 @@ const markdown = defineTransformer({
     const config = { ...options };
     config.rehypePlugins = await importPlugins(config.rehypePlugins);
     config.remarkPlugins = await importPlugins(config.remarkPlugins);
-    const parsed = await parse(content, config);
+    const parsed = await parseMarkdown(content, {
+      highlight: options.highlight,
+      remark: {
+        plugins: config.remarkPlugins
+      },
+      rehype: {
+        options: {
+          handlers: {
+            link
+          }
+        },
+        plugins: config.rehypePlugins
+      },
+      toc: config.toc
+    });
     return {
-      ...parsed.meta,
-      body: parsed.body,
+      ...parsed.data,
+      excerpt: parsed.excerpt,
+      body: {
+        ...parsed.body,
+        toc: parsed.toc
+      },
       _type: "markdown",
       _id
     };
@@ -2450,7 +2693,7 @@ async function importPlugins(plugins = {}) {
           /* @vite-ignore */
           name
         ).then((m) => m.default || m),
-        ...plugin
+        options: plugin
       };
     } else {
       resolvedPlugins[name] = false;
@@ -2458,12 +2701,38 @@ async function importPlugins(plugins = {}) {
   }
   return resolvedPlugins;
 }
+function link(state, node) {
+  const properties = {
+    ...node.attributes || {},
+    href: normalizeUri(normalizeLink(node.url))
+  };
+  if (node.title !== null && node.title !== void 0) {
+    properties.title = node.title;
+  }
+  const result = {
+    type: "element",
+    tagName: "a",
+    properties,
+    children: state.all(node)
+  };
+  state.patch(node, result);
+  return state.applyData(node, result);
+}
+function normalizeLink(link2) {
+  const match = link2.match(/#.+$/);
+  const hash = match ? match[0] : "";
+  if (link2.replace(/#.+$/, "").endsWith(".md") && (isRelative(link2) || !/^https?/.test(link2) && !link2.startsWith("/"))) {
+    return generatePath(link2.replace(".md" + hash, ""), { forceLeadingSlash: false }) + hash;
+  } else {
+    return link2;
+  }
+}
 
 const yaml = defineTransformer({
   name: "Yaml",
   extensions: [".yml", ".yaml"],
-  parse: async (_id, content) => {
-    const { data } = await parseFrontMatter(`---
+  parse: (_id, content) => {
+    const { data } = parseFrontMatter(`---
 ${content}
 ---`);
     let parsed = data;
@@ -2479,859 +2748,6 @@ ${content}
   }
 });
 
-const grammar = {
-  "information_for_contributors": [
-    "This file has been converted from https://github.com/docusgen/vscode-extension/blob/main/syntaxes/mdc.tmLanguage.json",
-    "If you want to provide a fix or improvement, please create a pull request against the original repository.",
-    "Once accepted there, we are happy to receive an update request."
-  ],
-  "version": "https://github.com/docusgen/vscode-extension/blob/1303abd16342880a42a4d143a660da049c79ea6c/syntaxes/mdc.tmLanguage.json",
-  "name": "markdown",
-  "injectionSelector": "L:text.html.markdown",
-  "scopeName": "text.markdown.mdc",
-  "patterns": [
-    {
-      "include": "text.html.markdown#frontMatter"
-    },
-    {
-      "include": "#component_block"
-    },
-    {
-      "include": "#block"
-    }
-  ],
-  "repository": {
-    "block": {
-      "comment": "Same as `text.html.markdown#block`, but without `raw_block`",
-      "patterns": [
-        {
-          "include": "#component_block"
-        },
-        {
-          "include": "text.html.markdown#separator"
-        },
-        {
-          "include": "#heading"
-        },
-        {
-          "include": "#blockquote"
-        },
-        {
-          "include": "#lists"
-        },
-        {
-          "include": "#paragraph"
-        },
-        {
-          "include": "text.html.markdown#fenced_code_block"
-        },
-        {
-          "include": "text.html.markdown#link-def"
-        },
-        {
-          "include": "text.html.markdown#html"
-        }
-      ]
-    },
-    "inline": {
-      "patterns": [
-        {
-          "include": "#component_inline"
-        },
-        {
-          "include": "#span"
-        },
-        {
-          "include": "#markdown_attributes"
-        }
-      ]
-    },
-    "markdown_attributes": {
-      "match": "(?x)([^ ])(               # attributes\n    ({)\n      ([^{]*)\n    (})\n  )",
-      "name": "markup.component.attribute",
-      "captures": {
-        "4": {
-          "patterns": [
-            {
-              "include": "#attribute"
-            }
-          ]
-        }
-      }
-    },
-    "span": {
-      "match": "(?x)\n  (\\[)           # Open\n    ([^]]*)\n  (\\])\n  (               # attributes\n    ({)\n      ([^{]*)\n    (})\n  )?",
-      "name": "markup.component.span",
-      "captures": {
-        "2": {
-          "name": "string.other.link.description.title.markdown"
-        },
-        "4": {
-          "patterns": [
-            {
-              "include": "#attributes"
-            }
-          ]
-        }
-      }
-    },
-    "attributes": {
-      "match": "(?x)(               # attributes\n    ({)\n      ([^{]*)\n    (})\n  )",
-      "name": "markup.attributes",
-      "captures": {
-        "3": {
-          "patterns": [
-            {
-              "include": "#attribute"
-            }
-          ]
-        }
-      }
-    },
-    "component_inline": {
-      "match": "(?x)\n  (^|\\G|\\s+)\n  (:)           # component colon\n  (?i:             # component name\n    (\\w[\\w\\d-]*)\n  )\n  (\n      ({[^}]*})        # attributes\n      (\\[[^\\]]*\\]?) # slot\n      # reverse order\n    | (\\[[^\\]]*\\])  # slot\n      ({[^}]*})?       # attributes\n  )?",
-      "name": "markup.component.inline",
-      "captures": {
-        "2": {
-          "name": "punctuation.definition.tag.start.component"
-        },
-        "3": {
-          "name": "entity.name.tag.component"
-        },
-        "5": {
-          "patterns": [
-            {
-              "include": "#attributes"
-            }
-          ]
-        },
-        "6": {
-          "patterns": [
-            {
-              "include": "#span"
-            }
-          ]
-        },
-        "7": {
-          "patterns": [
-            {
-              "include": "#span"
-            }
-          ]
-        },
-        "8": {
-          "patterns": [
-            {
-              "include": "#attributes"
-            }
-          ]
-        }
-      }
-    },
-    "component_block": {
-      "begin": "(?x)\n  (^|\\G)(\\s*)\n  (:{2,})     # component colons\n  (?i:\n    (\\w[\\w\\d-]+)   # component name\n    (                 # folowing spaces or attributes\n        \\s*\n      | {([^{]*)}\n    )\n    $\n  )",
-      "name": "markup.component.block",
-      "end": "(^|\\G)(\\2)(\\3)\\s*$",
-      "beginCaptures": {
-        "4": {
-          "name": "entity.name.tag.component"
-        },
-        "5": {
-          "patterns": [
-            {
-              "include": "#attribute"
-            }
-          ]
-        }
-      },
-      "patterns": [
-        {
-          "include": "#content"
-        }
-      ]
-    },
-    "content": {
-      "begin": "(^|\\G)(\\s*)(.*)",
-      "while": "(^|\\G)(?!\\s*([:]{2,})\\s*$)",
-      "contentName": "meta.embedded.block.component",
-      "patterns": [
-        {
-          "begin": "(^|\\G)(\\s*)(-{3})(\\s*)$",
-          "end": "(^|\\G)(\\s*(-{3})(\\s*)$)",
-          "patterns": [
-            {
-              "include": "source.yaml"
-            }
-          ]
-        },
-        {
-          "match": "^(\\s*)(#[\\w\\-\\_]*)\\s*(<!--(.*)-->)?$",
-          "captures": {
-            "2": {
-              "name": "entity.other.attribute-name.html"
-            },
-            "3": {
-              "name": "comment.block.html"
-            }
-          }
-        },
-        {
-          "comment": "Block Repository created to disable 4-space raw block inside components",
-          "include": "#block"
-        }
-      ]
-    },
-    "attribute": {
-      "patterns": [
-        {
-          "match": `(?x)
-  (
-    ([^=><\\s]*)  # attribute name
-    (             # attribute value
-        =["]([^"]*)(["])|[']([^']*)(['])
-      | =[^\\s'"]*
-    )?
-    \\s*
-  )`,
-          "captures": {
-            "2": {
-              "name": "entity.other.attribute-name.html"
-            },
-            "3": {
-              "patterns": [
-                {
-                  "include": "#attribute-interior"
-                }
-              ]
-            }
-          }
-        }
-      ]
-    },
-    "attribute-interior": {
-      "comment": "https://github.com/microsoft/vscode/blob/08d59c432609ae9306eb3889815977e93bb548de/extensions/html/syntaxes/html.tmLanguage.json#L376",
-      "patterns": [
-        {
-          "begin": "=",
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.separator.key-value.html"
-            }
-          },
-          "end": "(?<=[^\\s=])(?!\\s*=)|(?=/?>)",
-          "patterns": [
-            {
-              "match": "([^\\s\"'=<>`/]|/(?!>))+",
-              "name": "string.unquoted.html"
-            },
-            {
-              "begin": '"',
-              "beginCaptures": {
-                "0": {
-                  "name": "punctuation.definition.string.begin.html"
-                }
-              },
-              "end": '"',
-              "endCaptures": {
-                "0": {
-                  "name": "punctuation.definition.string.end.html"
-                }
-              },
-              "name": "string.quoted.double.html",
-              "patterns": [
-                {
-                  "include": "#entities"
-                }
-              ]
-            },
-            {
-              "begin": "'",
-              "beginCaptures": {
-                "0": {
-                  "name": "punctuation.definition.string.begin.html"
-                }
-              },
-              "end": "'",
-              "endCaptures": {
-                "0": {
-                  "name": "punctuation.definition.string.end.html"
-                }
-              },
-              "name": "string.quoted.single.html",
-              "patterns": [
-                {
-                  "include": "#entities"
-                }
-              ]
-            },
-            {
-              "match": "=",
-              "name": "invalid.illegal.unexpected-equals-sign.html"
-            }
-          ]
-        }
-      ]
-    },
-    "entities": {
-      "comment": "https://github.com/microsoft/vscode/blob/08d59c432609ae9306eb3889815977e93bb548de/extensions/html/syntaxes/html.tmLanguage.json#L532",
-      "patterns": [
-        {
-          "captures": {
-            "1": {
-              "name": "punctuation.definition.entity.html"
-            },
-            "912": {
-              "name": "punctuation.definition.entity.html"
-            }
-          },
-          "comment": "Yes this is a bit ridiculous, there are quite a lot of these",
-          "match": "(?x)\n						(&)	(?=[a-zA-Z])\n						(\n							(a(s(ymp(eq)?|cr|t)|n(d(slope|d|v|and)?|g(s(t|ph)|zarr|e|le|rt(vb(d)?)?|msd(a(h|c|d|e|f|a|g|b))?)?)|c(y|irc|d|ute|E)?|tilde|o(pf|gon)|uml|p(id|os|prox(eq)?|e|E|acir)?|elig|f(r)?|w(conint|int)|l(pha|e(ph|fsym))|acute|ring|grave|m(p|a(cr|lg))|breve)|A(s(sign|cr)|nd|MP|c(y|irc)|tilde|o(pf|gon)|uml|pplyFunction|fr|Elig|lpha|acute|ring|grave|macr|breve))\n						  | (B(scr|cy|opf|umpeq|e(cause|ta|rnoullis)|fr|a(ckslash|r(v|wed))|reve)|b(s(cr|im(e)?|ol(hsub|b)?|emi)|n(ot|e(quiv)?)|c(y|ong)|ig(s(tar|qcup)|c(irc|up|ap)|triangle(down|up)|o(times|dot|plus)|uplus|vee|wedge)|o(t(tom)?|pf|wtie|x(h(d|u|D|U)?|times|H(d|u|D|U)?|d(R|l|r|L)|u(R|l|r|L)|plus|D(R|l|r|L)|v(R|h|H|l|r|L)?|U(R|l|r|L)|V(R|h|H|l|r|L)?|minus|box))|Not|dquo|u(ll(et)?|mp(e(q)?|E)?)|prime|e(caus(e)?|t(h|ween|a)|psi|rnou|mptyv)|karow|fr|l(ock|k(1(2|4)|34)|a(nk|ck(square|triangle(down|left|right)?|lozenge)))|a(ck(sim(eq)?|cong|prime|epsilon)|r(vee|wed(ge)?))|r(eve|vbar)|brk(tbrk)?))\n						  | (c(s(cr|u(p(e)?|b(e)?))|h(cy|i|eck(mark)?)|ylcty|c(irc|ups(sm)?|edil|a(ps|ron))|tdot|ir(scir|c(eq|le(d(R|circ|S|dash|ast)|arrow(left|right)))?|e|fnint|E|mid)?|o(n(int|g(dot)?)|p(y(sr)?|f|rod)|lon(e(q)?)?|m(p(fn|le(xes|ment))?|ma(t)?))|dot|u(darr(l|r)|p(s|c(up|ap)|or|dot|brcap)?|e(sc|pr)|vee|wed|larr(p)?|r(vearrow(left|right)|ly(eq(succ|prec)|vee|wedge)|arr(m)?|ren))|e(nt(erdot)?|dil|mptyv)|fr|w(conint|int)|lubs(uit)?|a(cute|p(s|c(up|ap)|dot|and|brcup)?|r(on|et))|r(oss|arr))|C(scr|hi|c(irc|onint|edil|aron)|ircle(Minus|Times|Dot|Plus)|Hcy|o(n(tourIntegral|int|gruent)|unterClockwiseContourIntegral|p(f|roduct)|lon(e)?)|dot|up(Cap)?|OPY|e(nterDot|dilla)|fr|lo(seCurly(DoubleQuote|Quote)|ckwiseContourIntegral)|a(yleys|cute|p(italDifferentialD)?)|ross))\n						  | (d(s(c(y|r)|trok|ol)|har(l|r)|c(y|aron)|t(dot|ri(f)?)|i(sin|e|v(ide(ontimes)?|onx)?|am(s|ond(suit)?)?|gamma)|Har|z(cy|igrarr)|o(t(square|plus|eq(dot)?|minus)?|ublebarwedge|pf|wn(harpoon(left|right)|downarrows|arrow)|llar)|d(otseq|a(rr|gger))?|u(har|arr)|jcy|e(lta|g|mptyv)|f(isht|r)|wangle|lc(orn|rop)|a(sh(v)?|leth|rr|gger)|r(c(orn|rop)|bkarow)|b(karow|lac)|Arr)|D(s(cr|trok)|c(y|aron)|Scy|i(fferentialD|a(critical(Grave|Tilde|Do(t|ubleAcute)|Acute)|mond))|o(t(Dot|Equal)?|uble(Right(Tee|Arrow)|ContourIntegral|Do(t|wnArrow)|Up(DownArrow|Arrow)|VerticalBar|L(ong(RightArrow|Left(RightArrow|Arrow))|eft(RightArrow|Tee|Arrow)))|pf|wn(Right(TeeVector|Vector(Bar)?)|Breve|Tee(Arrow)?|arrow|Left(RightVector|TeeVector|Vector(Bar)?)|Arrow(Bar|UpArrow)?))|Zcy|el(ta)?|D(otrahd)?|Jcy|fr|a(shv|rr|gger)))\n						  | (e(s(cr|im|dot)|n(sp|g)|c(y|ir(c)?|olon|aron)|t(h|a)|o(pf|gon)|dot|u(ro|ml)|p(si(v|lon)?|lus|ar(sl)?)|e|D(ot|Dot)|q(s(im|lant(less|gtr))|c(irc|olon)|u(iv(DD)?|est|als)|vparsl)|f(Dot|r)|l(s(dot)?|inters|l)?|a(ster|cute)|r(Dot|arr)|g(s(dot)?|rave)?|x(cl|ist|p(onentiale|ectation))|m(sp(1(3|4))?|pty(set|v)?|acr))|E(s(cr|im)|c(y|irc|aron)|ta|o(pf|gon)|NG|dot|uml|TH|psilon|qu(ilibrium|al(Tilde)?)|fr|lement|acute|grave|x(ists|ponentialE)|m(pty(SmallSquare|VerySmallSquare)|acr)))\n						  | (f(scr|nof|cy|ilig|o(pf|r(k(v)?|all))|jlig|partint|emale|f(ilig|l(ig|lig)|r)|l(tns|lig|at)|allingdotseq|r(own|a(sl|c(1(2|8|3|4|5|6)|78|2(3|5)|3(8|4|5)|45|5(8|6)))))|F(scr|cy|illed(SmallSquare|VerySmallSquare)|o(uriertrf|pf|rAll)|fr))\n						  | (G(scr|c(y|irc|edil)|t|opf|dot|T|Jcy|fr|amma(d)?|reater(Greater|SlantEqual|Tilde|Equal(Less)?|FullEqual|Less)|g|breve)|g(s(cr|im(e|l)?)|n(sim|e(q(q)?)?|E|ap(prox)?)|c(y|irc)|t(c(c|ir)|dot|quest|lPar|r(sim|dot|eq(qless|less)|less|a(pprox|rr)))?|imel|opf|dot|jcy|e(s(cc|dot(o(l)?)?|l(es)?)?|q(slant|q)?|l)?|v(nE|ertneqq)|fr|E(l)?|l(j|E|a)?|a(cute|p|mma(d)?)|rave|g(g)?|breve))\n						  | (h(s(cr|trok|lash)|y(phen|bull)|circ|o(ok(leftarrow|rightarrow)|pf|arr|rbar|mtht)|e(llip|arts(uit)?|rcon)|ks(earow|warow)|fr|a(irsp|lf|r(dcy|r(cir|w)?)|milt)|bar|Arr)|H(s(cr|trok)|circ|ilbertSpace|o(pf|rizontalLine)|ump(DownHump|Equal)|fr|a(cek|t)|ARDcy))\n						  | (i(s(cr|in(s(v)?|dot|v|E)?)|n(care|t(cal|prod|e(rcal|gers)|larhk)?|odot|fin(tie)?)?|c(y|irc)?|t(ilde)?|i(nfin|i(nt|int)|ota)?|o(cy|ta|pf|gon)|u(kcy|ml)|jlig|prod|e(cy|xcl)|quest|f(f|r)|acute|grave|m(of|ped|a(cr|th|g(part|e|line))))|I(scr|n(t(e(rsection|gral))?|visible(Comma|Times))|c(y|irc)|tilde|o(ta|pf|gon)|dot|u(kcy|ml)|Ocy|Jlig|fr|Ecy|acute|grave|m(plies|a(cr|ginaryI))?))\n						  | (j(s(cr|ercy)|c(y|irc)|opf|ukcy|fr|math)|J(s(cr|ercy)|c(y|irc)|opf|ukcy|fr))\n						  | (k(scr|hcy|c(y|edil)|opf|jcy|fr|appa(v)?|green)|K(scr|c(y|edil)|Hcy|opf|Jcy|fr|appa))\n						  | (l(s(h|cr|trok|im(e|g)?|q(uo(r)?|b)|aquo)|h(ar(d|u(l)?)|blk)|n(sim|e(q(q)?)?|E|ap(prox)?)|c(y|ub|e(il|dil)|aron)|Barr|t(hree|c(c|ir)|imes|dot|quest|larr|r(i(e|f)?|Par))?|Har|o(ng(left(arrow|rightarrow)|rightarrow|mapsto)|times|z(enge|f)?|oparrow(left|right)|p(f|lus|ar)|w(ast|bar)|a(ng|rr)|brk)|d(sh|ca|quo(r)?|r(dhar|ushar))|ur(dshar|uhar)|jcy|par(lt)?|e(s(s(sim|dot|eq(qgtr|gtr)|approx|gtr)|cc|dot(o(r)?)?|g(es)?)?|q(slant|q)?|ft(harpoon(down|up)|threetimes|leftarrows|arrow(tail)?|right(squigarrow|harpoons|arrow(s)?))|g)?|v(nE|ertneqq)|f(isht|loor|r)|E(g)?|l(hard|corner|tri|arr)?|a(ng(d|le)?|cute|t(e(s)?|ail)?|p|emptyv|quo|rr(sim|hk|tl|pl|fs|lp|b(fs)?)?|gran|mbda)|r(har(d)?|corner|tri|arr|m)|g(E)?|m(idot|oust(ache)?)|b(arr|r(k(sl(d|u)|e)|ac(e|k))|brk)|A(tail|arr|rr))|L(s(h|cr|trok)|c(y|edil|aron)|t|o(ng(RightArrow|left(arrow|rightarrow)|rightarrow|Left(RightArrow|Arrow))|pf|wer(RightArrow|LeftArrow))|T|e(ss(Greater|SlantEqual|Tilde|EqualGreater|FullEqual|Less)|ft(Right(Vector|Arrow)|Ceiling|T(ee(Vector|Arrow)?|riangle(Bar|Equal)?)|Do(ubleBracket|wn(TeeVector|Vector(Bar)?))|Up(TeeVector|DownVector|Vector(Bar)?)|Vector(Bar)?|arrow|rightarrow|Floor|A(ngleBracket|rrow(RightArrow|Bar)?)))|Jcy|fr|l(eftarrow)?|a(ng|cute|placetrf|rr|mbda)|midot))\n						  | (M(scr|cy|inusPlus|opf|u|e(diumSpace|llintrf)|fr|ap)|m(s(cr|tpos)|ho|nplus|c(y|omma)|i(nus(d(u)?|b)?|cro|d(cir|dot|ast)?)|o(dels|pf)|dash|u(ltimap|map)?|p|easuredangle|DDot|fr|l(cp|dr)|a(cr|p(sto(down|up|left)?)?|l(t(ese)?|e)|rker)))\n						  | (n(s(hort(parallel|mid)|c(cue|e|r)?|im(e(q)?)?|u(cc(eq)?|p(set(eq(q)?)?|e|E)?|b(set(eq(q)?)?|e|E)?)|par|qsu(pe|be)|mid)|Rightarrow|h(par|arr|Arr)|G(t(v)?|g)|c(y|ong(dot)?|up|edil|a(p|ron))|t(ilde|lg|riangle(left(eq)?|right(eq)?)|gl)|i(s(d)?|v)?|o(t(ni(v(c|a|b))?|in(dot|v(c|a|b)|E)?)?|pf)|dash|u(m(sp|ero)?)?|jcy|p(olint|ar(sl|t|allel)?|r(cue|e(c(eq)?)?)?)|e(s(im|ear)|dot|quiv|ar(hk|r(ow)?)|xist(s)?|Arr)?|v(sim|infin|Harr|dash|Dash|l(t(rie)?|e|Arr)|ap|r(trie|Arr)|g(t|e))|fr|w(near|ar(hk|r(ow)?)|Arr)|V(dash|Dash)|l(sim|t(ri(e)?)?|dr|e(s(s)?|q(slant|q)?|ft(arrow|rightarrow))?|E|arr|Arr)|a(ng|cute|tur(al(s)?)?|p(id|os|prox|E)?|bla)|r(tri(e)?|ightarrow|arr(c|w)?|Arr)|g(sim|t(r)?|e(s|q(slant|q)?)?|E)|mid|L(t(v)?|eft(arrow|rightarrow)|l)|b(sp|ump(e)?))|N(scr|c(y|edil|aron)|tilde|o(nBreakingSpace|Break|t(R(ightTriangle(Bar|Equal)?|everseElement)|Greater(Greater|SlantEqual|Tilde|Equal|FullEqual|Less)?|S(u(cceeds(SlantEqual|Tilde|Equal)?|perset(Equal)?|bset(Equal)?)|quareSu(perset(Equal)?|bset(Equal)?))|Hump(DownHump|Equal)|Nested(GreaterGreater|LessLess)|C(ongruent|upCap)|Tilde(Tilde|Equal|FullEqual)?|DoubleVerticalBar|Precedes(SlantEqual|Equal)?|E(qual(Tilde)?|lement|xists)|VerticalBar|Le(ss(Greater|SlantEqual|Tilde|Equal|Less)?|ftTriangle(Bar|Equal)?))?|pf)|u|e(sted(GreaterGreater|LessLess)|wLine|gative(MediumSpace|Thi(nSpace|ckSpace)|VeryThinSpace))|Jcy|fr|acute))\n						  | (o(s(cr|ol|lash)|h(m|bar)|c(y|ir(c)?)|ti(lde|mes(as)?)|S|int|opf|d(sold|iv|ot|ash|blac)|uml|p(erp|lus|ar)|elig|vbar|f(cir|r)|l(c(ir|ross)|t|ine|arr)|a(st|cute)|r(slope|igof|or|d(er(of)?|f|m)?|v|arr)?|g(t|on|rave)|m(i(nus|cron|d)|ega|acr))|O(s(cr|lash)|c(y|irc)|ti(lde|mes)|opf|dblac|uml|penCurly(DoubleQuote|Quote)|ver(B(ar|rac(e|ket))|Parenthesis)|fr|Elig|acute|r|grave|m(icron|ega|acr)))\n						  | (p(s(cr|i)|h(i(v)?|one|mmat)|cy|i(tchfork|v)?|o(intint|und|pf)|uncsp|er(cnt|tenk|iod|p|mil)|fr|l(us(sim|cir|two|d(o|u)|e|acir|mn|b)?|an(ck(h)?|kv))|ar(s(im|l)|t|a(llel)?)?|r(sim|n(sim|E|ap)|cue|ime(s)?|o(d|p(to)?|f(surf|line|alar))|urel|e(c(sim|n(sim|eqq|approx)|curlyeq|eq|approx)?)?|E|ap)?|m)|P(s(cr|i)|hi|cy|i|o(incareplane|pf)|fr|lusMinus|artialD|r(ime|o(duct|portion(al)?)|ecedes(SlantEqual|Tilde|Equal)?)?))\n						  | (q(scr|int|opf|u(ot|est(eq)?|at(int|ernions))|prime|fr)|Q(scr|opf|UOT|fr))\n						  | (R(s(h|cr)|ho|c(y|edil|aron)|Barr|ight(Ceiling|T(ee(Vector|Arrow)?|riangle(Bar|Equal)?)|Do(ubleBracket|wn(TeeVector|Vector(Bar)?))|Up(TeeVector|DownVector|Vector(Bar)?)|Vector(Bar)?|arrow|Floor|A(ngleBracket|rrow(Bar|LeftArrow)?))|o(undImplies|pf)|uleDelayed|e(verse(UpEquilibrium|E(quilibrium|lement)))?|fr|EG|a(ng|cute|rr(tl)?)|rightarrow)|r(s(h|cr|q(uo(r)?|b)|aquo)|h(o(v)?|ar(d|u(l)?))|nmid|c(y|ub|e(il|dil)|aron)|Barr|t(hree|imes|ri(e|f|ltri)?)|i(singdotseq|ng|ght(squigarrow|harpoon(down|up)|threetimes|left(harpoons|arrows)|arrow(tail)?|rightarrows))|Har|o(times|p(f|lus|ar)|a(ng|rr)|brk)|d(sh|ca|quo(r)?|ldhar)|uluhar|p(polint|ar(gt)?)|e(ct|al(s|ine|part)?|g)|f(isht|loor|r)|l(har|arr|m)|a(ng(d|e|le)?|c(ute|e)|t(io(nals)?|ail)|dic|emptyv|quo|rr(sim|hk|c|tl|pl|fs|w|lp|ap|b(fs)?)?)|rarr|x|moust(ache)?|b(arr|r(k(sl(d|u)|e)|ac(e|k))|brk)|A(tail|arr|rr)))\n						  | (s(s(cr|tarf|etmn|mile)|h(y|c(hcy|y)|ort(parallel|mid)|arp)|c(sim|y|n(sim|E|ap)|cue|irc|polint|e(dil)?|E|a(p|ron))?|t(ar(f)?|r(ns|aight(phi|epsilon)))|i(gma(v|f)?|m(ne|dot|plus|e(q)?|l(E)?|rarr|g(E)?)?)|zlig|o(pf|ftcy|l(b(ar)?)?)|dot(e|b)?|u(ng|cc(sim|n(sim|eqq|approx)|curlyeq|eq|approx)?|p(s(im|u(p|b)|et(neq(q)?|eq(q)?)?)|hs(ol|ub)|1|n(e|E)|2|d(sub|ot)|3|plus|e(dot)?|E|larr|mult)?|m|b(s(im|u(p|b)|et(neq(q)?|eq(q)?)?)|n(e|E)|dot|plus|e(dot)?|E|rarr|mult)?)|pa(des(uit)?|r)|e(swar|ct|tm(n|inus)|ar(hk|r(ow)?)|xt|mi|Arr)|q(su(p(set(eq)?|e)?|b(set(eq)?|e)?)|c(up(s)?|ap(s)?)|u(f|ar(e|f))?)|fr(own)?|w(nwar|ar(hk|r(ow)?)|Arr)|larr|acute|rarr|m(t(e(s)?)?|i(d|le)|eparsl|a(shp|llsetminus))|bquo)|S(scr|hort(RightArrow|DownArrow|UpArrow|LeftArrow)|c(y|irc|edil|aron)?|tar|igma|H(cy|CHcy)|opf|u(c(hThat|ceeds(SlantEqual|Tilde|Equal)?)|p(set|erset(Equal)?)?|m|b(set(Equal)?)?)|OFTcy|q(uare(Su(perset(Equal)?|bset(Equal)?)|Intersection|Union)?|rt)|fr|acute|mallCircle))\n						  | (t(s(hcy|c(y|r)|trok)|h(i(nsp|ck(sim|approx))|orn|e(ta(sym|v)?|re(4|fore))|k(sim|ap))|c(y|edil|aron)|i(nt|lde|mes(d|b(ar)?)?)|o(sa|p(cir|f(ork)?|bot)?|ea)|dot|prime|elrec|fr|w(ixt|ohead(leftarrow|rightarrow))|a(u|rget)|r(i(sb|time|dot|plus|e|angle(down|q|left(eq)?|right(eq)?)?|minus)|pezium|ade)|brk)|T(s(cr|trok)|RADE|h(i(nSpace|ckSpace)|e(ta|refore))|c(y|edil|aron)|S(cy|Hcy)|ilde(Tilde|Equal|FullEqual)?|HORN|opf|fr|a(u|b)|ripleDot))\n						  | (u(scr|h(ar(l|r)|blk)|c(y|irc)|t(ilde|dot|ri(f)?)|Har|o(pf|gon)|d(har|arr|blac)|u(arr|ml)|p(si(h|lon)?|harpoon(left|right)|downarrow|uparrows|lus|arrow)|f(isht|r)|wangle|l(c(orn(er)?|rop)|tri)|a(cute|rr)|r(c(orn(er)?|rop)|tri|ing)|grave|m(l|acr)|br(cy|eve)|Arr)|U(scr|n(ion(Plus)?|der(B(ar|rac(e|ket))|Parenthesis))|c(y|irc)|tilde|o(pf|gon)|dblac|uml|p(si(lon)?|downarrow|Tee(Arrow)?|per(RightArrow|LeftArrow)|DownArrow|Equilibrium|arrow|Arrow(Bar|DownArrow)?)|fr|a(cute|rr(ocir)?)|ring|grave|macr|br(cy|eve)))\n						  | (v(s(cr|u(pn(e|E)|bn(e|E)))|nsu(p|b)|cy|Bar(v)?|zigzag|opf|dash|prop|e(e(eq|bar)?|llip|r(t|bar))|Dash|fr|ltri|a(ngrt|r(s(igma|u(psetneq(q)?|bsetneq(q)?))|nothing|t(heta|riangle(left|right))|p(hi|i|ropto)|epsilon|kappa|r(ho)?))|rtri|Arr)|V(scr|cy|opf|dash(l)?|e(e|r(yThinSpace|t(ical(Bar|Separator|Tilde|Line))?|bar))|Dash|vdash|fr|bar))\n						  | (w(scr|circ|opf|p|e(ierp|d(ge(q)?|bar))|fr|r(eath)?)|W(scr|circ|opf|edge|fr))\n						  | (X(scr|i|opf|fr)|x(s(cr|qcup)|h(arr|Arr)|nis|c(irc|up|ap)|i|o(time|dot|p(f|lus))|dtri|u(tri|plus)|vee|fr|wedge|l(arr|Arr)|r(arr|Arr)|map))\n						  | (y(scr|c(y|irc)|icy|opf|u(cy|ml)|en|fr|ac(y|ute))|Y(scr|c(y|irc)|opf|uml|Icy|Ucy|fr|acute|Acy))\n						  | (z(scr|hcy|c(y|aron)|igrarr|opf|dot|e(ta|etrf)|fr|w(nj|j)|acute)|Z(scr|c(y|aron)|Hcy|opf|dot|e(ta|roWidthSpace)|fr|acute))\n						)\n						(;)\n					",
-          "name": "constant.character.entity.named.$2.html"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "punctuation.definition.entity.html"
-            },
-            "3": {
-              "name": "punctuation.definition.entity.html"
-            }
-          },
-          "match": "(&)#[0-9]+(;)",
-          "name": "constant.character.entity.numeric.decimal.html"
-        },
-        {
-          "captures": {
-            "1": {
-              "name": "punctuation.definition.entity.html"
-            },
-            "3": {
-              "name": "punctuation.definition.entity.html"
-            }
-          },
-          "match": "(&)#[xX][0-9a-fA-F]+(;)",
-          "name": "constant.character.entity.numeric.hexadecimal.html"
-        },
-        {
-          "match": "&(?=[a-zA-Z0-9]+;)",
-          "name": "invalid.illegal.ambiguous-ampersand.html"
-        }
-      ]
-    },
-    "heading": {
-      "match": "(?:^|\\G)[ ]*(#{1,6}\\s+(.*?)(\\s+#{1,6})?\\s*)$",
-      "captures": {
-        "1": {
-          "patterns": [
-            {
-              "match": "(#{6})\\s+(.*?)(?:\\s+(#+))?\\s*$",
-              "name": "heading.6.markdown",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.heading.markdown"
-                },
-                "2": {
-                  "name": "entity.name.section.markdown",
-                  "patterns": [
-                    {
-                      "include": "text.html.markdown#inline"
-                    },
-                    {
-                      "include": "text.html.derivative"
-                    }
-                  ]
-                },
-                "3": {
-                  "name": "punctuation.definition.heading.markdown"
-                }
-              }
-            },
-            {
-              "match": "(#{5})\\s+(.*?)(?:\\s+(#+))?\\s*$",
-              "name": "heading.5.markdown",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.heading.markdown"
-                },
-                "2": {
-                  "name": "entity.name.section.markdown",
-                  "patterns": [
-                    {
-                      "include": "text.html.markdown#inline"
-                    },
-                    {
-                      "include": "text.html.derivative"
-                    }
-                  ]
-                },
-                "3": {
-                  "name": "punctuation.definition.heading.markdown"
-                }
-              }
-            },
-            {
-              "match": "(#{4})\\s+(.*?)(?:\\s+(#+))?\\s*$",
-              "name": "heading.4.markdown",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.heading.markdown"
-                },
-                "2": {
-                  "name": "entity.name.section.markdown",
-                  "patterns": [
-                    {
-                      "include": "text.html.markdown#inline"
-                    },
-                    {
-                      "include": "text.html.derivative"
-                    }
-                  ]
-                },
-                "3": {
-                  "name": "punctuation.definition.heading.markdown"
-                }
-              }
-            },
-            {
-              "match": "(#{3})\\s+(.*?)(?:\\s+(#+))?\\s*$",
-              "name": "heading.3.markdown",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.heading.markdown"
-                },
-                "2": {
-                  "name": "entity.name.section.markdown",
-                  "patterns": [
-                    {
-                      "include": "text.html.markdown#inline"
-                    },
-                    {
-                      "include": "text.html.derivative"
-                    }
-                  ]
-                },
-                "3": {
-                  "name": "punctuation.definition.heading.markdown"
-                }
-              }
-            },
-            {
-              "match": "(#{2})\\s+(.*?)(?:\\s+(#+))?\\s*$",
-              "name": "heading.2.markdown",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.heading.markdown"
-                },
-                "2": {
-                  "name": "entity.name.section.markdown",
-                  "patterns": [
-                    {
-                      "include": "text.html.markdown#inline"
-                    },
-                    {
-                      "include": "text.html.derivative"
-                    }
-                  ]
-                },
-                "3": {
-                  "name": "punctuation.definition.heading.markdown"
-                }
-              }
-            },
-            {
-              "match": "(#{1})\\s+(.*?)(?:\\s+(#+))?\\s*$",
-              "name": "heading.1.markdown",
-              "captures": {
-                "1": {
-                  "name": "punctuation.definition.heading.markdown"
-                },
-                "2": {
-                  "name": "entity.name.section.markdown",
-                  "patterns": [
-                    {
-                      "include": "text.html.markdown#inline"
-                    },
-                    {
-                      "include": "text.html.derivative"
-                    }
-                  ]
-                },
-                "3": {
-                  "name": "punctuation.definition.heading.markdown"
-                }
-              }
-            }
-          ]
-        }
-      },
-      "name": "markup.heading.markdown",
-      "patterns": [
-        {
-          "include": "text.html.markdown#inline"
-        }
-      ]
-    },
-    "heading-setext": {
-      "patterns": [
-        {
-          "match": "^(={3,})(?=[ \\t]*$\\n?)",
-          "name": "markup.heading.setext.1.markdown"
-        },
-        {
-          "match": "^(-{3,})(?=[ \\t]*$\\n?)",
-          "name": "markup.heading.setext.2.markdown"
-        }
-      ]
-    },
-    "lists": {
-      "patterns": [
-        {
-          "begin": "(^|\\G)([ ]*)([*+-])([ \\t])",
-          "beginCaptures": {
-            "3": {
-              "name": "punctuation.definition.list.begin.markdown"
-            }
-          },
-          "comment": "Currently does not support un-indented second lines.",
-          "name": "markup.list.unnumbered.markdown",
-          "patterns": [
-            {
-              "include": "#block"
-            },
-            {
-              "include": "text.html.markdown#list_paragraph"
-            }
-          ],
-          "while": "((^|\\G)([ ]*|\\t))|(^[ \\t]*$)"
-        },
-        {
-          "begin": "(^|\\G)([ ]*)([0-9]+\\.)([ \\t])",
-          "beginCaptures": {
-            "3": {
-              "name": "punctuation.definition.list.begin.markdown"
-            }
-          },
-          "name": "markup.list.numbered.markdown",
-          "patterns": [
-            {
-              "include": "#block"
-            },
-            {
-              "include": "text.html.markdown#list_paragraph"
-            }
-          ],
-          "while": "((^|\\G)([ ]*|\\t))|(^[ \\t]*$)"
-        }
-      ]
-    },
-    "paragraph": {
-      "begin": "(^|\\G)[ ]*(?=\\S)",
-      "name": "meta.paragraph.markdown",
-      "patterns": [
-        {
-          "include": "#inline"
-        },
-        {
-          "include": "text.html.markdown#inline"
-        },
-        {
-          "include": "text.html.derivative"
-        },
-        {
-          "include": "#heading-setext"
-        }
-      ],
-      "while": "(^|\\G)((?=\\s*[-=]{3,}\\s*$)|[ ]{4,}(?=\\S))"
-    },
-    "blockquote": {
-      "begin": "(^|\\G)[ ]*(>) ?",
-      "captures": {
-        "2": {
-          "name": "punctuation.definition.quote.begin.markdown"
-        }
-      },
-      "name": "markup.quote.markdown",
-      "patterns": [
-        {
-          "include": "#block"
-        }
-      ],
-      "while": "(^|\\G)\\s*(>) ?"
-    }
-  }
-};
-const mdcTMLanguage = grammar;
-
-const logger = consola.withScope("@nuxt/content");
-const resolveLang = (lang) => BUNDLED_LANGUAGES.find((l) => l.id === lang || l.aliases?.includes(lang));
-const resolveTheme = (theme) => {
-  if (!theme) {
-    return;
-  }
-  if (typeof theme === "string") {
-    theme = {
-      default: theme
-    };
-  }
-  return Object.entries(theme).reduce((acc, [key, value]) => {
-    acc[key] = BUNDLED_THEMES.find((t) => t === value);
-    return acc;
-  }, {});
-};
-const useShikiHighlighter = createSingleton((opts) => {
-  const { theme, preload } = opts || {};
-  let promise;
-  const getShikiHighlighter = () => {
-    if (!promise) {
-      promise = getHighlighter({
-        theme: theme?.default || theme || "dark-plus",
-        langs: [
-          ...preload || [],
-          "diff",
-          "json",
-          "js",
-          "ts",
-          "css",
-          "shell",
-          "html",
-          "md",
-          "yaml",
-          "vue",
-          {
-            id: "md",
-            scopeName: "text.markdown.mdc",
-            path: "mdc.tmLanguage.json",
-            aliases: ["markdown", "md", "mdc"],
-            grammar: mdcTMLanguage
-          }
-        ]
-      }).then((highlighter) => {
-        const themes = Object.values(typeof theme === "string" ? { default: theme } : theme || {});
-        if (themes.length) {
-          return Promise.all(themes.map((theme2) => highlighter.loadTheme(theme2))).then(() => highlighter);
-        }
-        return highlighter;
-      });
-    }
-    return promise;
-  };
-  const getHighlightedTokens = async (code, lang, theme2) => {
-    const highlighter = await getShikiHighlighter();
-    code = code.replace(/\n+$/, "");
-    lang = resolveLang(lang || "")?.id || lang;
-    theme2 = resolveTheme(theme2 || "") || { default: highlighter.getTheme() };
-    if (!lang) {
-      return [[{ content: code }]];
-    }
-    if (!highlighter.getLoadedLanguages().includes(lang)) {
-      const languageRegistration = resolveLang(lang);
-      if (languageRegistration) {
-        await highlighter.loadLanguage(languageRegistration);
-      } else {
-        logger.warn(`Language '${lang}' is not supported by shiki. Skipping highlight.`);
-        return [[{ content: code }]];
-      }
-    }
-    const newThemes = Object.values(theme2).filter((t) => !highlighter.getLoadedThemes().includes(t));
-    if (newThemes.length) {
-      await Promise.all(newThemes.map(highlighter.loadTheme));
-    }
-    const coloredTokens = Object.entries(theme2).map(([key, theme3]) => {
-      const tokens = highlighter.codeToThemedTokens(code, lang, theme3, { includeExplanation: false });
-      return {
-        key,
-        theme: theme3,
-        tokens
-      };
-    });
-    const highlightedCode = [];
-    for (const line in coloredTokens[0].tokens) {
-      highlightedCode[line] = coloredTokens.reduce((acc, color) => {
-        return mergeLines({
-          key: coloredTokens[0].key,
-          tokens: acc
-        }, {
-          key: color.key,
-          tokens: color.tokens[line]
-        });
-      }, coloredTokens[0].tokens[line]);
-    }
-    return highlightedCode;
-  };
-  const getHighlightedAST = async (code, lang, theme2, opts2) => {
-    const lines = await getHighlightedTokens(code, lang, theme2);
-    const { highlights = [], colorMap = {} } = opts2 || {};
-    return lines.map((line, lineIndex) => ({
-      type: "element",
-      tag: "span",
-      props: { class: ["line", highlights.includes(lineIndex + 1) ? "highlight" : ""].join(" ").trim() },
-      children: line.map(tokenSpan)
-    }));
-    function getColorProps(token) {
-      if (!token.color) {
-        return {};
-      }
-      if (typeof token.color === "string") {
-        return { style: { color: token.color } };
-      }
-      const key = Object.values(token.color).join("");
-      if (!colorMap[key]) {
-        colorMap[key] = {
-          colors: token.color,
-          className: "ct-" + Math.random().toString(16).substring(2, 8)
-          // hash(key)
-        };
-      }
-      return { class: colorMap[key].className };
-    }
-    function tokenSpan(token) {
-      return {
-        type: "element",
-        tag: "span",
-        props: getColorProps(token),
-        children: [{ type: "text", value: token.content }]
-      };
-    }
-  };
-  const getHighlightedCode = async (code, lang, theme2, opts2) => {
-    const colorMap = opts2?.colorMap || {};
-    const highlights = opts2?.highlights || [];
-    const ast = await getHighlightedAST(code, lang, theme2, { colorMap, highlights });
-    function renderNode(node) {
-      if (node.type === "text") {
-        return node.value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-      }
-      const children = node.children.map(renderNode).join("");
-      return `<${node.tag} class="${node.props.class}">${children}</${node.tag}>`;
-    }
-    return {
-      code: ast.map(renderNode).join(""),
-      styles: generateStyles(colorMap)
-    };
-  };
-  const generateStyles = (colorMap) => {
-    const colors = [];
-    for (const colorClass of Object.values(colorMap)) {
-      Object.entries(colorClass.colors).forEach(([variant, color]) => {
-        if (variant === "default") {
-          colors.unshift(`.${colorClass.className}{color:${color}}`);
-        } else {
-          colors.push(`.${variant} .${colorClass.className}{color:${color}}`);
-        }
-      });
-    }
-    return colors.join("\n");
-  };
-  return {
-    getHighlightedTokens,
-    getHighlightedAST,
-    getHighlightedCode,
-    generateStyles
-  };
-});
-function mergeLines(line1, line2) {
-  const mergedTokens = [];
-  const getColors = (h, i) => typeof h.tokens[i].color === "string" ? { [h.key]: h.tokens[i].color } : h.tokens[i].color;
-  const right = {
-    key: line1.key,
-    tokens: line1.tokens.slice()
-  };
-  const left = {
-    key: line2.key,
-    tokens: line2.tokens.slice()
-  };
-  let index = 0;
-  while (index < right.tokens.length) {
-    const rightToken = right.tokens[index];
-    const leftToken = left.tokens[index];
-    if (rightToken.content === leftToken.content) {
-      mergedTokens.push({
-        content: rightToken.content,
-        color: {
-          ...getColors(right, index),
-          ...getColors(left, index)
-        }
-      });
-      index += 1;
-      continue;
-    }
-    if (rightToken.content.startsWith(leftToken.content)) {
-      const nextRightToken = {
-        ...rightToken,
-        content: rightToken.content.slice(leftToken.content.length)
-      };
-      rightToken.content = leftToken.content;
-      right.tokens.splice(index + 1, 0, nextRightToken);
-      continue;
-    }
-    if (leftToken.content.startsWith(rightToken.content)) {
-      const nextLeftToken = {
-        ...leftToken,
-        content: leftToken.content.slice(rightToken.content.length)
-      };
-      leftToken.content = rightToken.content;
-      left.tokens.splice(index + 1, 0, nextLeftToken);
-      continue;
-    }
-    throw new Error("Unexpected token");
-  }
-  return mergedTokens;
-}
-
-const shiki = defineTransformer({
-  name: "highlight",
-  extensions: [".md"],
-  transform: async (content, options = {}) => {
-    const shikiHighlighter = useShikiHighlighter(options);
-    await Promise.all([
-      highlight(content.body),
-      highlight(content.excerpt)
-    ]);
-    return content;
-    async function highlight(document) {
-      if (!document) {
-        return;
-      }
-      const colorMap = {};
-      const codeBlocks = [];
-      const inlineCodes = [];
-      visit(
-        document,
-        (node) => node?.tag === "code" && node?.props.code || node?.tag === "code-inline" && (node.props?.lang || node.props?.language),
-        (node) => {
-          if (node?.tag === "code") {
-            codeBlocks.push(node);
-          } else if (node?.tag === "code-inline") {
-            inlineCodes.push(node);
-          }
-        }
-      );
-      await Promise.all(codeBlocks.map((node) => highlightBlock(node, colorMap)));
-      await Promise.all(inlineCodes.map((node) => highlightInline(node, colorMap)));
-      if (Object.values(colorMap).length) {
-        document?.children.push({
-          type: "element",
-          tag: "style",
-          children: [{ type: "text", value: shikiHighlighter.generateStyles(colorMap) }]
-        });
-      }
-    }
-    async function highlightInline(node, colorMap) {
-      const code = node.children[0].value;
-      const lines = await shikiHighlighter.getHighlightedAST(code, node.props.lang || node.props.language, options.theme, { colorMap });
-      node.children = lines[0].children;
-      node.props = Object.assign(node.props || {}, { class: "colored" });
-      return node;
-    }
-    async function highlightBlock(node, colorMap) {
-      const { code, language: lang, highlights = [] } = node.props;
-      const innerCodeNode = node.children[0].children[0];
-      innerCodeNode.children = await shikiHighlighter.getHighlightedAST(code, lang, options.theme, { colorMap, highlights });
-      return node;
-    }
-  }
-});
-
 const json = defineTransformer({
   name: "Json",
   extensions: [".json", ".json5"],
@@ -3339,9 +2755,9 @@ const json = defineTransformer({
     let parsed;
     if (typeof content === "string") {
       if (_id.endsWith("json5")) {
-        parsed = (await import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
+        parsed = (await import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
       } else if (_id.endsWith("json")) {
-        parsed = destr(content);
+        parsed = destr$1(content);
       }
     } else {
       parsed = content;
@@ -3365,7 +2781,6 @@ const TRANSFORMERS = [
   markdown,
   json,
   yaml,
-  shiki,
   pathMeta
 ];
 function getParser(ext, additionalTransformers = []) {
@@ -3404,14 +2819,258 @@ async function transformContent(id, content, options = {}) {
   return result;
 }
 
+function makeIgnored(ignores) {
+  const rxAll = ["/\\.", "/-", ...ignores.filter((p) => p)].map((p) => new RegExp(p));
+  return function isIgnored(key) {
+    const path = "/" + key.replace(/:/g, "/");
+    return rxAll.some((rx) => rx.test(path));
+  };
+}
+
+function createMatch(opts = {}) {
+  const operators = createOperators(match, opts.operators);
+  function match(item, conditions) {
+    if (typeof conditions !== "object" || conditions instanceof RegExp) {
+      return operators.$eq(item, conditions);
+    }
+    return Object.keys(conditions || {}).every((key) => {
+      const condition = conditions[key];
+      if (key.startsWith("$") && operators[key]) {
+        const fn = operators[key];
+        return typeof fn === "function" ? fn(item, condition) : false;
+      }
+      return match(get(item, key), condition);
+    });
+  }
+  return match;
+}
+function createOperators(match, operators = {}) {
+  return {
+    $match: (item, condition) => match(item, condition),
+    /**
+     * Match if item equals condition
+     **/
+    $eq: (item, condition) => condition instanceof RegExp ? condition.test(item) : item === condition,
+    /**
+     * Match if item not equals condition
+     **/
+    $ne: (item, condition) => condition instanceof RegExp ? !condition.test(item) : item !== condition,
+    /**
+     * Match is condition is false
+     **/
+    $not: (item, condition) => !match(item, condition),
+    /**
+     * Match only if all of nested conditions are true
+     **/
+    $and: (item, condition) => {
+      assertArray(condition, "$and requires an array as condition");
+      return condition.every((cond) => match(item, cond));
+    },
+    /**
+     * Match if any of nested conditions is true
+     **/
+    $or: (item, condition) => {
+      assertArray(condition, "$or requires an array as condition");
+      return condition.some((cond) => match(item, cond));
+    },
+    /**
+     * Match if item is in condition array
+     **/
+    $in: (item, condition) => ensureArray(condition).some(
+      (cond) => Array.isArray(item) ? match(item, { $contains: cond }) : match(item, cond)
+    ),
+    /**
+     * Match if item contains every condition or math every rule in condition array
+     **/
+    $contains: (item, condition) => {
+      item = Array.isArray(item) ? item : String(item);
+      return ensureArray(condition).every((i) => item.includes(i));
+    },
+    /**
+     * Ignore case contains
+     **/
+    $icontains: (item, condition) => {
+      if (typeof condition !== "string") {
+        throw new TypeError("$icontains requires a string, use $contains instead");
+      }
+      item = String(item).toLocaleLowerCase();
+      return ensureArray(condition).every((i) => item.includes(i.toLocaleLowerCase()));
+    },
+    /**
+     * Match if item contains at least one rule from condition array
+     */
+    $containsAny: (item, condition) => {
+      assertArray(condition, "$containsAny requires an array as condition");
+      item = Array.isArray(item) ? item : String(item);
+      return condition.some((i) => item.includes(i));
+    },
+    /**
+     * Check key existence
+     */
+    $exists: (item, condition) => condition ? typeof item !== "undefined" : typeof item === "undefined",
+    /**
+     * Match if type of item equals condition
+     */
+    $type: (item, condition) => typeof item === String(condition),
+    /**
+     * Provides regular expression capabilities for pattern matching strings.
+     */
+    $regex: (item, condition) => {
+      if (!(condition instanceof RegExp)) {
+        const matched = String(condition).match(/\/(.*)\/([dgimsuy]*)$/);
+        condition = matched ? new RegExp(matched[1], matched[2] || "") : new RegExp(condition);
+      }
+      return condition.test(String(item || ""));
+    },
+    /**
+     * Check if item is less than condition
+     */
+    $lt: (item, condition) => {
+      return item < condition;
+    },
+    /**
+     * Check if item is less than or equal to condition
+     */
+    $lte: (item, condition) => {
+      return item <= condition;
+    },
+    /**
+     * Check if item is greater than condition
+     */
+    $gt: (item, condition) => {
+      return item > condition;
+    },
+    /**
+     * Check if item is greater than or equal to condition
+     */
+    $gte: (item, condition) => {
+      return item >= condition;
+    },
+    ...operators || {}
+  };
+}
+
+function createPipelineFetcher(getContentsList) {
+  const match = createMatch();
+  const surround = (data, { query, before, after }) => {
+    const matchQuery = typeof query === "string" ? { _path: query } : query;
+    const index = data.findIndex((item) => match(item, matchQuery));
+    before = before ?? 1;
+    after = after ?? 1;
+    const slice = new Array(before + after).fill(null, 0);
+    return index === -1 ? slice : slice.map((_, i) => data[index - before + i + Number(i >= before)] || null);
+  };
+  const matchingPipelines = [
+    // Conditions
+    (state, params) => {
+      const filtered = state.result.filter((item) => ensureArray(params.where).every((matchQuery) => match(item, matchQuery)));
+      return {
+        ...state,
+        result: filtered,
+        total: filtered.length
+      };
+    },
+    // Sort data
+    (state, params) => ensureArray(params.sort).forEach((options) => sortList(state.result, options)),
+    function fetchSurround(state, params, db) {
+      if (params.surround) {
+        let _surround = surround(state.result?.length === 1 ? db : state.result, params.surround);
+        _surround = apply(withoutKeys(params.without))(_surround);
+        _surround = apply(withKeys(params.only))(_surround);
+        state.surround = _surround;
+      }
+      return state;
+    }
+  ];
+  const transformingPiples = [
+    // Skip first items
+    (state, params) => {
+      if (params.skip) {
+        return {
+          ...state,
+          result: state.result.slice(params.skip),
+          skip: params.skip
+        };
+      }
+    },
+    // Pick first items
+    (state, params) => {
+      if (params.limit) {
+        return {
+          ...state,
+          result: state.result.slice(0, params.limit),
+          limit: params.limit
+        };
+      }
+    },
+    function fetchDirConfig(state, params, db) {
+      if (params.dirConfig) {
+        const path = state.result[0]?._path || params.where?.find((w) => w._path)?._path;
+        if (typeof path === "string") {
+          const dirConfig = db.find((item) => item._path === joinURL(path, "_dir"));
+          if (dirConfig) {
+            state.dirConfig = { _path: dirConfig._path, ...withoutKeys(["_"])(dirConfig) };
+          }
+        }
+      }
+      return state;
+    },
+    // Remove unwanted fields
+    (state, params) => ({
+      ...state,
+      result: apply(withoutKeys(params.without))(state.result)
+    }),
+    // Select only wanted fields
+    (state, params) => ({
+      ...state,
+      result: apply(withKeys(params.only))(state.result)
+    })
+  ];
+  return async (query) => {
+    const db = await getContentsList();
+    const params = query.params();
+    const result1 = {
+      result: db,
+      limit: 0,
+      skip: 0,
+      total: db.length
+    };
+    const matchedData = matchingPipelines.reduce(($data, pipe) => pipe($data, params, db) || $data, result1);
+    if (params.count) {
+      return {
+        result: matchedData.result.length
+      };
+    }
+    const result = transformingPiples.reduce(($data, pipe) => pipe($data, params, db) || $data, matchedData);
+    if (params.first) {
+      return {
+        ...omit(["skip", "limit", "total"])(result),
+        result: result.result[0]
+      };
+    }
+    return result;
+  };
+}
+
 const isPreview = (event) => {
-  const previewToken = getQuery(event).previewToken || getCookie(event, "previewToken");
+  const previewToken = getQuery$1(event).previewToken || getCookie(event, "previewToken");
   return !!previewToken;
 };
 const getPreview = (event) => {
-  const key = getQuery(event).previewToken || getCookie(event, "previewToken");
+  const key = getQuery$1(event).previewToken || getCookie(event, "previewToken");
   return { key };
 };
+
+function buildAssetsDir() {
+  return useRuntimeConfig().app.buildAssetsDir;
+}
+function buildAssetsURL(...path) {
+  return joinURL(publicAssetsURL(), buildAssetsDir(), ...path);
+}
+function publicAssetsURL(...path) {
+  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
+  return path.length ? joinURL(publicBase, ...path) : publicBase;
+}
 
 async function getContentIndex(event) {
   const defaultLocale = useRuntimeConfig().content.defaultLocale;
@@ -3434,7 +3093,7 @@ async function getContentIndex(event) {
 async function getIndexedContentsList(event, query) {
   const params = query.params();
   const path = params?.where?.find((wh) => wh._path)?._path;
-  if (!isPreview(event) && (typeof path === "string" || path instanceof RegExp)) {
+  if (!isPreview(event) && !params.surround && !params.dirConfig && (typeof path === "string" || path instanceof RegExp)) {
     const index = await getContentIndex(event);
     const keys = Object.keys(index).filter((key) => path.test ? path.test(key) : key === String(path)).flatMap((key) => index[key]);
     const contents = await Promise.all(keys.map((key) => getContent(event, key)));
@@ -3449,12 +3108,10 @@ const sourceStorage = prefixStorage(useStorage(), "content:source");
 const cacheStorage = prefixStorage(useStorage(), "cache:content");
 const cacheParsedStorage = prefixStorage(useStorage(), "cache:content:parsed");
 const contentConfig = useRuntimeConfig().content;
-const contentIgnores = contentConfig.ignores.map(
-  (p) => typeof p === "string" ? new RegExp(`^${p}|:${p}`) : p
-);
+const isIgnored = makeIgnored(contentConfig.ignores);
 const invalidKeyCharacters = `'"?#/`.split("");
 const contentIgnorePredicate = (key) => {
-  if (key.startsWith("preview:") || contentIgnores.some((prefix) => prefix.test(key))) {
+  if (key.startsWith("preview:") || isIgnored(key)) {
     return false;
   }
   if (invalidKeyCharacters.some((ik) => key.includes(ik))) {
@@ -3489,11 +3146,22 @@ const getContentsIds = async (event, prefix) => {
   }
   return keys.filter(contentIgnorePredicate);
 };
+function* chunksFromArray(arr, n) {
+  for (let i = 0; i < arr.length; i += n) {
+    yield arr.slice(i, i + n);
+  }
+}
 const getContentsList = async (event, prefix) => {
   const keys = await getContentsIds(event, prefix);
-  const contents = await Promise.all(keys.map((key) => getContent(event, key)));
+  const keyChunks = [...chunksFromArray(keys, 10)];
+  const contents = [];
+  for (const chunk of keyChunks) {
+    const result = await Promise.all(chunk.map((key) => getContent(event, key)));
+    contents.push(...result);
+  }
   return contents;
 };
+const pendingPromises = {};
 const getContent = async (event, id) => {
   const contentId = id;
   if (!contentIgnorePredicate(id)) {
@@ -3509,8 +3177,13 @@ const getContent = async (event, id) => {
   }
   const cached = await cacheParsedStorage.getItem(id);
   const meta = await sourceStorage.getMeta(id);
+  const mtime = meta.mtime;
+  const size = meta.size || 0;
   const hash$1 = hash({
-    meta,
+    // Last modified time
+    mtime,
+    // File size
+    size,
     // Add Content version to the hash, to revalidate the cache on content update
     version: contentConfig.cacheVersion,
     integrity: contentConfig.cacheIntegrity
@@ -3518,42 +3191,52 @@ const getContent = async (event, id) => {
   if (cached?.hash === hash$1) {
     return cached.parsed;
   }
-  const body = await sourceStorage.getItem(id);
-  if (body === null) {
-    return { _id: contentId, body: null };
+  if (!pendingPromises[id + hash$1]) {
+    pendingPromises[id + hash$1] = new Promise(async (resolve) => {
+      const body = await sourceStorage.getItem(id);
+      if (body === null) {
+        return resolve({ _id: contentId, body: null });
+      }
+      const parsed = await parseContent(contentId, body);
+      await cacheParsedStorage.setItem(id, { parsed, hash: hash$1 }).catch(() => {
+      });
+      resolve(parsed);
+      delete pendingPromises[id + hash$1];
+    });
   }
-  const parsed = await parseContent(contentId, body);
-  await cacheParsedStorage.setItem(id, { parsed, hash: hash$1 }).catch(() => {
-  });
-  return parsed;
+  return pendingPromises[id + hash$1];
 };
-async function parseContent(id, content, opts = {}) {
+const parseContent = async (id, content, opts = {}) => {
   const nitroApp = useNitroApp();
   const options = defu(
     opts,
     {
-      markdown: contentConfig.markdown,
+      markdown: {
+        ...contentConfig.markdown,
+        highlight: contentConfig.highlight
+      },
       csv: contentConfig.csv,
       yaml: contentConfig.yaml,
-      highlight: contentConfig.highlight,
       transformers: transformers,
       pathMeta: {
         defaultLocale: contentConfig.defaultLocale,
-        locales: contentConfig.locales
+        locales: contentConfig.locales,
+        respectPathCase: contentConfig.respectPathCase
       }
     }
   );
-  const file = { _id: id, body: content };
+  const file = { _id: id, body: typeof content === "string" ? content.replace(/\r\n|\r/g, "\n") : content };
   await nitroApp.hooks.callHook("content:file:beforeParse", file);
   const result = await transformContent(id, file.body, options);
   await nitroApp.hooks.callHook("content:file:afterParse", result);
   return result;
-}
+};
 const createServerQueryFetch = (event) => (query) => {
   return createPipelineFetcher(() => getIndexedContentsList(event, query))(query);
 };
 function serverQueryContent(event, query, ...pathParts) {
-  const queryBuilder = createQuery(createServerQueryFetch(event), typeof query !== "string" ? query || {} : {});
+  const { advanceQuery } = useRuntimeConfig().public.content.experimental;
+  const queryBuilder = advanceQuery ? createQuery(createServerQueryFetch(event), { initialParams: typeof query !== "string" ? query || {} : {}, legacy: false }) : createQuery(createServerQueryFetch(event), { initialParams: typeof query !== "string" ? query || {} : {}, legacy: true });
   let path;
   if (typeof query === "string") {
     path = withLeadingSlash(joinURL(query, ...pathParts));
@@ -3585,17 +3268,15 @@ function serverQueryContent(event, query, ...pathParts) {
 }
 
 function jsonParse(value) {
-  return JSON.parse(value, (key, value2) => {
-    const withOperator = typeof value2 === "string" && value2.match(/^--([A-Z]+) (.+)$/) || [];
-    if (withOperator[1] === "REGEX") {
-      const regex = withOperator[2].match(/\/(.*)\/([dgimsuy]*)$/);
-      return regex ? new RegExp(regex[1], regex[2] || "") : value2;
-    }
-    if (key === "_path") {
-      return decodeURI(value2);
-    }
-    return value2;
-  });
+  return JSON.parse(value, regExpReviver);
+}
+function regExpReviver(_key, value) {
+  const withOperator = typeof value === "string" && value.match(/^--([A-Z]+) (.+)$/) || [];
+  if (withOperator[1] === "REGEX") {
+    const regex = withOperator[2].match(/\/(.*)\/([dgimsuy]*)$/);
+    return regex ? new RegExp(regex[1], regex[2] || "") : value;
+  }
+  return value;
 }
 
 const parseJSONQueryParams = (body) => {
@@ -3617,20 +3298,20 @@ const getContentQuery = (event) => {
   if (params) {
     return decodeQueryParams(params.replace(/.json$/, ""));
   }
-  const qid = event.context.params.qid?.replace(/.json$/, "");
-  const query = getQuery(event) || {};
+  const qid = event.context.params?.qid?.replace(/.json$/, "");
+  const query = getQuery$1(event) || {};
   if (qid && query._params) {
-    memory[qid] = parseJSONQueryParams(query._params);
+    memory[qid] = parseJSONQueryParams(decodeURIComponent(query._params));
     if (memory[qid].where && !Array.isArray(memory[qid].where)) {
       memory[qid].where = [memory[qid].where];
     }
     return memory[qid];
   }
-  if (memory[qid]) {
+  if (qid && memory[qid]) {
     return memory[qid];
   }
   if (query._params) {
-    return parseJSONQueryParams(query._params);
+    return parseJSONQueryParams(decodeURIComponent(query._params));
   }
   if (typeof query.only === "string" && query.only.includes(",")) {
     query.only = query.only.split(",").map((s) => s.trim());
@@ -3667,22 +3348,18 @@ const getContentQuery = (event) => {
   return query;
 };
 
-const _k6RHSo = defineEventHandler(async (event) => {
+const _ebM1dm = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
+  const { advanceQuery } = useRuntimeConfig().public.content.experimental;
   if (query.first) {
-    const content = await serverQueryContent(event, query).findOne();
-    const path = content?._path || query.where?.find((w) => w._path)?._path;
-    if (path) {
-      const _dir = await serverQueryContent(event).where({ _path: join(path, "_dir") }).without("_").findOne();
-      if (_dir && !Array.isArray(_dir)) {
-        return {
-          _path: path,
-          ...content || {},
-          _dir
-        };
-      }
+    let contentQuery = serverQueryContent(event, query);
+    if (!advanceQuery) {
+      contentQuery = contentQuery.withDirConfig();
     }
-    if (!content) {
+    const content = await contentQuery.findOne();
+    const _result = advanceQuery ? content?.result : content;
+    const missing = !_result && !content?.dirConfig?.navigation?.redirect && !content?._dir?.navigation?.redirect;
+    if (missing) {
       throw createError({
         statusMessage: "Document not found!",
         statusCode: 404,
@@ -3694,11 +3371,13 @@ const _k6RHSo = defineEventHandler(async (event) => {
     }
     return content;
   }
-  const contents = await serverQueryContent(event, query).find();
-  return contents;
+  if (query.count) {
+    return serverQueryContent(event, query).count();
+  }
+  return serverQueryContent(event, query).find();
 });
 
-const _lZ1wEq = defineEventHandler(async (event) => {
+const _qUpgS3 = defineEventHandler(async (event) => {
   const { content } = useRuntimeConfig();
   const now = Date.now();
   const contents = await serverQueryContent(event).find();
@@ -3714,7 +3393,7 @@ const _lZ1wEq = defineEventHandler(async (event) => {
 });
 
 function createNav(contents, configs) {
-  const { navigation } = useRuntimeConfig().content;
+  const { navigation } = useRuntimeConfig().public.content;
   const pickNavigationFields = (content) => ({
     ...pick(["title", ...navigation.fields])(content),
     ...isObject(content?.navigation) ? content.navigation : {}
@@ -3778,7 +3457,7 @@ const collator = new Intl.Collator(void 0, { numeric: true, sensitivity: "base" 
 function sortAndClear(nav) {
   const sorted = nav.sort((a, b) => collator.compare(a._file, b._file));
   for (const item of sorted) {
-    if (item.children.length) {
+    if (item.children?.length) {
       sortAndClear(item.children);
     } else {
       delete item.children;
@@ -3800,7 +3479,7 @@ function isObject(obj) {
   return Object.prototype.toString.call(obj) === "[object Object]";
 }
 
-const _sJE8MM = defineEventHandler(async (event) => {
+const _0IoPDB = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (!isPreview(event) && Object.keys(query).length === 0) {
     const cache = await cacheStorage.getItem("content-navigation.json");
@@ -3822,7 +3501,7 @@ const _sJE8MM = defineEventHandler(async (event) => {
     }
   }).find();
   const dirConfigs = await serverQueryContent(event).where({ _path: /\/_dir$/i, _partial: true }).find();
-  const configs = dirConfigs.reduce((configs2, conf) => {
+  const configs = (dirConfigs?.result || dirConfigs).reduce((configs2, conf) => {
     if (conf.title?.toLowerCase() === "dir") {
       conf.title = void 0;
     }
@@ -3834,49 +3513,114 @@ const _sJE8MM = defineEventHandler(async (event) => {
     };
     return configs2;
   }, {});
-  return createNav(contents, configs);
+  return createNav(contents?.result || contents, configs);
 });
 
-const _lazy_QFWisv = () => Promise.resolve().then(function () { return searchExample$1; });
-const _lazy_Ma1pDg = () => Promise.resolve().then(function () { return google; });
-const _lazy_XrWOay = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_biYJbD = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/api/searchExample', handler: _lazy_QFWisv, lazy: true, middleware: false, method: undefined },
-  { route: '/api/google', handler: _lazy_Ma1pDg, lazy: true, middleware: false, method: undefined },
-  { route: '/__nuxt_error', handler: _lazy_XrWOay, lazy: true, middleware: false, method: undefined },
-  { route: '', handler: _FIFLpG, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _O4Xkyd, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _iLBork, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _Ybs3s8, lazy: false, middleware: false, method: undefined },
-  { route: '', handler: _j0TZ2L, lazy: false, middleware: false, method: undefined },
-  { route: '/api/_content/query/:qid/**:params', handler: _k6RHSo, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query/:qid', handler: _k6RHSo, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query', handler: _k6RHSo, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.json', handler: _lZ1wEq, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid/**:params', handler: _sJE8MM, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid', handler: _sJE8MM, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation', handler: _sJE8MM, lazy: false, middleware: false, method: "get" },
-  { route: '/**', handler: _lazy_XrWOay, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_biYJbD, lazy: true, middleware: false, method: undefined },
+  { route: '/api/_content/query/:qid/**:params', handler: _ebM1dm, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query/:qid', handler: _ebM1dm, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query', handler: _ebM1dm, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/cache.json', handler: _qUpgS3, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid/**:params', handler: _0IoPDB, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid', handler: _0IoPDB, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation', handler: _0IoPDB, lazy: false, middleware: false, method: "get" },
+  { route: '/**', handler: _lazy_biYJbD, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
   const config = useRuntimeConfig();
   const hooks = createHooks();
+  const captureError = (error, context = {}) => {
+    const promise = hooks.callHookParallel("error", error, context).catch((_err) => {
+      console.error("Error while capturing another error", _err);
+    });
+    if (context.event && isEvent(context.event)) {
+      const errors = context.event.context.nitro?.errors;
+      if (errors) {
+        errors.push({ error, context });
+      }
+      if (context.event.waitUntil) {
+        context.event.waitUntil(promise);
+      }
+    }
+  };
   const h3App = createApp({
     debug: destr(true),
-    onError: errorHandler
+    onError: (error, event) => {
+      captureError(error, { event, tags: ["request"] });
+      return errorHandler(error, event);
+    },
+    onRequest: async (event) => {
+      await nitroApp.hooks.callHook("request", event).catch((error) => {
+        captureError(error, { event, tags: ["request"] });
+      });
+    },
+    onBeforeResponse: async (event, response) => {
+      await nitroApp.hooks.callHook("beforeResponse", event, response).catch((error) => {
+        captureError(error, { event, tags: ["request", "response"] });
+      });
+    },
+    onAfterResponse: async (event, response) => {
+      await nitroApp.hooks.callHook("afterResponse", event, response).catch((error) => {
+        captureError(error, { event, tags: ["request", "response"] });
+      });
+    }
   });
-  h3App.use(config.app.baseURL, timingMiddleware);
-  const router = createRouter$1();
-  h3App.use(createRouteRulesHandler());
+  const router = createRouter$1({
+    preemptive: true
+  });
+  const localCall = createCall(toNodeListener(h3App));
+  const _localFetch = createFetch(localCall, globalThis.fetch);
+  const localFetch = (input, init) => _localFetch(input, init).then(
+    (response) => normalizeFetchResponse(response)
+  );
+  const $fetch = createFetch$1({
+    fetch: localFetch,
+    Headers: Headers$1,
+    defaults: { baseURL: config.app.baseURL }
+  });
+  globalThis.$fetch = $fetch;
+  h3App.use(createRouteRulesHandler({ localFetch }));
+  h3App.use(
+    eventHandler((event) => {
+      event.context.nitro = event.context.nitro || { errors: [] };
+      const envContext = event.node.req?.__unenv__;
+      if (envContext) {
+        Object.assign(event.context, envContext);
+      }
+      event.fetch = (req, init) => fetchWithEvent(event, req, init, { fetch: localFetch });
+      event.$fetch = (req, init) => fetchWithEvent(event, req, init, {
+        fetch: $fetch
+      });
+      event.waitUntil = (promise) => {
+        if (!event.context.nitro._waitUntilPromises) {
+          event.context.nitro._waitUntilPromises = [];
+        }
+        event.context.nitro._waitUntilPromises.push(promise);
+        if (envContext?.waitUntil) {
+          envContext.waitUntil(promise);
+        }
+      };
+      event.captureError = (error, context) => {
+        captureError(error, { event, ...context });
+      };
+    })
+  );
   for (const h of handlers) {
     let handler = h.lazy ? lazyEventHandler(h.handler) : h.handler;
     if (h.middleware || !h.route) {
-      const middlewareBase = (config.app.baseURL + (h.route || "/")).replace(/\/+/g, "/");
+      const middlewareBase = (config.app.baseURL + (h.route || "/")).replace(
+        /\/+/g,
+        "/"
+      );
       h3App.use(middlewareBase, handler);
     } else {
-      const routeRules = getRouteRulesForPath(h.route.replace(/:\w+|\*\*/g, "_"));
+      const routeRules = getRouteRulesForPath(
+        h.route.replace(/:\w+|\*\*/g, "_")
+      );
       if (routeRules.cache) {
         handler = cachedEventHandler(handler, {
           group: "nitro/routes",
@@ -3886,20 +3630,22 @@ function createNitroApp() {
       router.use(h.route, handler, h.method);
     }
   }
-  h3App.use(config.app.baseURL, router);
-  const localCall = createCall(toNodeListener(h3App));
-  const localFetch = createFetch(localCall, globalThis.fetch);
-  const $fetch = createFetch$1({ fetch: localFetch, Headers, defaults: { baseURL: config.app.baseURL } });
-  globalThis.$fetch = $fetch;
+  h3App.use(config.app.baseURL, router.handler);
   const app = {
     hooks,
     h3App,
     router,
     localCall,
-    localFetch
+    localFetch,
+    captureError
   };
   for (const plugin of plugins) {
-    plugin(app);
+    try {
+      plugin(app);
+    } catch (err) {
+      captureError(err, { tags: ["plugin"] });
+      throw err;
+    }
   }
   return app;
 }
@@ -3908,16 +3654,16 @@ const useNitroApp = () => nitroApp;
 
 const server = new Server(toNodeListener(nitroApp.h3App));
 function getAddress() {
-  if (provider === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET) {
-    return "0";
+  if (U === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET || process.versions.bun) {
+    return 0;
   }
   const socketName = `worker-${process.pid}-${threadId}.sock`;
-  if (isWindows) {
-    return join$1("\\\\.\\pipe\\nitro", socketName);
+  if (C) {
+    return join("\\\\.\\pipe\\nitro", socketName);
   } else {
-    const socketDir = join$1(tmpdir(), "nitro");
+    const socketDir = join(tmpdir(), "nitro");
     mkdirSync(socketDir, { recursive: true });
-    return join$1(socketDir, socketName);
+    return join(socketDir, socketName);
   }
 }
 const listenAddress = getAddress();
@@ -3928,58 +3674,110 @@ server.listen(listenAddress, () => {
     address: typeof _address === "string" ? { socketPath: _address } : { host: "localhost", port: _address.port }
   });
 });
-{
-  process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection]", err));
-  process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException]", err));
+trapUnhandledNodeErrors();
+async function onShutdown(signal) {
+  await nitroApp.hooks.callHook("close");
+}
+parentPort.on("message", async (msg) => {
+  if (msg && msg.event === "shutdown") {
+    await onShutdown();
+    parentPort.postMessage({ event: "exit" });
+  }
+});
+
+const _messages = {"appName":"Nuxt","version":"","statusCode":500,"statusMessage":"Server error","description":"An error occurred in the application and the page could not be served. If you are the application owner, check your server logs for details.","stack":""};
+const _render = function({ messages }) {
+var __t, __p = '';
+__p += '<!DOCTYPE html><html><head><title>' +
+((__t = ( messages.statusCode )) == null ? '' : __t) +
+' - ' +
+((__t = ( messages.statusMessage )) == null ? '' : __t) +
+' | ' +
+((__t = ( messages.appName )) == null ? '' : __t) +
+'</title><meta charset="utf-8"><meta content="width=device-width,initial-scale=1,minimum-scale=1" name="viewport"><style>.spotlight{background:linear-gradient(45deg, #00DC82 0%, #36E4DA 50%, #0047E1 100%);opacity:0.8;filter:blur(30vh);height:60vh;bottom:-40vh}*,:before,:after{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e0e0e0}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(14, 165, 233, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{margin:0;font-family:inherit;line-height:inherit}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}h1,p,pre{margin:0}h1{font-size:inherit;font-weight:inherit}pre{font-size:1em;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.bg-white{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-black\\/5{--tw-bg-opacity:.05;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.rounded-t-md{border-top-left-radius:.375rem;border-top-right-radius:.375rem}.flex{display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex}.flex-col{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;-webkit-flex-direction:column;flex-direction:column}.flex-1{-webkit-box-flex:1;-ms-flex:1 1 0%;-webkit-flex:1 1 0%;flex:1 1 0%}.font-sans{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"}.font-medium{font-weight:500}.font-light{font-weight:300}.h-auto{height:auto}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-6xl{font-size:3.75rem;line-height:1}.leading-tight{line-height:1.25}.mb-8{margin-bottom:2rem}.mb-6{margin-bottom:1.5rem}.min-h-screen{min-height:100vh}.overflow-y-auto{overflow-y:auto}.p-8{padding:2rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.pt-14{padding-top:3.5rem}.fixed{position:fixed}.left-0{left:0}.right-0{right:0}.text-black{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.z-10{z-index:10}@media (min-width: 640px){.sm\\:text-8xl{font-size:6rem;line-height:1}.sm\\:text-2xl{font-size:1.5rem;line-height:2rem}}@media (prefers-color-scheme: dark){.dark\\:bg-black{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:bg-white\\/10{--tw-bg-opacity:.1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.dark\\:text-white{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}</style><script>(function(){const t=document.createElement("link").relList;if(t&&t.supports&&t.supports("modulepreload"))return;for(const e of document.querySelectorAll(\'link[rel="modulepreload"]\'))i(e);new MutationObserver(e=>{for(const r of e)if(r.type==="childList")for(const o of r.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&i(o)}).observe(document,{childList:!0,subtree:!0});function s(e){const r={};return e.integrity&&(r.integrity=e.integrity),e.referrerPolicy&&(r.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?r.credentials="include":e.crossOrigin==="anonymous"?r.credentials="omit":r.credentials="same-origin",r}function i(e){if(e.ep)return;e.ep=!0;const r=s(e);fetch(e.href,r)}})();</script></head><body class="font-sans antialiased bg-white px-10 pt-14 dark:bg-black text-black dark:text-white min-h-screen flex flex-col"><div class="fixed left-0 right-0 spotlight"></div><h1 class="text-6xl sm:text-8xl font-medium mb-6">' +
+((__t = ( messages.statusCode )) == null ? '' : __t) +
+'</h1><p class="text-xl sm:text-2xl font-light mb-8 leading-tight">' +
+((__t = ( messages.description )) == null ? '' : __t) +
+'</p><div class="bg-white rounded-t-md bg-black/5 dark:bg-white/10 flex-1 overflow-y-auto h-auto"><pre class="text-xl font-light leading-tight z-10 p-8">' +
+((__t = ( messages.stack )) == null ? '' : __t) +
+'</pre></div></body></html>';
+return __p
+};
+const _template = (messages) => _render({ messages: { ..._messages, ...messages } });
+const template$1 = _template;
+
+const errorDev = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  template: template$1
+});
+
+const Vue3 = version.startsWith("3");
+
+function resolveUnref(r) {
+  return typeof r === "function" ? r() : unref(r);
+}
+function resolveUnrefHeadInput(ref, lastKey = "") {
+  if (ref instanceof Promise)
+    return ref;
+  const root = resolveUnref(ref);
+  if (!ref || !root)
+    return root;
+  if (Array.isArray(root))
+    return root.map((r) => resolveUnrefHeadInput(r, lastKey));
+  if (typeof root === "object") {
+    return Object.fromEntries(
+      Object.entries(root).map(([k, v]) => {
+        if (k === "titleTemplate" || k.startsWith("on"))
+          return [k, unref(v)];
+        return [k, resolveUnrefHeadInput(v, k)];
+      })
+    );
+  }
+  return root;
 }
 
-const searchExample = defineEventHandler(async (event) => {
-  const { serverMeilisearchClient } = event.context;
-  await serverMeilisearchClient.index("movies").addDocuments(
-    {
-      id: 999999994234,
-      title: "Batman Unmasked: The Psychology of the Dark Knight",
-      poster: "https://image.tmdb.org/t/p/w1280/jjHu128XLARc2k4cJrblAvZe0HE.jpg",
-      overview: "Delve into the world of Batman and the vigilante justice tha",
-      release_date: "2008-07-15"
+const VueReactivityPlugin = defineHeadPlugin({
+  hooks: {
+    "entries:resolve": function(ctx) {
+      for (const entry of ctx.entries)
+        entry.resolvedInput = resolveUnrefHeadInput(entry.input);
     }
-  );
-  return { myCustomResponse: "Document is on the way...." };
+  }
 });
 
-const searchExample$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': searchExample
-});
+const headSymbol = "usehead";
+function vueInstall(head) {
+  const plugin = {
+    install(app) {
+      if (Vue3) {
+        app.config.globalProperties.$unhead = head;
+        app.config.globalProperties.$head = head;
+        app.provide(headSymbol, head);
+      }
+    }
+  };
+  return plugin.install;
+}
+function createServerHead(options = {}) {
+  const head = createServerHead$1(options);
+  head.use(VueReactivityPlugin);
+  head.install = vueInstall(head);
+  return head;
+}
 
-useOneTap({
-  onSuccess: (response) => {
-    console.log("Success:", response);
-  },
-  onError: () => console.error("Error with One Tap Login")
-});
+const unheadPlugins = [];
 
-const google = /*#__PURE__*/Object.freeze({
-  __proto__: null
-});
+const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
 const appRootId = "__nuxt";
 
 const appRootTag = "div";
 
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
-}
-function publicAssetsURL(...path) {
-  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
 globalThis.__buildAssetsURL = buildAssetsURL;
 globalThis.__publicAssetsURL = publicAssetsURL;
-const getClientManifest = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getStaticRenderedHead = () => Promise.resolve().then(function () { return _virtual__headStatic$1; }).then((r) => r.default || r);
-const getServerEntry = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/Applications/AlternateCMS-Framework/elitekids-frontend/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file://C:/Users/Basti/OneDrive/Documents/My%20Websites/Handmade%20Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   if (!manifest) {
@@ -4000,15 +3798,16 @@ const getSSRRenderer = lazyCachedFunction(async () => {
     if (process.env.NUXT_VITE_NODE_OPTIONS) {
       renderer.rendererContext.updateManifest(await getClientManifest());
     }
-    return `<${appRootTag} id="${appRootId}">${html}</${appRootTag}>`;
+    return `<${appRootTag}${` id="${appRootId}"` }>${html}</${appRootTag}>`;
   }
   return renderer;
 });
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
+  const spaTemplate = await Promise.resolve().then(function () { return _virtual__spaTemplate; }).then((r) => r.template).catch(() => "");
   const options = {
     manifest,
-    renderToString: () => `<${appRootTag} id="${appRootId}"></${appRootTag}>`,
+    renderToString: () => `<${appRootTag}${` id="${appRootId}"` }>${spaTemplate}</${appRootTag}>`,
     buildAssetsURL
   };
   const renderer = createRenderer(() => () => {
@@ -4016,16 +3815,17 @@ const getSPARenderer = lazyCachedFunction(async () => {
   const result = await renderer.renderToString({});
   const renderToString = (ssrContext) => {
     const config = useRuntimeConfig();
+    ssrContext.modules = ssrContext.modules || /* @__PURE__ */ new Set();
     ssrContext.payload = {
+      _errors: {},
       serverRendered: false,
-      config: {
-        public: config.public,
-        app: config.app
-      },
       data: {},
       state: {}
     };
-    ssrContext.renderMeta = ssrContext.renderMeta ?? getStaticRenderedHead;
+    ssrContext.config = {
+      public: config.public,
+      app: config.app
+    };
     return Promise.resolve(result);
   };
   return {
@@ -4033,33 +3833,59 @@ const getSPARenderer = lazyCachedFunction(async () => {
     renderToString
   };
 });
-const PAYLOAD_URL_RE = /\/_payload(\.[a-zA-Z0-9]+)?.js(\?.*)?$/;
+const PAYLOAD_URL_RE = /\/_payload(\.[a-zA-Z0-9]+)?.json(\?.*)?$/ ;
 const renderer = defineRenderHandler(async (event) => {
-  const ssrError = event.node.req.url?.startsWith("/__nuxt_error") ? getQuery(event) : null;
-  if (ssrError && event.node.req.socket.readyState !== "readOnly") {
-    throw createError("Cannot directly render error page!");
+  const nitroApp = useNitroApp();
+  const ssrError = event.path.startsWith("/__nuxt_error") ? getQuery$1(event) : null;
+  if (ssrError && ssrError.statusCode) {
+    ssrError.statusCode = parseInt(ssrError.statusCode);
   }
-  let url = ssrError?.url || event.node.req.url;
-  const isRenderingPayload = PAYLOAD_URL_RE.test(url);
+  if (ssrError && !("__unenv__" in event.node.req)) {
+    throw createError({
+      statusCode: 404,
+      statusMessage: "Page Not Found: /__nuxt_error"
+    });
+  }
+  const islandContext = void 0;
+  let url = ssrError?.url || islandContext?.url || event.path;
+  const isRenderingPayload = PAYLOAD_URL_RE.test(url) && !islandContext;
   if (isRenderingPayload) {
     url = url.substring(0, url.lastIndexOf("/")) || "/";
+    event._path = url;
     event.node.req.url = url;
   }
   const routeOptions = getRouteRules(event);
+  const head = createServerHead({
+    plugins: unheadPlugins
+  });
+  const headEntryOptions = { mode: "server" };
+  head.push(appHead, headEntryOptions);
   const ssrContext = {
     url,
     event,
     runtimeConfig: useRuntimeConfig(),
-    noSSR: !!event.node.req.headers["x-nuxt-no-ssr"] || routeOptions.ssr === false || (false),
+    noSSR: event.context.nuxt?.noSSR || routeOptions.ssr === false && !islandContext || (false),
+    head,
     error: !!ssrError,
     nuxt: void 0,
-    payload: ssrError ? { error: ssrError } : {}
+    /* NuxtApp */
+    payload: ssrError ? { error: ssrError } : {},
+    _payloadReducers: {},
+    islandContext
   };
   const renderer = ssrContext.noSSR ? await getSPARenderer() : await getSSRRenderer();
-  const _rendered = await renderer.renderToString(ssrContext).catch((error) => {
-    throw !ssrError && ssrContext.payload?.error || error;
+  const _rendered = await renderer.renderToString(ssrContext).catch(async (error) => {
+    if (ssrContext._renderResponse && error.message === "skipping render") {
+      return {};
+    }
+    const _err = !ssrError && ssrContext.payload?.error || error;
+    await ssrContext.nuxt?.hooks.callHook("app:error", _err);
+    throw _err;
   });
-  await ssrContext.nuxt?.hooks.callHook("app:rendered", { ssrContext });
+  await ssrContext.nuxt?.hooks.callHook("app:rendered", { ssrContext, renderResult: _rendered });
+  if (ssrContext._renderResponse) {
+    return ssrContext._renderResponse;
+  }
   if (ssrContext.payload?.error && !ssrError) {
     throw ssrContext.payload.error;
   }
@@ -4067,41 +3893,59 @@ const renderer = defineRenderHandler(async (event) => {
     const response2 = renderPayloadResponse(ssrContext);
     return response2;
   }
-  const renderedMeta = await ssrContext.renderMeta?.() ?? {};
-  const inlinedStyles = "";
+  const inlinedStyles = Boolean(islandContext) ? await renderInlineStyles(ssrContext.modules ?? ssrContext._registeredComponents ?? []) : [];
+  const NO_SCRIPTS = routeOptions.experimentalNoScripts;
+  const { styles, scripts } = getRequestDependencies(ssrContext, renderer.rendererContext);
+  head.push({ style: inlinedStyles });
+  head.push({
+    link: Object.values(styles).map(
+      (resource) => ({ rel: "stylesheet", href: renderer.rendererContext.buildAssetsURL(resource.file) })
+    )
+  }, headEntryOptions);
+  if (!NO_SCRIPTS) {
+    head.push({
+      link: getPreloadLinks(ssrContext, renderer.rendererContext)
+    }, headEntryOptions);
+    head.push({
+      link: getPrefetchLinks(ssrContext, renderer.rendererContext)
+    }, headEntryOptions);
+    head.push({
+      script: renderPayloadJsonScript({ id: "__NUXT_DATA__", ssrContext, data: ssrContext.payload }) 
+    }, {
+      ...headEntryOptions,
+      // this should come before another end of body scripts
+      tagPosition: "bodyClose",
+      tagPriority: "high"
+    });
+  }
+  if (!routeOptions.experimentalNoScripts) {
+    head.push({
+      script: Object.values(scripts).map((resource) => ({
+        type: resource.module ? "module" : null,
+        src: renderer.rendererContext.buildAssetsURL(resource.file),
+        defer: resource.module ? null : true,
+        crossorigin: ""
+      }))
+    }, headEntryOptions);
+  }
+  const { headTags, bodyTags, bodyTagsOpen, htmlAttrs, bodyAttrs } = await renderSSRHead(head);
   const htmlContext = {
-    htmlAttrs: normalizeChunks([renderedMeta.htmlAttrs]),
-    head: normalizeChunks([
-      renderedMeta.headTags,
-      null,
-      _rendered.renderResourceHints(),
-      _rendered.renderStyles(),
-      inlinedStyles,
-      ssrContext.styles
-    ]),
-    bodyAttrs: normalizeChunks([renderedMeta.bodyAttrs]),
-    bodyPrepend: normalizeChunks([
-      renderedMeta.bodyScriptsPrepend,
-      ssrContext.teleports?.body
-    ]),
-    body: [
-      _rendered.html
-    ],
-    bodyAppend: normalizeChunks([
-      `<script>window.__NUXT__=${devalue(ssrContext.payload)}<\/script>`,
-      _rendered.renderScripts(),
-      renderedMeta.bodyScripts
-    ])
+    island: Boolean(islandContext),
+    htmlAttrs: [htmlAttrs],
+    head: normalizeChunks([headTags, ssrContext.styles]),
+    bodyAttrs: [bodyAttrs],
+    bodyPrepend: normalizeChunks([bodyTagsOpen, ssrContext.teleports?.body]),
+    body: [_rendered.html],
+    bodyAppend: [bodyTags]
   };
-  const nitroApp = useNitroApp();
   await nitroApp.hooks.callHook("render:html", htmlContext, { event });
   const response = {
     body: renderHTMLDocument(htmlContext),
-    statusCode: event.node.res.statusCode,
-    statusMessage: event.node.res.statusMessage,
+    statusCode: getResponseStatus(event),
+    statusMessage: getResponseStatusText(event),
     headers: {
-      "Content-Type": "text/html;charset=UTF-8",
-      "X-Powered-By": "Nuxt"
+      "content-type": "text/html;charset=utf-8",
+      "x-powered-by": "Nuxt"
     }
   };
   return response;
@@ -4134,16 +3978,46 @@ function renderHTMLDocument(html) {
 <body ${joinAttrs(html.bodyAttrs)}>${joinTags(html.bodyPrepend)}${joinTags(html.body)}${joinTags(html.bodyAppend)}</body>
 </html>`;
 }
+async function renderInlineStyles(usedModules) {
+  const styleMap = await getSSRStyles();
+  const inlinedStyles = /* @__PURE__ */ new Set();
+  for (const mod of usedModules) {
+    if (mod in styleMap) {
+      for (const style of await styleMap[mod]()) {
+        inlinedStyles.add(style);
+      }
+    }
+  }
+  return Array.from(inlinedStyles).map((style) => ({ innerHTML: style }));
+}
 function renderPayloadResponse(ssrContext) {
   return {
-    body: `export default ${devalue(splitPayload(ssrContext).payload)}`,
-    statusCode: ssrContext.event.node.res.statusCode,
-    statusMessage: ssrContext.event.node.res.statusMessage,
+    body: stringify(splitPayload(ssrContext).payload, ssrContext._payloadReducers) ,
+    statusCode: getResponseStatus(ssrContext.event),
+    statusMessage: getResponseStatusText(ssrContext.event),
     headers: {
-      "content-type": "text/javascript;charset=UTF-8",
+      "content-type": "application/json;charset=utf-8" ,
       "x-powered-by": "Nuxt"
     }
   };
+}
+function renderPayloadJsonScript(opts) {
+  const contents = opts.data ? stringify(opts.data, opts.ssrContext._payloadReducers) : "";
+  const payload = {
+    type: "application/json",
+    id: opts.id,
+    innerHTML: contents,
+    "data-ssr": !(opts.ssrContext.noSSR)
+  };
+  if (opts.src) {
+    payload["data-src"] = opts.src;
+  }
+  return [
+    payload,
+    {
+      innerHTML: `window.__NUXT__={};window.__NUXT__.config=${uneval(opts.ssrContext.config)}`
+    }
+  ];
 }
 function splitPayload(ssrContext) {
   const { data, prerenderedAt, ...initial } = ssrContext.payload;
@@ -4155,13 +4029,20 @@ function splitPayload(ssrContext) {
 
 const renderer$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  'default': renderer
+  default: renderer
 });
 
-const _virtual__headStatic = {"headTags":"<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">","bodyTags":"","bodyTagsOpen":"","htmlAttrs":"","bodyAttrs":""};
+const styles = {};
 
-const _virtual__headStatic$1 = /*#__PURE__*/Object.freeze({
+const styles$1 = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  'default': _virtual__headStatic
+  default: styles
+});
+
+const template = "";
+
+const _virtual__spaTemplate = /*#__PURE__*/Object.freeze({
+  __proto__: null,
+  template: template
 });
 //# sourceMappingURL=index.mjs.map

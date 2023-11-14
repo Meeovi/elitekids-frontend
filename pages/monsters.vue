@@ -29,54 +29,18 @@
             <div class="container">
 
                 <div class="row mt-4">
-                    <div class="item features-image сol-12 col-md-6 col-lg-4">
+                    <div class="item features-image сol-12 col-md-6 col-lg-4" v-for="monsters in data.MonsterItems.items" :key="monsters">
                         <div class="item-wrapper">
                             <div class="item-img">
-                                <img src="../assets/images/features1.jpg">
+                                <img :src="`${monsters.content.image.filename}`" :alt="monsters.content.name">
                             </div>
                             <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-7"><strong>No Coding</strong></h5>
+                                <h5 class="item-title mbr-fonts-style display-7"><strong>{{ monsters.content.name }}</strong></h5>
 
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Mobirise is an easy website builder.
-                                    Just
-                                    drop site elements to your page, add content and style it to look the way you like.
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">{{ monsters.content.types.name }}
                                 </p>
                             </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href=""
-                                    class="btn btn-primary item-btn display-7" target="_blank">Learn More
-                                    &gt;</a></div>
-                        </div>
-                    </div>
-                    <div class="item features-image сol-12 col-md-6 col-lg-4">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img src="../assets/images/features2.jpg">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-7"><strong>Mobile Friendly</strong></h5>
-
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">You don't have to code to create your
-                                    own
-                                    site. Select one of available themes in the Mobirise Site Maker.</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href=""
-                                    class="btn btn-primary item-btn display-7" target="_blank">Learn More
-                                    &gt;</a></div>
-                        </div>
-                    </div>
-                    <div class="item features-image сol-12 col-md-6 col-lg-4">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img src="../assets/images/features3.jpg">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-7"><strong>Unique Styles</strong></h5>
-
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Select the theme that suits you. Each
-                                    theme
-                                    in the Mobirise Website Software contains a set of unique blocks.<br></p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href=""
+                            <div class="mbr-section-btn item-footer mt-2"><a :href="`/character/${monsters.id}`"
                                     class="btn btn-primary item-btn display-7" target="_blank">Learn More
                                     &gt;</a></div>
                         </div>
@@ -94,6 +58,36 @@
 </script>
 
 <script setup>
+const query = gql `
+query {
+  MonsterItems {
+    items {
+      id
+      content {
+        name
+        types {
+          name
+        }
+        levels {
+          name
+        }
+        affiliates {
+          name
+        }
+        description
+        image {
+          filename
+        }
+      }
+    }
+  }
+}
+`
+
+  const {
+    data
+  } = await useAsyncQuery(query)
+
     useHead({
         title: 'Monsters',
     })

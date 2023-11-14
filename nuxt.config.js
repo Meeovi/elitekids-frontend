@@ -2,7 +2,6 @@
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@sidebase/core'],
 
   css: [
     'assets/web/assets/mobirise-icons2/mobirise2.css',
@@ -19,31 +18,10 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    //'nuxt-graphql-client',
     '@nuxt/content',
-    'nuxt-meilisearch',
-    'nuxt-directus',
     '@nuxtjs/apollo',
+    ["@storyblok/nuxt", { accessToken: process.env.accessToken }]
   ],
-
-  directus: {
-    url: process.env.DIRECTUS_URL,
-    auth: {
-      email: process.env.DIRECTUS_EMAIL,
-      password: process.env.DIRECTUS_PASSWORD,
-      token: process.env.DIRECTUS_TOKEN,
-    }
-  },
-
-  meilisearch: {
-    hostUrl: process.env.HOSTURL,
-    searchApiKey: process.env.SEARCH_APIKEY,
-    adminApiKey: process.env.ADMIN_APIKEY,
-    serverSideUsage: true,
-    instantSearch: {
-      theme: 'algolia'
-    }
-  },
 
   apollo: {
     authType: "Bearer",
@@ -52,16 +30,17 @@ export default defineNuxtConfig({
     clients: {
       default: {
         tokenName: "apollo-token",
-        httpEndpoint: process.env.GQL_HOST,
+        httpEndpoint: process.env.STORYBLOK_URL,
         httpLinkOptions: {
           headers: {
-            'x-hasura-admin-secret': process.env.GQL_HEADERS,
+            //'Authorization': process.env.STORYBLOK_TOKEN,
+            token: process.env.STORYBLOK_TOKEN,
+            version: 'publish'
           }
-        } /**/
+        }/* */
       },
     },
   },
-
 
   build: {
     transpile: [

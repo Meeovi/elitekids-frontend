@@ -1,13 +1,13 @@
-import { NuxtModule } from '@nuxt/schema'
-declare module '@nuxt/schema' {
+import { NuxtModule, RuntimeConfig } from 'nuxt/schema'
+declare module 'nuxt/schema' {
   interface NuxtConfig {
-    ["apollo"]?: typeof import("@nuxtjs/apollo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["mdc"]?: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["i18n"]?: typeof import("@nuxtjs/i18n").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["security"]?: typeof import("nuxt-security").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["googleSignIn"]?: typeof import("nuxt-vue3-google-signin").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["meilisearch"]?: typeof import("nuxt-meilisearch").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["apollo"]?: typeof import("@nuxtjs/apollo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["storyblok"]?: typeof import("@storyblok/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    ["devtools"]?: typeof import("C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    modules?: (undefined | null | false | NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/mdc", Exclude<NuxtConfig["mdc"], boolean>] | ["@nuxt/content", Exclude<NuxtConfig["content"], boolean>] | ["@nuxtjs/apollo", Exclude<NuxtConfig["apollo"], boolean>] | ["@storyblok/nuxt", Exclude<NuxtConfig["storyblok"], boolean>] | ["C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig {
    app: {
@@ -16,6 +16,10 @@ declare module '@nuxt/schema' {
       buildAssetsDir: string,
 
       cdnURL: string,
+   },
+
+   mdc: {
+      highlight: any,
    },
 
    content: {
@@ -47,7 +51,7 @@ declare module '@nuxt/schema' {
 
       sources: any,
 
-      ignores: Array<string>,
+      ignores: Array<any>,
 
       locales: Array<any>,
 
@@ -129,210 +133,96 @@ declare module '@nuxt/schema' {
          fields: Array<any>,
       },
 
+      contentHead: boolean,
+
       documentDriven: boolean,
+
+      respectPathCase: boolean,
 
       experimental: {
          clientDB: boolean,
 
          stripQueryParameters: boolean,
-      },
-   },
 
-   security: {
-      headers: {
-         crossOriginResourcePolicy: {
-            value: string,
+         advanceQuery: boolean,
 
-            route: string,
-         },
-
-         crossOriginOpenerPolicy: {
-            value: string,
-
-            route: string,
-         },
-
-         crossOriginEmbedderPolicy: {
-            value: string,
-
-            route: string,
-         },
-
-         contentSecurityPolicy: {
-            value: {
-               "base-uri": Array<string>,
-
-               "font-src": Array<string>,
-
-               "form-action": Array<string>,
-
-               "frame-ancestors": Array<string>,
-
-               "img-src": Array<string>,
-
-               "object-src": Array<string>,
-
-               "script-src-attr": Array<string>,
-
-               "style-src": Array<string>,
-
-               "upgrade-insecure-requests": boolean,
-            },
-
-            route: string,
-         },
-
-         originAgentCluster: {
-            value: string,
-
-            route: string,
-         },
-
-         referrerPolicy: {
-            value: string,
-
-            route: string,
-         },
-
-         strictTransportSecurity: {
-            value: {
-               maxAge: number,
-
-               includeSubdomains: boolean,
-            },
-
-            route: string,
-         },
-
-         xContentTypeOptions: {
-            value: string,
-
-            route: string,
-         },
-
-         xDNSPrefetchControl: {
-            value: string,
-
-            route: string,
-         },
-
-         xDownloadOptions: {
-            value: string,
-
-            route: string,
-         },
-
-         xFrameOptions: {
-            value: string,
-
-            route: string,
-         },
-
-         xPermittedCrossDomainPolicies: {
-            value: string,
-
-            route: string,
-         },
-
-         xXSSProtection: {
-            value: string,
-
-            route: string,
-         },
-      },
-
-      requestSizeLimiter: {
-         value: {
-            maxRequestSizeInBytes: number,
-
-            maxUploadFileRequestInBytes: number,
-         },
-
-         route: string,
-
-         throwError: boolean,
-      },
-
-      rateLimiter: {
-         value: {
-            tokensPerInterval: number,
-
-            interval: string,
-
-            fireImmediately: boolean,
-         },
-
-         route: string,
-
-         throwError: boolean,
-      },
-
-      xssValidator: {
-         value: any,
-
-         route: string,
-
-         throwError: boolean,
-      },
-
-      corsHandler: {
-         value: {
-            origin: string,
-
-            methods: Array<string>,
-
-            preflight: {
-               statusCode: number,
-            },
-         },
-
-         route: string,
-
-         throwError: boolean,
-      },
-
-      allowedMethodsRestricter: {
-         value: string,
-
-         route: string,
-
-         throwError: boolean,
-      },
-
-      hidePoweredBy: boolean,
-
-      basicAuth: boolean,
-
-      enabled: boolean,
-   },
-
-   serverMeilisearchClient: {
-      hostUrl: string,
-
-      searchApiKey: string,
-
-      adminApiKey: string,
-
-      serverSideUsage: boolean,
-
-      instantSearch: {
-         theme: string,
-      },
-
-      clientOptions: {
-         placeholderSearch: boolean,
-
-         paginationTotalHits: number,
-
-         finitePagination: boolean,
-
-         primaryKey: any,
-
-         keepZeroFacets: boolean,
+         search: any,
       },
    },
   }
   interface PublicRuntimeConfig {
+   mdc: {
+      components: {
+         prose: boolean,
+
+         map: {
+            p: string,
+
+            a: string,
+
+            blockquote: string,
+
+            "code-inline": string,
+
+            code: string,
+
+            em: string,
+
+            h1: string,
+
+            h2: string,
+
+            h3: string,
+
+            h4: string,
+
+            h5: string,
+
+            h6: string,
+
+            hr: string,
+
+            img: string,
+
+            ul: string,
+
+            ol: string,
+
+            li: string,
+
+            strong: string,
+
+            table: string,
+
+            thead: string,
+
+            tbody: string,
+
+            td: string,
+
+            th: string,
+
+            tr: string,
+         },
+      },
+
+      headings: {
+         anchorLinks: {
+            h1: boolean,
+
+            h2: boolean,
+
+            h3: boolean,
+
+            h4: boolean,
+
+            h5: boolean,
+
+            h6: boolean,
+         },
+      },
+   },
+
    content: {
       locales: Array<any>,
 
@@ -343,8 +233,12 @@ declare module '@nuxt/schema' {
       experimental: {
          stripQueryParameters: boolean,
 
+         advanceQuery: boolean,
+
          clientDB: boolean,
       },
+
+      respectPathCase: boolean,
 
       api: {
          baseURL: string,
@@ -414,6 +308,10 @@ declare module '@nuxt/schema' {
 
       trailingSlash: boolean,
 
+      search: any,
+
+      contentHead: boolean,
+
       anchorLinks: {
          depth: number,
 
@@ -421,32 +319,25 @@ declare module '@nuxt/schema' {
       },
    },
 
-   googleSignIn: {
-      clientId: string,
-   },
+   storyblok: {
+      accessToken: string,
 
-   meilisearchClient: {
-      hostUrl: string,
+      enableSudoMode: boolean,
 
-      searchApiKey: string,
+      usePlugin: boolean,
 
-      serverSideUsage: boolean,
+      bridge: boolean,
 
-      instantSearch: {
-         theme: string,
-      },
+      devtools: boolean,
 
-      clientOptions: {
-         placeholderSearch: boolean,
+      componentsDir: string,
 
-         paginationTotalHits: number,
-
-         finitePagination: boolean,
-
-         primaryKey: any,
-
-         keepZeroFacets: boolean,
-      },
+      apiOptions: any,
    },
   }
 }
+declare module 'vue' {
+        interface ComponentCustomProperties {
+          $config: RuntimeConfig
+        }
+      }

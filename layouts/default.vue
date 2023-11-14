@@ -6,11 +6,11 @@
         </a></v-app-bar-title>
 
       <v-list-item title="Home" value="home" href="/"></v-list-item>
-      <v-list-item title="Characters" value="Characters" href="/characters"></v-list-item>
-      <v-list-item title="Monsters" value="Monsters" href="/monsters"></v-list-item>
-      <v-list-item title="Places" value="Places" href="/places"></v-list-item>
-      <v-list-item title="Videos" value="Videos" href="/videos"></v-list-item>
-      <v-list-item title="Stories" value="Stories" href="/stories"></v-list-item>
+      <v-list-item title="Characters" value="Characters" prepend-icon="fas fa-mask" href="/characters"></v-list-item>
+      <v-list-item title="Monsters" value="Monsters" prepend-icon="fas fa-spaghetti-monster-flying" href="/monsters"></v-list-item>
+      <v-list-item title="Places" value="Places" prepend-icon="fas fa-globe" href="/places"></v-list-item>
+      <v-list-item title="Videos" value="Videos" prepend-icon="fas fa-video" href="/videos"></v-list-item>
+      <v-list-item title="Stories" value="Stories" prepend-icon="fas fa-book" href="/stories"></v-list-item>
       <v-spacer></v-spacer>
 
       <div class="d-flex align-center flex-column flex-sm-row fill-height">

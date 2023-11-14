@@ -23,24 +23,13 @@
         </section>
 
         <section class="image4 cid-sgjsafsZOP" id="image4-h">
-
-
-
-
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-6">
+                    <div class="col-12 col-lg-6" v-for="characters in data.CharacterItems.items" :key="characters">
                         <div class="image-wrapper">
-                            <img src="../assets/images/1.jpg" alt="Mobirise">
+                            <img :src="`${characters.content.image.filename}`" :alt="characters.content.name">
                             <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
-                                Image Description</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="image-wrapper">
-                            <img src="../assets/images/3.jpg" alt="Mobirise">
-                            <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
-                                <a href="/" class="text-primary">Image Description</a></p>
+                                <a :href="`/character/${characters.id}`" class="text-primary">{{ characters.content.name }}</a></p>
                         </div>
                     </div>
                 </div>
@@ -56,6 +45,33 @@
 </script>
 
 <script setup>
+const query = gql `
+ query {
+  CharacterItems {
+    items {
+      id
+      content {
+        name
+        age
+        alias
+        abilities
+        affiliates {
+          name
+        }
+        description
+        image {
+          filename
+        }
+      }
+    }
+  }
+}
+`
+
+  const {
+    data
+  } = await useAsyncQuery(query)
+
     useHead({
         title: 'Characters',
     })
