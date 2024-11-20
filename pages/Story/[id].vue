@@ -10,7 +10,7 @@
           </div>
 
           <div v-else>
-            <img class="img-fluid shadow-1-strong rounded-5 mb-4" height="300" src="~/assets/images/coming_soon.png"
+            <img class="img-fluid shadow-1-strong rounded-5 mb-4" height="300" src="~/assets/images/stories.png"
               cover />
           </div>
 
