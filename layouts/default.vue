@@ -59,7 +59,7 @@
   import ecosystemmenu from '~/components/Menus/ecosystemmenu.vue'
   import search from '~/components/Search/search.vue'
   import lowerbar from '~/components/Menus/lowerbar.vue'
-  import Relatedproducts from '~/components/Related/Relatedproducts.vue'
+  import Relatedproducts from '~/components/Related/relatedproducts.vue'
 
   const theme = ref('light')
   const location = ref('bottom');
