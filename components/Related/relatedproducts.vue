@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-  import productCard from '~/components/related/productCard.vue'
+  import productCard from '~/components/Related/productCard.vue'
   import {
     ref
   } from 'vue'

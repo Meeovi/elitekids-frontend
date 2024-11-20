@@ -26,7 +26,7 @@
         </v-sheet>
       </v-col>
 
-      <relatedstories />
+      <Relatedstories />
     </v-row>
     <latestproducts />
   </div>

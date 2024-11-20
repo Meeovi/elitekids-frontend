@@ -18,6 +18,7 @@
   import {
     ref
   } from 'vue'
+  import story from '~/components/Related/story.vue'
 
   const model = ref(null)
   const {

@@ -62,7 +62,7 @@
     SfButton,
     SfIconFavorite
   } from '@storefront-ui/vue'
-  import list from '~/components/commerce/related/lists.vue'
+  import list from '~/components/commerce/Related/lists.vue'
   import createlist from '~/components/crud/create/add-list.vue'
   import {
     useToast

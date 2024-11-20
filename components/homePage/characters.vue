@@ -48,7 +48,7 @@
 
 <script setup>
   import { ref } from 'vue'
-  import characters from '~/components/related/character.vue'
+  import characters from '~/components/Related/character.vue'
   const model = ref(null);
 
   const {

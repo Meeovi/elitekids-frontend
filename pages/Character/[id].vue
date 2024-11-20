@@ -134,7 +134,7 @@
         </v-row>
       </div>
 
-      <relatedcharacters />
+      <Relatedcharacters />
       <v-col cols="12">
         <comments />
       </v-col>
@@ -151,7 +151,7 @@
   import item from '~/components/Related/item.vue'
   import place from '~/components/Related/place.vue'
   import story from '~/components/Related/story.vue'
-  import relatedcharacters from '~/components/Related/relatedcharacters.vue'
+  import Relatedcharacters from '~/components/Related/Relatedcharacters.vue'
   import video from '~/components/Related/video.vue'
 
   const route = useRoute()

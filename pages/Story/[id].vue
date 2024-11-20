@@ -1,44 +1,74 @@
 <template>
-    <div>
-        <section class="testimonials1 cid-sghsIwkjXm" id="testimonials1-g">
-    
+  <div>
+    <div v-if="story">
+      <div class="container my-5 py-5">
+        <!-- Section: Design Block -->
+        <section class="mb-10">
+          <div v-if="story?.image?.filename_disk">
+            <img class="img-fluid shadow-1-strong rounded-5 mb-4" height="400" :alt="story?.name"
+              :src="`${$directus.url}/assets/${story?.image?.filename_disk}`" cover />
+          </div>
 
-    
-    <div class="container">
-        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
-            <strong>Testimonials</strong>
-        </h3>
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-                <div class="image-wrapper">
-                    <img src="../assets/images/team2.jpg" alt="Mobirise">
-                </div>
+          <div v-else>
+            <img class="img-fluid shadow-1-strong rounded-5 mb-4" height="300" src="~/assets/images/coming_soon.png"
+              cover />
+          </div>
+
+          <div class="row align-items-center mb-4">
+            <div class="col-lg-7">
+              <span> Published <u>{{ new Date(story?.date_created).toLocaleDateString() }}</u></span>
             </div>
-            <div class="col-12 col-md">
-                <div class="text-wrapper">
-                    <p class="mbr-text mbr-fonts-style mb-4 display-7">All sites you create with the Mobirise web builder are mobile-friendly natively. No special actions required. You can preview your site inside the app. Check the icons on the top.</p>
-                    <p class="name mbr-fonts-style mb-1 display-4">
-                        <strong>Jessica Brown</strong>
-                    </p>
-                    <p class="position mbr-fonts-style display-4">
-                        <strong>Client</strong>
-                    </p>
-                </div>
-            </div>
-        </div>
+          </div>
+
+          <h1 class="fw-bold mb-4">
+            {{ story?.name }}
+          </h1>
+
+          <p>
+            {{ story?.description }}
+          </p>
+        </section>
+      </div>
+
+      <div class="characterLowerPage">
+        <v-row>
+          <v-toolbar title="Characters in this Story" density="comfortable" color="transparent">
+          </v-toolbar>
+          <v-col cols="3" v-for="characters in story?.characters" :key="characters">
+            <characters :character="characters?.characters_id" />
+          </v-col>
+        </v-row>
+      </div>
     </div>
-</section>
+
+    <div v-else>
+      <p class="storyNotFound">Story not found</p>
     </div>
+
+    <relatedstories />
+    <v-divider></v-divider>
+    <comments />
+  </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
-
 <script setup>
-    useHead({
-        title: 'Characters',
-    })
+  import characters from '~/components/Related/character.vue'
+  import relatedstories from '~/components/Related/relatedstories.vue'
+  import { readItem } from '@directus/sdk';
+
+  const route = useRoute()
+  const {
+    $directus,
+    $readItem
+  } = useNuxtApp()
+
+  const {
+    data: story
+  } = await useAsyncData('story', () => {
+    return $directus.request(readItem('stories', route.params.id))
+  })
+
+  useHead({
+    title: computed(() => story?.value?.name || 'Story Page')
+  })
 </script>
