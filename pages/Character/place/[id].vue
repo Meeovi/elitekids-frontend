@@ -15,12 +15,12 @@
                             <v-col cols="4">
                                 <div v-if="place?.image?.filename_disk">
                                     <img class="align-end text-white" height="100"
-                                        :src="`${$directus.url}/assets/${place?.image?.filename_disk} || '../../../assets/images/coming_soon.png'`"
+                                        :src="`${$directus.url}/assets/${place?.image?.filename_disk} || '../../../assets/images/stories.png'`"
                                         cover />
                                 </div>
 
                                 <div v-else>
-                                    <img class="align-end text-white" height="100" src="~/assets/images/coming_soon.png"
+                                    <img class="align-end text-white" height="100" src="~/assets/images/stories.png"
                                         cover />
                                 </div>
                             </v-col>
