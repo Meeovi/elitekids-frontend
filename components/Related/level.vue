@@ -8,7 +8,7 @@
         </div>
 
         <div v-else>
-          <img class="align-end text-white" height="300" src="~/assets/images/coming_soon.png" cover />
+          <img class="align-end text-white" height="300" src="~/assets/images/stories.png" cover />
         </div>
         <v-card-title class="pt-4">{{ level?.name }}</v-card-title>
         <div class="d-flex fill-height align-center justify-center">
