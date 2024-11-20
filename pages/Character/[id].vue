@@ -147,11 +147,10 @@
     useRoute,
     useRouter
   } from 'vue-router'
-  import comments from '~/components/partials/comments.vue'
   import item from '~/components/Related/item.vue'
   import place from '~/components/Related/place.vue'
   import story from '~/components/Related/story.vue'
-  import Relatedcharacters from '~/components/Related/Relatedcharacters.vue'
+  import Relatedcharacters from '~/components/Related/relatedcharacters.vue'
   import video from '~/components/Related/video.vue'
 
   const route = useRoute()

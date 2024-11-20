@@ -47,7 +47,6 @@
 
     <relatedstories />
     <v-divider></v-divider>
-    <comments />
   </div>
 </template>
 
