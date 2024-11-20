@@ -3,9 +3,8 @@ import { updateAppConfig } from '#app/config'
 import { defuFn } from 'defu'
 
 const inlineConfig = {
-  "nuxt": {
-    "buildId": "dev"
-  }
+  "titleSuffix": "Elite Kids",
+  "nuxt": {}
 }
 
 // Vite - webpack is handled directly in #app/config
@@ -17,4 +16,4 @@ if (import.meta.hot) {
 
 
 
-export default /* #__PURE__ */ defuFn(inlineConfig)
+export default /*@__PURE__*/ defuFn(inlineConfig)

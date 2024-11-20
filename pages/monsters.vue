@@ -29,20 +29,9 @@
             <div class="container">
 
                 <div class="row mt-4">
-                    <div class="item features-image сol-12 col-md-6 col-lg-4" v-for="monsters in data.MonsterItems.items" :key="monsters">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img :src="`${monsters.content.image.filename}`" :alt="monsters.content.name">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-7"><strong>{{ monsters.content.name }}</strong></h5>
-
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">{{ monsters.content.types.name }}
-                                </p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a :href="`/character/${monsters.id}`"
-                                    class="btn btn-primary item-btn display-7" target="_blank">Learn More
-                                    &gt;</a></div>
+                  <div class="col-12 col-lg-6" v-for="characters in monsters" :key="characters">
+                        <div class="image-wrapper">
+                            <characters :character="characters" />
                         </div>
                     </div>
                 </div>
@@ -51,44 +40,33 @@
     </div>
 </template>
 
-<script>
-    export default {
-
-    }
-</script>
-
 <script setup>
-const query = gql `
-query {
-  MonsterItems {
-    items {
-      id
-      content {
-        name
-        types {
-          name
-        }
-        levels {
-          name
-        }
-        affiliates {
-          name
-        }
-        description
-        image {
-          filename
-        }
-      }
-    }
-  }
-}
-`
-
+import characters from '~/components/Related/character.vue';
   const {
-    data
-  } = await useAsyncQuery(query)
+        $directus,
+        $readItems
+    } = useNuxtApp()
+
+    const {
+        data: monsters
+    } = await useAsyncData('monsters', () => {
+        return $directus.request($readItems('characters', {
+            filter: {
+                type: {
+                    _eq: "Kids"
+                },
+                tags: {
+                  tags_id: {
+                    name: {
+                      _eq: "Monsters"
+                    }
+                  }
+                }
+            }
+        }))
+    })
 
     useHead({
-        title: 'Monsters',
+      title: 'Monsters'
     })
 </script>

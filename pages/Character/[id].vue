@@ -1,44 +1,174 @@
 <template>
-    <div>
-        <section class="testimonials1 cid-sghsoXtvhA" id="testimonials1-f">
-    
+  <div>
+    <v-row>
+      <v-col cols="12">
+        <v-toolbar dark prominent color="#6592e6">
+          <v-toolbar-title>{{ character?.name }}</v-toolbar-title>
 
-    
-    <div class="container">
-        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
-            <strong>Testimonials</strong>
-        </h3>
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-                <div class="image-wrapper">
-                    <img src="../assets/images/team2.jpg" alt="Mobirise">
-                </div>
+          <v-img>
+            <div v-if="character?.image?.filename_disk">
+              <img class="align-end text-white" height="300"
+                :src="`${$directus.url}/assets/${character?.image?.filename_disk} || '../../../assets/images/stories.png'`"
+                cover />
             </div>
-            <div class="col-12 col-md">
-                <div class="text-wrapper">
-                    <p class="mbr-text mbr-fonts-style mb-4 display-7">All sites you create with the Mobirise web builder are mobile-friendly natively. No special actions required. You can preview your site inside the app. Check the icons on the top.</p>
-                    <p class="name mbr-fonts-style mb-1 display-4">
-                        <strong>Jessica Brown</strong>
-                    </p>
-                    <p class="position mbr-fonts-style display-4">
-                        <strong>Client</strong><br>Client<br>Client<strong><br></strong>
-                    </p>
-                </div>
+
+            <div v-else>
+              <img class="align-end text-white" height="300" src="~/assets/images/stories.png" cover />
             </div>
-        </div>
-    </div>
-</section>
-    </div>
+          </v-img>
+        </v-toolbar>
+      </v-col>
+
+      <v-col cols="8">
+        <v-card class="mx-auto" :text="character?.description" elevation="0"></v-card>
+      </v-col>
+
+      <v-col cols="4">
+        <v-row>
+          <v-col cols="12">
+            <v-card class="mx-auto" width="400">
+              <div v-if="character?.image?.filename_disk">
+                <img class="align-end text-white" height="300"
+                  :src="`${$directus.url}/assets/${character?.image?.filename_disk} || '../../../assets/images/stories.png'`"
+                  cover />
+              </div>
+
+              <div v-else>
+                <img class="align-end text-white" height="300" src="~/assets/images/stories.png" cover />
+              </div>
+
+              <v-card-subtitle class="pt-4">
+                <div>Categories:
+                  <div v-for="category in character?.categories?.categories_id" :key="category">
+                    {{ category?.name }}
+                  </div>
+                </div>
+              </v-card-subtitle>
+
+              <v-card-text>
+                <div>Name: {{ character?.name }}</div>
+                <v-spacer></v-spacer>
+
+                <div v-if="character?.tags?.some(tag => tag.tags_id.name === 'Humans')">Age: {{ character?.age }}</div>
+                <v-spacer></v-spacer>
+
+                <div>Alias: {{ character?.alias }}</div>
+                <v-spacer></v-spacer>
+
+                <div style="display: flex; padding-right: 5px;">Abilities:&nbsp;
+                  <div v-for="abilities in character?.abilities" :key="abilities">
+                    <a :href="`/characters/ability/${abilities?.abilities_id?.id}`">{{ abilities?.abilities_id?.name }}</a> &nbsp;
+                  </div>
+                </div>
+                <v-spacer></v-spacer>
+
+                <div style="display: flex; padding-right: 5px;">Affiliates:&nbsp;
+                  <div v-for="affiliates in character?.characters" :key="affiliates">
+                    <a :href="`/characters/${affiliates?.characters_id?.id}`">{{ affiliates?.characters_id?.name }}</a> &nbsp;
+                  </div>
+                </div>
+
+                <div>Universe: {{ character?.type }}</div>
+
+                <div style="display: flex; padding-right: 5px;">Species:&nbsp;
+                  <div v-for="species in character?.tags" :key="species">
+                    <a :href="`/characters/category/${species?.tags_id?.id}`">{{ species?.tags_id?.name }}</a> &nbsp;
+                  </div>
+                </div>
+
+                <div v-if="character?.tags?.some(tag => tag.tags_id.name === 'Monsters')" style="display: flex; padding-right: 5px;">Types:&nbsp;
+                  <div v-for="type in character?.types" :key="types">
+                    <a :href="`/characters/type/${type?.types_id?.id}`">{{ type?.types_id?.name }}</a> &nbsp;
+                  </div>
+                </div>
+
+                <div v-if="character?.tags?.some(tag => tag.tags_id.name === 'Monsters')" style="display: flex; padding-right: 5px;">Level:&nbsp;
+                  <div v-for="level in character?.levels" :key="level">
+                    <a :href="`/characters/level/${level?.levels_id?.id}`">{{ level?.levels_id?.name }}</a> &nbsp;
+                  </div>
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
+
+
+      <div class="characterLowerPage">
+        <v-row>
+          <v-col cols="12">
+            <h3>Items</h3>
+            <v-row>
+              <v-col cols="4" v-for="items in character?.items" :key="items">
+                <item :item="items?.items_id" />
+              </v-col>
+            </v-row>
+          </v-col>
+
+          <v-col cols="12">
+            <h3>Places</h3>
+            <v-row>
+              <v-col cols="4" v-for="places in character?.places" :key="places">
+                <place :place="places?.places_id" />
+              </v-col>
+            </v-row>
+          </v-col>
+
+          <v-col cols="12">
+            <h3>Stories</h3>
+            <v-row>
+              <v-col cols="4" v-for="stories in character?.stories" :key="stories">
+                <story :story="stories?.stories_id" />
+              </v-col>
+            </v-row>
+          </v-col>
+
+          <v-col cols="12">
+            <h3>Videos</h3>
+            <v-row>
+              <v-col cols="4" v-for="videos in character?.videos" :key="videos">
+                <video :video="videos?.videos_id" />
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-row>
+      </div>
+
+      <relatedcharacters />
+      <v-col cols="12">
+        <comments />
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
-
 <script setup>
-    useHead({
-        title: 'Characters',
-    })
+  import {
+    useRoute,
+    useRouter
+  } from 'vue-router'
+  import comments from '~/components/partials/comments.vue'
+  import item from '~/components/Related/item.vue'
+  import place from '~/components/Related/place.vue'
+  import story from '~/components/Related/story.vue'
+  import relatedcharacters from '~/components/Related/relatedcharacters.vue'
+  import video from '~/components/Related/video.vue'
+
+  const route = useRoute()
+  const {
+    $directus,
+    $readItem
+  } = useNuxtApp()
+
+  const {
+    data: character
+  } = await useAsyncData('character', () => {
+    return $directus.request($readItem('characters', route.params.id, {
+      fields: ['*', '*.*.*'],
+    }))
+  })
+
+  useHead({
+    title: computed(() => character?.value?.name || 'Character Page')
+  })
 </script>

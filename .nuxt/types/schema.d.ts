@@ -1,16 +1,291 @@
-import { NuxtModule, RuntimeConfig } from 'nuxt/schema'
-declare module 'nuxt/schema' {
+import { NuxtModule, RuntimeConfig } from '@nuxt/schema'
+declare module '@nuxt/schema' {
+  interface NuxtOptions {
+    /**
+     * Configuration for `@nuxt/image`
+     */
+    ["image"]: typeof import("@nuxt/image").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     */
+    ["tailwindcss"]: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@storefront-ui/nuxt`
+     */
+    ["storefrontUi"]: typeof import("@storefront-ui/nuxt").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@pinia/nuxt`
+     */
+    ["pinia"]: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `nuxt-vuefire`
+     */
+    ["vuefire"]: typeof import("nuxt-vuefire").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module`
+     */
+    ["site"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module`
+     */
+    ["robots"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module`
+     */
+    ["sitemap"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module`
+     */
+    ["ogImage"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module`
+     */
+    ["schemaOrg"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module`
+     */
+    ["seoExperiments"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module`
+     */
+    ["linkChecker"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/seo`
+     */
+    ["seo"]: typeof import("@nuxtjs/seo").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module`
+     */
+    ["devtools"]: typeof import("C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     */
+    ["telemetry"]: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? O : Record<string, any>
+  }
   interface NuxtConfig {
-    ["mdc"]?: typeof import("@nuxtjs/mdc").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["content"]?: typeof import("@nuxt/content").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["apollo"]?: typeof import("@nuxtjs/apollo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    ["storyblok"]?: typeof import("@storyblok/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/image`
+     */
+    ["image"]?: typeof import("@nuxt/image").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     */
+    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@storefront-ui/nuxt`
+     */
+    ["storefrontUi"]?: typeof import("@storefront-ui/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@pinia/nuxt`
+     */
+    ["pinia"]?: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `nuxt-vuefire`
+     */
+    ["vuefire"]?: typeof import("nuxt-vuefire").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module`
+     */
+    ["site"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module`
+     */
+    ["robots"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module`
+     */
+    ["sitemap"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module`
+     */
+    ["ogImage"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module`
+     */
+    ["schemaOrg"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module`
+     */
+    ["seoExperiments"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module`
+     */
+    ["linkChecker"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/seo`
+     */
+    ["seo"]?: typeof import("@nuxtjs/seo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module`
+     */
     ["devtools"]?: typeof import("C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     */
     ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
-    modules?: (undefined | null | false | NuxtModule | string | [NuxtModule | string, Record<string, any>] | ["@nuxtjs/mdc", Exclude<NuxtConfig["mdc"], boolean>] | ["@nuxt/content", Exclude<NuxtConfig["content"], boolean>] | ["@nuxtjs/apollo", Exclude<NuxtConfig["apollo"], boolean>] | ["@storyblok/nuxt", Exclude<NuxtConfig["storyblok"], boolean>] | ["C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxt/image", Exclude<NuxtConfig["image"], boolean>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@storefront-ui/nuxt", Exclude<NuxtConfig["storefrontUi"], boolean>] | ["@pinia/nuxt", Exclude<NuxtConfig["pinia"], boolean>] | ["nuxt-vuefire", Exclude<NuxtConfig["vuefire"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module", Exclude<NuxtConfig["robots"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module", Exclude<NuxtConfig["sitemap"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module", Exclude<NuxtConfig["ogImage"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module", Exclude<NuxtConfig["schemaOrg"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module", Exclude<NuxtConfig["seoExperiments"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module", Exclude<NuxtConfig["linkChecker"], boolean>] | ["@nuxtjs/seo", Exclude<NuxtConfig["seo"], boolean>] | ["C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
+  }
+}
+declare module 'nuxt/schema' {
+  interface NuxtOptions {
+    /**
+     * Configuration for `@nuxt/image`
+     * @see https://www.npmjs.com/package/@nuxt/image
+     */
+    ["image"]: typeof import("@nuxt/image").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     * @see https://www.npmjs.com/package/@nuxtjs/tailwindcss
+     */
+    ["tailwindcss"]: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@storefront-ui/nuxt`
+     * @see https://www.npmjs.com/package/@storefront-ui/nuxt
+     */
+    ["storefrontUi"]: typeof import("@storefront-ui/nuxt").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@pinia/nuxt`
+     * @see https://www.npmjs.com/package/@pinia/nuxt
+     */
+    ["pinia"]: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `nuxt-vuefire`
+     * @see https://www.npmjs.com/package/nuxt-vuefire
+     */
+    ["vuefire"]: typeof import("nuxt-vuefire").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module
+     */
+    ["site"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module
+     */
+    ["robots"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module
+     */
+    ["sitemap"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module
+     */
+    ["ogImage"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module
+     */
+    ["schemaOrg"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module
+     */
+    ["seoExperiments"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module
+     */
+    ["linkChecker"]: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/seo`
+     * @see https://www.npmjs.com/package/@nuxtjs/seo
+     */
+    ["seo"]: typeof import("@nuxtjs/seo").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module
+     */
+    ["devtools"]: typeof import("C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module").default extends NuxtModule<infer O> ? O : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     * @see https://www.npmjs.com/package/@nuxt/telemetry
+     */
+    ["telemetry"]: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? O : Record<string, any>
+  }
+  interface NuxtConfig {
+    /**
+     * Configuration for `@nuxt/image`
+     * @see https://www.npmjs.com/package/@nuxt/image
+     */
+    ["image"]?: typeof import("@nuxt/image").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/tailwindcss`
+     * @see https://www.npmjs.com/package/@nuxtjs/tailwindcss
+     */
+    ["tailwindcss"]?: typeof import("@nuxtjs/tailwindcss").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@storefront-ui/nuxt`
+     * @see https://www.npmjs.com/package/@storefront-ui/nuxt
+     */
+    ["storefrontUi"]?: typeof import("@storefront-ui/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@pinia/nuxt`
+     * @see https://www.npmjs.com/package/@pinia/nuxt
+     */
+    ["pinia"]?: typeof import("@pinia/nuxt").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `nuxt-vuefire`
+     * @see https://www.npmjs.com/package/nuxt-vuefire
+     */
+    ["vuefire"]?: typeof import("nuxt-vuefire").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module
+     */
+    ["site"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module
+     */
+    ["robots"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module
+     */
+    ["sitemap"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module
+     */
+    ["ogImage"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module
+     */
+    ["schemaOrg"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module
+     */
+    ["seoExperiments"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module
+     */
+    ["linkChecker"]?: typeof import("C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxtjs/seo`
+     * @see https://www.npmjs.com/package/@nuxtjs/seo
+     */
+    ["seo"]?: typeof import("@nuxtjs/seo").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module`
+     * @see https://www.npmjs.com/package/C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module
+     */
+    ["devtools"]?: typeof import("C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    /**
+     * Configuration for `@nuxt/telemetry`
+     * @see https://www.npmjs.com/package/@nuxt/telemetry
+     */
+    ["telemetry"]?: typeof import("@nuxt/telemetry").default extends NuxtModule<infer O> ? Partial<O> : Record<string, any>
+    modules?: (undefined | null | false | NuxtModule<any> | string | [NuxtModule | string, Record<string, any>] | ["@nuxt/image", Exclude<NuxtConfig["image"], boolean>] | ["@nuxtjs/tailwindcss", Exclude<NuxtConfig["tailwindcss"], boolean>] | ["@storefront-ui/nuxt", Exclude<NuxtConfig["storefrontUi"], boolean>] | ["@pinia/nuxt", Exclude<NuxtConfig["pinia"], boolean>] | ["nuxt-vuefire", Exclude<NuxtConfig["vuefire"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-site-config/dist/module", Exclude<NuxtConfig["site"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/robots/dist/module", Exclude<NuxtConfig["robots"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/@nuxtjs/sitemap/dist/module", Exclude<NuxtConfig["sitemap"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-og-image/dist/module", Exclude<NuxtConfig["ogImage"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-schema-org/dist/module", Exclude<NuxtConfig["schemaOrg"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-seo-experiments/dist/module", Exclude<NuxtConfig["seoExperiments"], boolean>] | ["C:/Users/Basti/OneDrive/Documents/My_Websites/Handmade_Sites/Javascript-Projects/Nuxt-Projects/AlternateCMS-Framework/TheMeeoviCompany-Sites/elitekids-frontend/node_modules/nuxt-link-checker/dist/module", Exclude<NuxtConfig["linkChecker"], boolean>] | ["@nuxtjs/seo", Exclude<NuxtConfig["seo"], boolean>] | ["C:/Users/Basti/AppData/Roaming/npm/node_modules/@nuxt/devtools/module", Exclude<NuxtConfig["devtools"], boolean>] | ["@nuxt/telemetry", Exclude<NuxtConfig["telemetry"], boolean>])[],
   }
   interface RuntimeConfig {
    app: {
+      buildId: string,
+
       baseURL: string,
 
       buildAssetsDir: string,
@@ -18,321 +293,247 @@ declare module 'nuxt/schema' {
       cdnURL: string,
    },
 
-   mdc: {
-      highlight: any,
+   turnstile: {
+      secretKey: string,
    },
 
-   content: {
-      cacheVersion: number,
+   nitro: {
+      envPrefix: string,
+   },
 
-      cacheIntegrity: string,
+   vuefire: {
+      admin: any,
 
-      transformers: Array<any>,
+      auth: {
+         enabled: boolean,
 
-      base: string,
+         errorMap: string,
 
-      api: {
-         baseURL: string,
+         persistence: Array<string>,
+
+         popupRedirectResolver: string,
+
+         sessionCookie: boolean,
       },
+   },
 
-      watch: {
-         ws: {
-            port: {
-               port: number,
+   sitemap: {
+      isI18nMapped: boolean,
 
-               portRange: Array<number>,
-            },
+      sitemapName: string,
 
-            hostname: string,
+      isMultiSitemap: boolean,
 
-            showURL: boolean,
+      excludeAppSources: Array<any>,
+
+      cacheMaxAgeSeconds: number,
+
+      autoLastmod: boolean,
+
+      defaultSitemapsChunkSize: number,
+
+      minify: boolean,
+
+      sortEntries: boolean,
+
+      debug: boolean,
+
+      discoverImages: boolean,
+
+      discoverVideos: boolean,
+
+      sitemapsPathPrefix: string,
+
+      isNuxtContentDocumentDriven: boolean,
+
+      xsl: string,
+
+      xslTips: boolean,
+
+      xslColumns: Array<{
+
+      }>,
+
+      credits: boolean,
+
+      version: string,
+
+      sitemaps: {
+         "sitemap.xml": {
+            sitemapName: string,
+
+            route: string,
+
+            defaults: any,
+
+            include: Array<any>,
+
+            exclude: Array<string>,
+
+            includeAppSources: boolean,
          },
       },
+   },
 
-      sources: any,
+   "nuxt-site-config": {
+      stack: Array<{
 
-      ignores: Array<any>,
+      }>,
 
-      locales: Array<any>,
+      version: string,
 
-      defaultLocale: any,
+      debug: boolean,
+   },
 
-      highlight: boolean,
+   "nuxt-robots": {
+      version: string,
 
-      markdown: {
-         tags: {
-            p: string,
+      usingNuxtContent: boolean,
 
-            a: string,
+      debug: boolean,
 
-            blockquote: string,
+      credits: boolean,
 
-            "code-inline": string,
+      groups: Array<{
 
-            code: string,
+      }>,
 
-            em: string,
+      sitemap: Array<string>,
 
-            h1: string,
+      header: boolean,
 
-            h2: string,
+      robotsEnabledValue: string,
 
-            h3: string,
+      robotsDisabledValue: string,
 
-            h4: string,
+      cacheControl: string,
+   },
 
-            h5: string,
+   "nuxt-simple-robots": {
+      version: string,
 
-            h6: string,
+      usingNuxtContent: boolean,
 
-            hr: string,
+      debug: boolean,
 
-            img: string,
+      credits: boolean,
 
-            ul: string,
+      groups: Array<{
 
-            ol: string,
+      }>,
 
-            li: string,
+      sitemap: Array<string>,
 
-            strong: string,
+      header: boolean,
 
-            table: string,
+      robotsEnabledValue: string,
 
-            thead: string,
+      robotsDisabledValue: string,
 
-            tbody: string,
-
-            td: string,
-
-            th: string,
-
-            tr: string,
-         },
-
-         anchorLinks: {
-            depth: number,
-
-            exclude: Array<number>,
-         },
-
-         remarkPlugins: any,
-
-         rehypePlugins: any,
-      },
-
-      yaml: any,
-
-      csv: {
-         delimeter: string,
-
-         json: boolean,
-      },
-
-      navigation: {
-         fields: Array<any>,
-      },
-
-      contentHead: boolean,
-
-      documentDriven: boolean,
-
-      respectPathCase: boolean,
-
-      experimental: {
-         clientDB: boolean,
-
-         stripQueryParameters: boolean,
-
-         advanceQuery: boolean,
-
-         search: any,
-      },
+      cacheControl: string,
    },
   }
   interface PublicRuntimeConfig {
-   mdc: {
-      components: {
-         prose: boolean,
+   appId: string,
 
-         map: {
-            p: string,
+   apiKey: string,
 
-            a: string,
+   indexName: string,
 
-            blockquote: string,
+   authSecret: string,
 
-            "code-inline": string,
+   jwtSecret: string,
 
-            code: string,
+   directus: {
+      url: string,
 
-            em: string,
+      auth: {
+         email: string,
 
-            h1: string,
+         password: string,
 
-            h2: string,
-
-            h3: string,
-
-            h4: string,
-
-            h5: string,
-
-            h6: string,
-
-            hr: string,
-
-            img: string,
-
-            ul: string,
-
-            ol: string,
-
-            li: string,
-
-            strong: string,
-
-            table: string,
-
-            thead: string,
-
-            tbody: string,
-
-            td: string,
-
-            th: string,
-
-            tr: string,
-         },
-      },
-
-      headings: {
-         anchorLinks: {
-            h1: boolean,
-
-            h2: boolean,
-
-            h3: boolean,
-
-            h4: boolean,
-
-            h5: boolean,
-
-            h6: boolean,
-         },
+         token: string,
       },
    },
 
-   content: {
-      locales: Array<any>,
+   meeDirectusUrl: string,
 
-      defaultLocale: any,
+   auth: {
+      meeDirectusEmail: string,
 
-      integrity: any,
+      meeDirectusPassword: string,
 
-      experimental: {
-         stripQueryParameters: boolean,
+      meeDirectusToken: string,
+   },
 
-         advanceQuery: boolean,
+   firebaseApiKey: string,
 
-         clientDB: boolean,
+   firebaseAuthDomain: string,
+
+   firebaseProjectId: string,
+
+   firebaseStorageBucket: string,
+
+   firebaseMessagingSenderId: string,
+
+   firebaseAppId: string,
+
+   measurementId: string,
+
+   commerceUrl: string,
+
+   commerceGraphql: string,
+
+   commerceApiToken: string,
+
+   commentsUrl: string,
+
+   budibaseEmbed: string,
+
+   vuefire: {
+      config: {
+         apiKey: string,
+
+         authDomain: string,
+
+         projectId: string,
+
+         storageBucket: string,
+
+         messagingSenderId: string,
+
+         appId: string,
+
+         measurementId: string,
       },
 
-      respectPathCase: boolean,
+      appCheck: {
+         provider: string,
 
-      api: {
-         baseURL: string,
-      },
+         key: string,
 
-      navigation: {
-         fields: Array<any>,
-      },
+         isTokenAutoRefreshEnabled: boolean,
 
-      tags: {
-         p: string,
-
-         a: string,
-
-         blockquote: string,
-
-         "code-inline": string,
-
-         code: string,
-
-         em: string,
-
-         h1: string,
-
-         h2: string,
-
-         h3: string,
-
-         h4: string,
-
-         h5: string,
-
-         h6: string,
-
-         hr: string,
-
-         img: string,
-
-         ul: string,
-
-         ol: string,
-
-         li: string,
-
-         strong: string,
-
-         table: string,
-
-         thead: string,
-
-         tbody: string,
-
-         td: string,
-
-         th: string,
-
-         tr: string,
-      },
-
-      highlight: boolean,
-
-      wsUrl: string,
-
-      documentDriven: boolean,
-
-      host: string,
-
-      trailingSlash: boolean,
-
-      search: any,
-
-      contentHead: boolean,
-
-      anchorLinks: {
-         depth: number,
-
-         exclude: Array<number>,
+         debug: string,
       },
    },
 
-   storyblok: {
-      accessToken: string,
+   "nuxt-schema-org": {
+      reactive: boolean,
 
-      enableSudoMode: boolean,
+      minify: boolean,
 
-      usePlugin: boolean,
+      scriptAttributes: {
+         id: string,
+      },
 
-      bridge: boolean,
+      identity: any,
 
-      devtools: boolean,
+      version: string,
+   },
 
-      componentsDir: string,
-
-      apiOptions: any,
+   "nuxt-seo": {
+      canonicalQueryWhitelist: Array<string>,
    },
   }
 }

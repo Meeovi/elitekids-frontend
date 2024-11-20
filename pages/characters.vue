@@ -25,11 +25,9 @@
         <section class="image4 cid-sgjsafsZOP" id="image4-h">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-lg-6" v-for="characters in data.CharacterItems.items" :key="characters">
+                    <div class="col-12 col-lg-6" v-for="characters in charactersData" :key="characters">
                         <div class="image-wrapper">
-                            <img :src="`${characters.content.image.filename}`" :alt="characters.content.name">
-                            <p class="mbr-text mbr-fonts-style mt-2 align-center display-4">
-                                <a :href="`/character/${characters.id}`" class="text-primary">{{ characters.content.name }}</a></p>
+                            <characters :character="characters" />
                         </div>
                     </div>
                 </div>
@@ -38,41 +36,26 @@
     </div>
 </template>
 
-<script>
-    export default {
-
-    }
-</script>
-
 <script setup>
-const query = gql `
- query {
-  CharacterItems {
-    items {
-      id
-      content {
-        name
-        age
-        alias
-        abilities
-        affiliates {
-          name
-        }
-        description
-        image {
-          filename
-        }
-      }
-    }
-  }
-}
-`
-
+import characters from '~/components/Related/character.vue';
   const {
-    data
-  } = await useAsyncQuery(query)
+        $directus,
+        $readItems
+    } = useNuxtApp()
+
+    const {
+        data: charactersData
+    } = await useAsyncData('charactersData', () => {
+        return $directus.request($readItems('characters', {
+            filter: {
+                status: {
+                    _eq: "Kids"
+                }
+            }
+        }))
+    })
 
     useHead({
-        title: 'Characters',
+      title: 'Characters'
     })
 </script>

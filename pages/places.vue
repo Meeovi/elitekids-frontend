@@ -28,21 +28,8 @@
             <div class="container-fluid">
 
                 <div class="row mt-4">
-                    <div class="item features-image сol-12 col-md-6 col-lg-4" v-for="places in data.PlacesItems.items" :key="places">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img :src="`${places.content.image.filename}`" :alt="places.content.name">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-7"><strong>{{ places.content.name }}</strong></h5>
-
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">{{ places.content.location.name }}
-                                </p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a :href="`/character/${places.id}`"
-                                    class="btn btn-primary item-btn display-7" target="_blank">Learn More
-                                    &gt;</a></div>
-                        </div>
+                    <div class="item features-image сol-12 col-md-6 col-lg-4" v-for="places in places" :key="places">
+                        <place :place="places" />
                     </div>
                 </div>
             </div>
@@ -50,36 +37,25 @@
     </div>
 </template>
 
-<script>
-    export default {
-
-    }
-</script>
-
 <script setup>
-const query = gql `
-query {
-  PlacesItems {
-    items {
-        id
-      content {
-        name
-        location {
-          name
-        }
-        description
-        image {
-          filename
-        }
-      }
-    }
-  }
-}
-`
+import place from '~/components/Related/place.vue';
 
   const {
-    data
-  } = await useAsyncQuery(query)
+        $directus,
+        $readItems
+    } = useNuxtApp()
+
+    const {
+        data: places
+    } = await useAsyncData('places', () => {
+        return $directus.request($readItems('places', {
+            filter: {
+                status: {
+                    _eq: "Kids"
+                }
+            }
+        }))
+    })
 
     useHead({
         title: 'Places',

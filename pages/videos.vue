@@ -21,90 +21,34 @@
 
         <section class="gallery5 mbr-gallery cid-sghrLMhsMk" id="gallery5-e">
             <div class="container-fluid">
-
-                <div class="row mbr-gallery mt-4">
-                    <div class="col-12 col-md-6 col-lg-3 item gallery-image" v-for="videos in data.VideoItems.items" :key="videos">
-                        <div class="item-wrapper" data-toggle="modal" data-target="#svordVMBDg-modal">
-                            <img class="w-100" :src="`${videos.content.video.filename}`" :alt="videos.content.name" data-slide-to="0"
-                                data-target="#lb-svordVMBDg">
-                            <div class="icon-wrapper">
-                                <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                            </div>
-                        </div>
-                        <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
-                            <a href="#" class="text-primary">{{ videos.content.name }}</a>
-                        </h6>
-                    </div>
-                </div>
-
-                <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="svordVMBDg-modal" v-for="videos in data.VideoItems.items" :key="videos">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="carousel slide carousel-fade" id="lb-svordVMBDg" data-ride="carousel"
-                                    data-interval="5000">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img class="d-block w-100" :src="`${videos.content.video.filename}`" :alt="videos.content.name">
-                                        </div>
-                                    </div>
-                                    <ol class="carousel-indicators">
-                                        <li data-slide-to="0" class="active" data-target="#lb-svordVMBDg"></li>
-                                        <li data-slide-to="1" data-target="#lb-svordVMBDg"></li>
-                                        <li data-slide-to="2" data-target="#lb-svordVMBDg"></li>
-                                        <li data-slide-to="3" data-target="#lb-svordVMBDg"></li>
-                                    </ol>
-                                    <a role="button" href="" class="close" data-dismiss="modal" aria-label="Close">
-                                    </a>
-                                    <a class="carousel-control-prev carousel-control" role="button" data-slide="prev"
-                                        href="#lb-svordVMBDg">
-                                        <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                                        <span class="sr-only">Previous</span>
-                                    </a>
-                                    <a class="carousel-control-next carousel-control" role="button" data-slide="next"
-                                        href="#lb-svordVMBDg">
-                                        <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                                        <span class="sr-only">Next</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <v-card color="white" :class="['ma-4', selectedClass]" height="320" width="350">
+              <video :src="`$${videos?.video?.filename_disk}`" controls height="250" width="350"></video>
+              <v-card-title>{{ videos?.name }}</v-card-title>
+            </v-card>
             </div>
         </section>
     </div>
 </template>
 
-<script>
-    export default {
-
-    }
-</script>
-
 <script setup>
-const query = gql `
-query {
-  VideoItems {
-    items {
-      id
-      created_at
-      content {
-        name
-        video {
-          filename
-        }
-      }
-    }
-  }
-}
-`
-
   const {
-    data
-  } = await useAsyncQuery(query)
+        $directus,
+        $readItems
+    } = useNuxtApp()
 
-    useHead({
-        title: 'Videos',
-    })
+    const {
+        data: videos
+    } = await useAsyncData('videos', () => {
+        return $directus.request($readItems('videos', {
+          filter: {
+              status: {
+                  _eq: "Kids"
+              }
+          }
+      }))
+  })
+
+  useHead({
+    title: 'Videos',
+  })
 </script>
